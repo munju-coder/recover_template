@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리커버플라워</title>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--goolge webfont-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet"> 
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="../recover_flower/css/swiper.min.css">
+    <script src="../recover_flower/js/swiper.js"></script>
+    <!--js-->
+    <script src="../recover_flower/js/main.js"></script>
+    <!--style sheet-->
+    <link rel="stylesheet" href="../recover_flower/css/import.css">
+    <link rel="stylesheet" href="../recover_flower/css/main.css">
+
+</head>
+
+<body>
+    <!--wrap {-->
+    <div class="wrap">
+        <!--menu click bg call-->
+        <div class="menu_bg"></div>
+        <style>
+            
+            .wrap header .header_wrap { max-width: 1400px; padding-top: 40px; margin: 0 auto; }
+            .wrap header .header_left, .wrap header .header_middle, .wrap header .header_right  { float: left; width: 33%; }
+            .wrap header::after { content: ''; display: block; overflow: hidden; clear: both; } 
+            .wrap header .header_wrap .header_right { width: 375px; margin-left: 98px; }
+            .wrap header .header_wrap .header_right ul li { float: left; width: 16%; }
+            .wrap header .header_wrap .header_right ul .header_join { margin-right: 20px; }
+            .wrap header .header_wrap .header_right ul .header_login { margin-left: 55px; }
+
+            .wrap header .header_wrap .header_right ul::after { content: ''; display: block; overflow: hidden; clear: both; }
+            .wrap header .header_wrap .header_middle { width: 465px; border-radius: 10px; border: 2px solid #3f3734; background-color: white; }
+            .wrap header .header_wrap .header_middle .search_box 
+            { float: left; width: 410px; height: 38px; background-color: white; border: none; border-right: transparent; border-radius: 10px; }
+            .wrap header .header_wrap .header_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
+            .wrap header .header_wrap .header_middle button { float: left; width: 50px; height: 38px; border: none; background-color: white; border-radius: 10px;  }
+            .wrap header .header_wrap .header_bottom .hb_menu { padding-top: 30px; margin-bottom: 20px; }
+           
+            .wrap .contents .c_top .main-container { position: relative; }
+            .wrap .contents .c_top .main-container .swiper-button-prev,.wrap .contents .c_top .main-container .swiper-button-next {  color: white; }
+            .wrap .contents .c_top .main-container .swiper-button-prev { left: 75px; }
+            .wrap .contents .c_top .main-container .swiper-button-next { right: 75px; }
+            .wrap .contents .c_top .main-container .swiper-button-prev::after,.wrap .contents .c_top .main-container .swiper-button-next::after { font-size: 75px; }
+
+            .wrap footer { background-color: rgb(204, 155, 155); }
+
+        </style>
+
+        <!--header {-->
+        <header class="dw_100p">
+            <div class="header_wrap">
+                <div class="header_left">
+                    <h1><a href="index.html"><img src="../recover_flower/images/recoverflower_logo.png" alt="recoverflower_logo"></a></h1>
+                </div>
+
+                <div class="header_middle">
+                    <input type="text" class="search_box">
+                    <button type="submit" id="sch_submit" class="cursor"><a href="#"><img src="../recover_flower/images/search_icon.png" alt="search_icon"></a>
+                </div>
+
+                <div class="header_right">
+                    <ul>
+                        <li class="header_login mt10px"><a href="#">로그인</a></li>
+                        <li class="header_join mt10px"><a href="#">회원가입</a></li>
+                        <li><a href="#"><img src="../recover_flower/images/cart_icon.png" alt="cart_icon"></a></li>
+                        <li><a href="#"><img src="../recover_flower/images/mypage_icon.png" alt="mypage_icon"></a></li>
+                        <li class="menu_icon"><a href="#"><img src="../recover_flower/images/menu_icon.png" alt="menu_icon"></a></li>
+                    </ul>
+                </div>
+
+                <div class="header_bottom main_menu-container">
+                    <div class="hb_menu swiper-wrapper">
+                        <div class="swiper-slide"><a href="#">꽃바구니</a></div>
+                        <div class="swiper-slide"><a href="#">개업화분</a></div>
+                        <div class="swiper-slide"><a href="#">축하화환</a></div>
+                        <div class="swiper-slide"><a href="#">근조화환</a></div>
+                        <div class="swiper-slide"><a href="#">공기정화식물</a></div>
+                        <div class="swiper-slide"><a href="#">동양란</a></div>
+                        <div class="swiper-slide"><a href="#">서양란</a></div>
+                        <div class="swiper-slide"><a href="#">꽃다발</a></div>
+                        <div class="swiper-slide"><a href="#">분재</a></div>
+                        <div class="swiper-slide"><a href="#">과일바구니</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!--} header-->
+
+
+        <style>
+            .wrap .menu_bg {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.486);
+                z-index: 11;    
+            }
+            .wrap .left_menu { position: absolute; top: 0; height: 100%; display: none; }
+            .wrap .left_menu .left_menu_wrap {
+                width: 260px;
+                height: 100%;
+                background-color: white;
+                padding: 15px;
+                position: absolute;
+                z-index: 100;
+
+            }
+            .wrap .left_menu .left_menu_wrap .login_wrap { position: relative; margin: 0 0 10px; padding: 10px 0; }
+            .wrap .left_menu .close_btn {
+                position: absolute;
+                top: 0;
+                z-index: 11;
+                left: 260px;
+                background-color: black;
+                padding: 10px 15px;
+            }
+            .wrap .left_menu .close_btn a i { color: white; font-size: 20px; }
+            .wrap .left_menu .left_menu_wrap .login_wrap .login_form_wrap form fieldset input { width: 100%; padding: 5px; border: 1px solid rgb(168, 168, 168); }
+            .wrap .left_menu .left_menu_wrap .login_wrap .login_form_wrap form fieldset #login_id { margin-bottom: 10px; }
+            .wrap .left_menu .left_menu_wrap .login_wrap .login_form_wrap form fieldset #login_submit { background-color: rgb(9, 36, 15); color: white; padding: 10px; border: none; }
+            .wrap .left_menu .catego_menu { width: 100%; margin: 0 auto; max-width: 210px; }
+        </style>
+        <!--{ aside left_menu-->
+        <aside class="left_menu">
+            <div class="close_btn">
+                <a href="#"><i class="fas fa-times"></i></a>
+            </div>
+
+            <!--left_menu_wrap {-->
+            <div class="left_menu_wrap">
+                <div class="login_wrap t_center">
+                    <div class="login_form_wrap">
+                        <form name="" action="" id="login_form">
+                            <!-- 로그인 전 적용해야할 폼 -->
+                            <fieldset class="before_logoin">
+                                <input type="text" name="mb_id" id="login_id" placeholder="아이디" maxlength="20">
+                                <input type="password" name="mb_password" id="login_pw" placeholder="비밀번호" maxlength="20">
+
+                                <div id="login_checkbox">
+                                    <input type="checkbox" id="auto_login" name="auto_login" value="1">
+                                    <label for="auto_login" id="auto_login_label">자동로그인</label>
+                                    <label for="join_login" id="join_login_label">회원가입</label>
+                                </div>
+                                
+                                <input type="submit" id="login_submit" value="로그인" class="btn_submit ft_600">
+                            </fieldset>
+
+                            <!-- 로그인 후 적용해야할 폼
+                            <div class="after_login">
+                                <div class="al_top">
+                                    <div class="alt_right">
+                                        <img src="images/no_profile.gif" alt="profile image">
+                                        <a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+                                    </div>
+
+                                    <div class="alt_left">
+                                        <p>테스트28님</p>
+                                        <button type="text">로그아웃</button>
+                                    </div>
+                                </div>
+
+                                <div class="al_bottom">
+                                    <div class="alb_right">
+                                        <div class="">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <span>0</span>
+                                    </div>
+
+                                    <div class="alb_left">
+                                        <div class="">
+                                            <i class="fa fa-database"></i>
+                                        </div>
+                                        <span>1,015,564</span>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </form>
+                    </div>
+                </div>
+
+                <!--catego_menu {-->
+                <div class="catego_menu t_center">
+                    <div class="left_tab_subject">
+                        <ul>
+                            <li class="left_tablinks cursor catego_active" tab_name="left_tab1"><a href="#">카테고리</a></li>
+                            <li class="left_tablinks cursor" tab_name="left_tab2"><a href="#">프로모션</a></li>
+                            <li class="left_tablinks cursor" tab_name="left_tab3"><a href="#">마이페이지</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="left_tab left_tab_active" id="left_tab1">
+                        <ul>
+                            <li><a href="#">꽃바구니</a></li>
+                            <li><a href="#">꽃다발</a></li>
+                            <li><a href="#">개업화분</a></li>
+                            <li><a href="#">축하화환</a></li>
+                            <li><a href="#">근조화환</a></li>
+                            <li><a href="#">공기정화식물</a></li>
+                            <li><a href="#">동양란</a></li>
+                            <li><a href="#">서양란</a></li>
+                            <li><a href="#">분재</a></li>
+                            <li><a href="#">과일바구니</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="left_tab" id="left_tab2">
+                        <ul>
+                            <li><a href="#">창업/개업</a></li>
+                            <li><a href="#">출산/문병방문</a></li>
+                            <li><a href="#">생일/기념일</a></li>
+                            <li><a href="#">결혼/회갑/칠순</a></li>
+                            <li><a href="#">전시회/행사</a></li>
+                            <li><a href="#">졸업/입학</a></li>
+                            <li><a href="#">할인상품</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="left_tab" id="left_tab3">
+                        <ul>
+                            <li><a href="#">마이페이지</a></li>
+                            <li><a href="#">주문내역</a></li>
+                            <li><a href="#">주문배송조회</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">입금계좌안내</a></li>
+                            <li><a href="#">증빙서류신청/출력</a></li> 
+                        </ul>
+                    </div>
+                    
+                </div>  
+                <!--} catego_menu-->
+                    
+            </div>
+            <!--} left_menu_wrap-->
+            
+        </aside>
+        <!--} aside menu-->
+
+        <!--contents {-->
+        <div class="contents">
+            <!--c_top {-->
+            <div class="c_top">
+                <div class="main-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="../recover_flower/images/main_banner.png" alt="main_banner1"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="http://placehold.it/1903x728/095430/ffffff?text=IMG" alt="main_banner2"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="http://placehold.it/1903x728/041d11/ffffff?text=IMG" alt="main_banner3"></a>
+                        </div>
+            
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <!--} c_top-->
+
+            <!--c_middle {-->
+            <div class="c_middle">
+                <div class="c_middle_tab sub_menu-container">
+                    <div class="swiper-wrapper">
+                        <button class="tablinks swiper-slide sub_menu_active" tab_name="tab1">축하화환</button>
+                        <button class="tablinks swiper-slide" tab_name="tab2">꽃다발</button>
+                        <button class="tablinks swiper-slide" tab_name="tab3">꽃바구니</button>
+                        <button class="tablinks swiper-slide" tab_name="tab4">관엽식물</button>
+                        <button class="tablinks swiper-slide" tab_name="tab5">동양란</button>
+                        <button class="tablinks swiper-slide" tab_name="tab6">서양란</button>
+                    </div>
+                </div>
+            
+                <div class="tabcontent tab_active" id="tab1">
+                    <div class="cm_top">
+                        <h2>축하화환</h2>
+                    </div>
+
+                    <ul>
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 축하화환</p></li>
+                                <li><strong>67,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 축하화환</p></li>
+                                <li><strong>67,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 축하화환</p></li>
+                                <li><strong>67,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 축하화환</p></li>
+                                <li><strong>67,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 축하화환</p></li>
+                                <li><strong>67,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 축하화환</p></li>
+                                <li><strong>67,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tabcontent" id="tab2">
+                    <div class="cm_top">
+                        <h2>꽃다발</h2>
+                    </div>
+                    
+                    <ul>
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃다발</p></li>
+                                <li><strong>57,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃다발</p></li>
+                                <li><strong>57,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃다발</p></li>
+                                <li><strong>57,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃다발</p></li>
+                                <li><strong>57,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃다발</p></li>
+                                <li><strong>57,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃다발</p></li>
+                                <li><strong>57,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </div>
+
+                <div class="tabcontent" id="tab3">
+                    <div class="cm_top">
+                        <h2>꽃바구니</h2>
+                    </div>
+
+                    <ul>
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃바구니</p></li>
+                                <li><strong>87,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃바구니</p></li>
+                                <li><strong>87,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃바구니</p></li>
+                                <li><strong>87,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃바구니</p></li>
+                                <li><strong>87,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃바구니</p></li>
+                                <li><strong>87,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>로맨틱 꽃바구니</p></li>
+                                <li><strong>87,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </div>
+
+                <div class="tabcontent" id="tab4">
+                    <div class="cm_top">
+                        <h2>관엽식물</h2>
+                    </div> 
+
+                    <ul>
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>관엽식물1</p></li>
+                                <li><strong>97,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>관엽식물2</p></li>
+                                <li><strong>97,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>관엽식물3</p></li>
+                                <li><strong>97,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>관엽식물4</p></li>
+                                <li><strong>97,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>관엽식물5</p></li>
+                                <li><strong>97,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>관엽식물6</p></li>
+                                <li><strong>97,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </div>
+
+                <div class="tabcontent" id="tab5">
+                    <div class="cm_top">
+                        <h2>동양란</h2>
+                    </div>
+                    
+                    <ul>
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>동양란1</p></li>
+                                <li><strong>107,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>동양란2</p></li>
+                                <li><strong>107,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>동양란3</p></li>
+                                <li><strong>107,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>동양란4</p></li>
+                                <li><strong>107,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>동양란5</p></li>
+                                <li><strong>107,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>동양란6</p></li>
+                                <li><strong>107,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </div>
+
+                <div class="tabcontent" id="tab6">
+                    <div class="cm_top">
+                        <h2>서양란</h2>
+                    </div>
+
+                    <ul>
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>서양란1</p></li>
+                                <li><strong>127,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>서양란2</p></li>
+                                <li><strong>127,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>서양란3</p></li>
+                                <li><strong>127,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>서양란4</p></li>
+                                <li><strong>127,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>서양란5</p></li>
+                                <li><strong>127,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+
+                        <li class="col-xs-6 col-md-2">
+                            <ul>                           
+                                <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
+                                <li><p>서양란6</p></li>
+                                <li><strong>127,700원</strong></li>
+                                <li><p>1,334P</p></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </div>
+
+            </div>
+            <!--} c_middle-->
+
+            <!--c_bottom {-->
+            <div class="c_bottom">
+                <div class="cb_top">
+                    <h2>리커버플라워 오늘의 특가</h2>
+                </div>
+
+                <div class="cb_middle">
+                    <div class="cbm_middle">
+                        <ul class="col-md-12 col-lg-4">
+                            <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_1img"></a></li>
+                            <li><p>축하화환3단</p></li>
+                            <li>
+                                <h3>
+                                    <del>140,700원</del>
+                                    120,700원
+                                </h3>
+                            </li>
+                            <li><p>10,334P</p></li>
+                        </ul>
+
+                        <ul class="col-md-12 col-lg-4">
+                            <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_2img"></a></li>
+                            <li><p>축하화환3단</p></li>
+                            <li>
+                                <h3>
+                                    <del>140,700원</del>
+                                    120,700원
+                                </h3>
+                            </li>
+                            <li><p>10,334P</p></li>
+                        </ul>
+
+                        <ul class="col-md-12 col-lg-4">
+                            <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_3img"></a></li>
+                            <li><p>축하화환3단</p></li>
+                            <li>
+                                <h3>
+                                    <del>140,700원</del>
+                                    120,700원
+                                </h3>
+                            </li>
+                            <li><p>10,334P</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- } c_bottom -->
+        </div>
+        <!--} contents-->
+
+        <!--footer {-->
+        <footer>
+            <!--ft_wrap {-->
+            <div class="ft_wrap">
+                <div class="ft_top">
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">마이페이지</a></li>
+                    </ul>
+                </div>
+
+                <div class="ft_left">
+                    <a href="#"><img src="../recover_flower/images/recoverflower_logo.png" alt="recoverflower_logo"></a>
+                </div>
+                
+                <div class="ft_middle">
+                    <ul>
+                        <li><strong>주식회사 예원엠엔디</strong></li>
+                        <li>주소: 경기도 광명시 오리로길 619번길 11 (하안동 232번지) 예원이케이빌딩</li>
+                        <li>사업자 등록번호 : 835-87-00673 대표 : 서제학</li>
+                        <li>팩스 : 02-897-8952  개인정보 보호책임자 : 김영민  부가통신사업신고번호 : 제2017-경기광명-0300호</li>
+                        <li>Copyright © 2018 주식회사 예원엠앤디. All Rights Reserved.</li>
+                    </ul>
+                </div>
+
+                <div class="ft_right">
+                    <ul>
+                        <li><p>고객만족센터</p></li>
+                        <li>평일: 9:00 - 18:00 / 점심시간 12:00 - 13:00 </li>
+                        <li>문의전화 <strong>02-2616-8952</strong></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--} ft_wrap-->
+        </footer>
+        <!--} footer-->
+    </div>
+    <!--} wrap-->
+    
+</body>
+</html>
