@@ -99,10 +99,8 @@ $(document).ready( function(){
     });
 
     $('.menu_icon,.menu_bg,.close_btn').click( function(){
-        $(".left_menu,.menu_bg,.close_btn").toggle();
-        
+        $(".left_menu,.menu_bg,.close_btn").toggle()
     });
-
     
 
 

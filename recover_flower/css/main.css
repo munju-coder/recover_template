@@ -26,5 +26,5 @@
 
 .tab_active { display: block; }
 .tabcontent { display: none; }
-.sub_menu_active { background-color: red; color: white; }
+
 .c_middle,.c_bottom { overflow: hidden; }
