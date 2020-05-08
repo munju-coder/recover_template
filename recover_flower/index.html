@@ -29,21 +29,25 @@
         <!--menu click bg call-->
         <div class="menu_bg"></div>
         <style>
-            
-            .wrap header .header_wrap { max-width: 1400px; padding-top: 40px; margin: 0 auto; }
+            .wrap header .header_wrap .header_M_left { display: none; }
+            .wrap header .header_wrap { padding-top: 40px; }
             .wrap header .header_left, .wrap header .header_middle, .wrap header .header_right  { float: left; width: 33%; }
             .wrap header::after { content: ''; display: block; overflow: hidden; clear: both; } 
-            /* .wrap header .header_wrap .header_right { width: 375px; margin-left: 98px; } */
-            .wrap header .header_wrap .header_right ul li { float: left; width: 16%; }
-            /* .wrap header .header_wrap .header_right ul .header_join { margin-right: 20px; } */
-            .wrap header .header_wrap .header_right ul .header_login { margin-left: 55px; margin-right: 15px; }
+            .wrap header .header_wrap .header_right ul li { float: left; width: 13%; }
+            .wrap header .header_wrap .header_right ul .header_login { margin-left: 31%; margin-right: 15px; }
 
             .wrap header .header_wrap .header_right ul::after { content: ''; display: block; overflow: hidden; clear: both; }
-            .wrap header .header_wrap .header_middle { width: 465px; border-radius: 10px; border: 2px solid #3f3734; background-color: white; }
+            .wrap header .header_wrap .header_middle { width: 33%; border-radius: 10px; border: 2px solid #3f3734; background-color: white; }
+
+            .wrap header .header_wrap .header_middle div {float:left;}
+            .wrap header .header_wrap .header_middle div:first-child {width:80%;}
+            .wrap header .header_wrap .header_middle div:last-child {width:20%;}
+
+
             .wrap header .header_wrap .header_middle .search_box 
-            { float: left; width: 410px; height: 38px; background-color: white; border: none; border-right: transparent; border-radius: 10px; }
+            { float: left; width: 80%; height: 38px; background-color: white; border: none; border-right: transparent; border-radius: 10px; }
             .wrap header .header_wrap .header_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
-            .wrap header .header_wrap .header_middle button { float: left; width: 50px; height: 38px; border: none; background-color: white; border-radius: 10px;  }
+            .wrap header .header_wrap .header_middle button { float: right; width: 50px; height: 38px; border: none; background-color: white; border-radius: 10px;  }
             .wrap header .header_wrap .header_bottom .hb_menu { padding-top: 30px; margin-bottom: 20px; }
            
             .wrap .contents .c_top .main-container { position: relative; }
@@ -52,20 +56,103 @@
             .wrap .contents .c_top .main-container .swiper-button-next { right: 75px; }
             .wrap .contents .c_top .main-container .swiper-button-prev::after,.wrap .contents .c_top .main-container .swiper-button-next::after { font-size: 75px; }
 
-            .wrap footer { background-color: rgb(204, 155, 155); }
+            
 
+            @media (max-width: 1430px) {
+                .dw_1400px { width: 90%; }
+                .wrap header .header_left, .wrap header .header_middle, .wrap header .header_right { width: 30%; }
+                .wrap header .header_wrap .header_right ul .header_login { margin-left: 15%; }
+                .wrap header .header_right { margin-left: 7%; }
+                .wrap header .header_wrap .header_right ul .header_login { margin-right: 10px; }
+                .wrap header .header_wrap .header_right ul li { width: 16%; font-size: 13px; }
+                .wrap header .header_wrap .header_right ul li img { width: 33px; }
+            
+
+            }
+            @media (max-width: 1110px) {
+
+                .wrap header .header_right { width: 13%; margin-left: 24%; }
+                .wrap header .header_wrap .header_right ul .header_login,.wrap header .header_wrap .header_right ul .header_join { display: none; }
+                .wrap header .header_wrap .header_right ul li { width: 20%; margin-right: 20px; }
+                .wrap header .header_wrap .header_right ul .menu_icon { margin-right: 0; }
+
+                .wrap header .header_wrap .header_middle .search_box,.wrap header .header_wrap .header_middle button { height: 30px;}
+                 
+
+            }
+
+            @media (max-width: 870px) {
+                .wrap header .header_wrap .header_left h1 a img { width: 55%; }
+                .wrap header .header_right { width: 18%; margin-left: 19%; }
+            }
+            @media (max-width: 768px) {
+                .wrap header .header_wrap .header_middle { display: none; }
+                .wrap header .header_right { margin-left: 0; }
+                .wrap header .header_wrap .header_right ul li:not(.menu_icon) { display: none; }
+                .wrap header .header_wrap .header_M_left { display: block; float: left; width: 33%; }
+                .wrap header .header_wrap::after { content: ''; display: block; overflow: hidden; clear: both; }
+                .wrap header .header_wrap .header_left { float: left; width: 4%; }
+                .wrap header .header_right { float: right; width: 8%; }
+
+                .wrap header .header_wrap .header_M_left .search_input /* ,.wrap header .header_wrap .header_M_left .search_button */ { display: none; }
+
+                .wrap header .header_wrap .header_left { width: 33%; text-align: center; }
+                .wrap header .header_wrap .header_left h1 a img { width: 100%; }
+
+                /* .wrap header .header_wrap .header_M_left .search_input input
+                { float: left; width: 80%; height: 38px; background-color: white; border: none; border-right: transparent; border-radius: 10px; }
+                .wrap header .header_wrap .header_M_left .search_input::after { content: ''; display: block; overflow: hidden; clear: both; }
+                .wrap header .header_wrap .header_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
+                .wrap header .header_wrap .header_middle button { float: right; width: 50px; height: 38px; border: none; background-color: white; border-radius: 10px;  } */
+                /* .wrap header .header_wrap .header_M_left div:not(#search_icon){ float: left; } */
+                /* .wrap header .header_wrap .header_M_left .search_wrap { overflow: hidden; } */
+                /* .wrap header .header_wrap .header_M_left .search_wrap div { float: left; } */
+                .wrap header .header_wrap .header_M_left .search_wrap .search_input ul li input { border: none; border-radius: 10px; border: 1px solid #ddd; }
+                .wrap header .header_wrap .header_M_left .search_wrap .search_input ul li { float: left; }
+                .wrap header .header_wrap .header_M_left .search_wrap .search_input ul::after { content: ''; display: block; overflow: hidden; clear: both; }
+
+
+            }
+            @media (max-width:600px) {
+                .wrap header .header_wrap .header_bottom .hb_menu .swiper-slide { font-size: 14px; }
+            }
+ 
         </style>
+        <script>
+            $(document).ready( function(){
+                //header_M_left search_icon toggle
+                $('.header_M_left #search_icon').click( function(){
+                    $('.search_input,.search_button').toggle();
+                });
+            });
+        </script>
 
         <!--header {-->
-        <header class="dw_100p">
-            <div class="header_wrap">
+        <header>
+            <div class="header_wrap dw_1400px">
+                <!--mobile menu 변경-->
+                <div class="header_M_left">
+                    <div id="search_icon"><a href="#"><img src="../recover_flower/images/search_icon.png" alt="search_icon"></a></div>
+                    <div class="search_wrap">
+                        <div class="search_input">
+                            <ul>
+                                <li><input type="text" class="search_box"></li>
+                                <li><button type="submit" id="sch_submit" class="cursor"><a href="#">검색</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="header_left t_left">
+                    
                     <h1><a href="index.html"><img src="../recover_flower/images/recoverflower_logo.png" alt="recoverflower_logo"></a></h1>
                 </div>
 
                 <div class="header_middle t_center">
-                    <input type="text" class="search_box">
-                    <button type="submit" id="sch_submit" class="cursor"><a href="#"><img src="../recover_flower/images/search_icon.png" alt="search_icon"></a>
+                    <div class="search_input"><input type="text" class="search_box"></div>
+                    <div class="search_button">
+                        <button type="submit" id="sch_submit" class="cursor"><a href="#"><img src="../recover_flower/images/search_icon.png" alt="search_icon"></a>
+                    </div>
                 </div>
 
                 <div class="header_right t_right">
@@ -92,6 +179,8 @@
                         <div class="swiper-slide"><a href="#">과일바구니</a></div>
                     </div>
                 </div>
+                
+
             </div>
 
         </header>
@@ -267,10 +356,10 @@
                             <a href="#"><img src="../recover_flower/images/main_banner.png" alt="main_banner1"></a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#"><img src="http://placehold.it/1903x728/095430/ffffff?text=IMG" alt="main_banner2"></a>
+                            <a href="#"><img src="http://placehold.it/1903x724/095430/ffffff?text=IMG" alt="main_banner2"></a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#"><img src="http://placehold.it/1903x728/041d11/ffffff?text=IMG" alt="main_banner3"></a>
+                            <a href="#"><img src="http://placehold.it/1903x724/041d11/ffffff?text=IMG" alt="main_banner3"></a>
                         </div>
             
                     </div>
@@ -300,8 +389,6 @@
                 .wrap .contents .c_middle .c_middle_tab { margin-top: 55px; margin-bottom: 60px;  }
                 .wrap .contents .c_middle .tabcontent .cm_top { margin-bottom: 20px; }
                 .wrap .contents .c_middle .tabcontent .cm_top h2 { font-size: 28px; }
-
-
 
                 </style>
             
@@ -696,7 +783,7 @@
                 <div class="cb_middle">
                     <div class="cbm_middle">
                         <ul class="col-md-12 col-lg-4">
-                            <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_1img"></a></li>
+                            <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/section2.png" alt="flower_section2_1img"></a></li>
                             <li><p>축하화환3단</p></li>
                             <li>
                                 <h3>
@@ -738,39 +825,68 @@
         </div>
         <!--} contents-->
 
+        <style>
+            .wrap footer { background-color: #3e3e3e; color: white; }
+            /* .wrap footer .ft_wrap .ft_top { margin-left: 15px; } */
+            /* .wrap footer .ft_wrap .ft_top ul li { float: left; width: 15%; }
+            .wrap footer .ft_wrap .ft_top ul::after { content: ''; display: block; overflow: hidden; clear: both; } */
+            .wrap footer .ft_wrap .ft_middle { padding-top: 20px; padding-bottom: 10%; }
+            /* .wrap footer .ft_wrap .ft_middle div { float: left; width: 33.3%; }
+            .wrap footer .ft_wrap .ft_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
+            .wrap footer .ft_wrap .ft_middle ul li { margin-bottom: 10px; }
+            .wrap footer .ft_wrap .ft_middle .ftm_right ul li { margin-bottom: 10px; }
+            .wrap footer .ft_wrap .ft_middle .ftm_left { width: 15%; } */
+            .wrap footer .ft_wrap .ft_middle { overflow: hidden; }
+            .wrap footer .ft_wrap .ft_middle ul li { margin-bottom: 10px; }
+            .wrap footer .ft_wrap .ft_top .ft_menu .swiper-slide { background-color: #3e3e3e; }
+            .wrap footer .ft_wrap .ft_top .ft_menu .swiper-slide a { color: white; }
+            .wrap footer .ft_wrap .ft_middle .ftm_left a img { width: 65%; }
+
+            @media (max-width:992px) {
+                .wrap footer .ft_wrap .ft_middle .ftm_left { margin-bottom: 10px; }
+                .wrap footer .ft_wrap .ft_middle .ftm_middle { margin-bottom: 10px; }
+                .wrap footer .ft_wrap .ft_middle .ftm_left a img { width: 155px; } 
+            }
+
+        </style>
+
         <!--footer {-->
         <footer>
             <!--ft_wrap {-->
             <div class="ft_wrap dw_1400px">
-                <div class="ft_top">
-                    <ul>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">서비스소개</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">마이페이지</a></li>
-                    </ul>
+                <div class="ft_top t_center ft_menu-container">
+                    <div class="ft_menu swiper-wrapper pt20px pb20px t_left">
+                        <div class="swiper-slide"><a href="#">회사소개</a></div>
+                        <div class="swiper-slide"><a href="#">서비스소개</a></div>
+                        <div class="swiper-slide"><a href="#">서비스이용약관</a></div>
+                        <div class="swiper-slide"><a href="#">개인정보처리방침</a></div>
+                        <div class="swiper-slide"><a href="#">이벤트</a></div>
+                        <div class="swiper-slide"><a href="#">공지사항</a></div>
+                    </div>
                 </div>
 
-                <div class="ft_left">
-                    <a href="#"><img src="../recover_flower/images/recoverflower_logo.png" alt="recoverflower_logo"></a>
-                </div>
-                
                 <div class="ft_middle">
-                    <ul>
-                        <li><strong>주식회사 예원엠엔디</strong></li>
-                        <li>주소: 경기도 광명시 오리로길 619번길 11 (하안동 232번지) 예원이케이빌딩</li>
-                        <li>사업자 등록번호 : 835-87-00673 대표 : 서제학</li>
-                        <li>팩스 : 02-897-8952  개인정보 보호책임자 : 김영민  부가통신사업신고번호 : 제2017-경기광명-0300호</li>
-                        <li>Copyright © 2018 주식회사 예원엠앤디. All Rights Reserved.</li>
-                    </ul>
-                </div>
+                    <div class="ftm_left col-xs-12 col-md-3">
+                        <a href="#"><img src="../recover_flower/images/recoverflower_ft_logo.png" alt="recoverflower_logo"></a>
+                    </div>
+                    
+                    <div class="ftm_middle col-xs-12 col-md-6">
+                        <ul>
+                            <li><strong>주식회사 예원엠엔디</strong></li>
+                            <li>주소: 경기도 광명시 오리로길 619번길 11 (하안동 232번지) 예원이케이빌딩</li>
+                            <li>사업자 등록번호 : 835-87-00673 대표 : 서제학</li>
+                            <li>팩스 : 02-897-8952  개인정보 보호책임자 : 김영민  부가통신사업신고번호 : 제2017-경기광명-0300호</li>
+                            <li>Copyright © 2018 주식회사 예원엠앤디. All Rights Reserved.</li>
+                        </ul>
+                    </div>
 
-                <div class="ft_right">
-                    <ul>
-                        <li><p>고객만족센터</p></li>
-                        <li>평일: 9:00 - 18:00 / 점심시간 12:00 - 13:00 </li>
-                        <li>문의전화 <strong>02-2616-8952</strong></li>
-                    </ul>
+                    <div class="ftm_right col-xs-12 col-md-3">
+                        <ul>
+                            <li><p>고객만족센터</p></li>
+                            <li>평일: 9:00 - 18:00 / 점심시간 12:00 - 13:00 </li>
+                            <li>문의전화 <strong>02-2616-8952</strong></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>

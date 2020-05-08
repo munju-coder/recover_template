@@ -24,7 +24,7 @@
     }
 .img-thumbnail { border: none; border-radius: 0; padding: 0; }
 
-.tab_active { display: block; }
 .tabcontent { display: none; }
+.tab_active { display: block; }
 
 .c_middle,.c_bottom { overflow: hidden; }

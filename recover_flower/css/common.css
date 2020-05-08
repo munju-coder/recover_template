@@ -45,6 +45,8 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 /*padding*/
 .pt3per { padding-top: 3%; }
 .pt10px { padding-top: 10px; }
+.pt20px { padding-top: 20px; }
 
 .pb3per { padding-bottom: 3%; }
 .pb10px { padding-bottom: 10px; }
+.pb20px { padding-bottom: 20px; }
