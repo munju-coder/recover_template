@@ -135,7 +135,29 @@ $(document).ready( function(){
     $('.menu_icon,.menu_bg,.close_btn').click( function(){
         $(".left_menu,.menu_bg,.close_btn").toggle()
     });
-    
+
+    //header_M_left search_icon toggle
+    $('.header_M_left #search_icon').click( function(){
+        $('.search_input,.search_button').toggle();
+        $('.hb_menu').css({'padding-top':'10px'});
+    });
+
+    //left_tab menu
+    $('.left_tablinks').each( function(){
+        $(this).click( function(){
+
+            $(".left_tablinks").removeClass("catego_active");
+            $(this).addClass("catego_active");
+
+            $(".left_tab").removeClass("left_tab_active");
+            $(".left_tab").css("display", "none");
+
+            var chk = $(this).attr("tab_name");
+            $('#' + chk).css("display", "block");
+        });
+
+    });
+
 
 
 });

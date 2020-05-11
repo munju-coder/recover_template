@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,127 +28,16 @@
     <div class="wrap">
         <!--menu click bg call-->
         <div class="menu_bg"></div>
-        <style>
-            .wrap header { overflow: hidden; }
-            .wrap header .header_wrap .header_M_left { display: none; }
-            .wrap header .header_wrap { padding-top: 40px; }
-            .wrap header .header_left, .wrap header .header_middle, .wrap header .header_right  { float: left; width: 33%; }
-            .wrap header::after { content: ''; display: block; overflow: hidden; clear: both; } 
-            .wrap header .header_wrap .header_right ul li { float: left; width: 13%; }
-            .wrap header .header_wrap .header_right ul .header_login { margin-left: 31%; margin-right: 15px; }
-
-            .wrap header .header_wrap .header_right ul::after { content: ''; display: block; overflow: hidden; clear: both; }
-            .wrap header .header_wrap .header_middle { width: 33%; border-radius: 10px; border: 2px solid #3f3734; background-color: white; }
-
-            .wrap header .header_wrap .header_middle div {float:left;}
-            .wrap header .header_wrap .header_middle div:first-child {width:80%;}
-            .wrap header .header_wrap .header_middle div:last-child {width:20%;}
-
-
-            .wrap header .header_wrap .header_middle .search_box 
-            { float: left; width: 80%; height: 38px; background-color: white; border: none; border-right: transparent; border-radius: 10px; }
-            .wrap header .header_wrap .header_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
-            .wrap header .header_wrap .header_middle button { float: right; width: 50px; height: 38px; border: none; background-color: white; border-radius: 10px;  }
-            .wrap header .header_wrap .header_bottom .hb_menu { padding-top: 30px; margin-bottom: 20px; }
-           
-            .wrap .contents .c_top .main-container { position: relative; }
-            .wrap .contents .c_top .main-container .swiper-button-prev,.wrap .contents .c_top .main-container .swiper-button-next {  color: white; }
-            .wrap .contents .c_top .main-container .swiper-button-prev { left: 75px; }
-            .wrap .contents .c_top .main-container .swiper-button-next { right: 75px; }
-            .wrap .contents .c_top .main-container .swiper-button-prev::after,.wrap .contents .c_top .main-container .swiper-button-next::after { font-size: 75px; }
-
-            
-            .wrap footer { overflow: hidden; }
-            
-
-            @media (max-width: 1430px) {
-                .dw_1400px { width: 90%; }
-                .wrap header .header_left, .wrap header .header_middle, .wrap header .header_right { width: 30%; }
-                .wrap header .header_wrap .header_right ul .header_login { margin-left: 15%; }
-                .wrap header .header_right { margin-left: 7%; }
-                .wrap header .header_wrap .header_right ul .header_login { margin-right: 10px; }
-                .wrap header .header_wrap .header_right ul li { width: 16%; font-size: 13px; }
-                .wrap header .header_wrap .header_right ul li img { width: 33px; }
-            
-
-            }
-            @media (max-width: 1110px) {
-
-                .wrap header .header_right { width: 13%; margin-left: 24%; }
-                .wrap header .header_wrap .header_right ul .header_login,.wrap header .header_wrap .header_right ul .header_join { display: none; }
-                .wrap header .header_wrap .header_right ul li { width: 20%; margin-right: 20px; }
-                .wrap header .header_wrap .header_right ul .menu_icon { margin-right: 0; }
-
-                .wrap header .header_wrap .header_middle .search_box,.wrap header .header_wrap .header_middle button { height: 30px;}
-                 
-
-            }
-
-            @media (max-width: 870px) {
-                .wrap header .header_wrap .header_left h1 a img { width: 55%; }
-                .wrap header .header_right { width: 18%; margin-left: 19%; }
-            }
-            @media (max-width: 768px) {
-                .wrap header .header_wrap .header_middle { display: none; }
-                .wrap header .header_right { margin-left: 0; }
-                .wrap header .header_wrap .header_right ul li:not(.menu_icon) { display: none; }
-                .wrap header .header_wrap .header_M_left { display: block; float: left; width: 33%; }
-                .wrap header .header_wrap::after { content: ''; display: block; overflow: hidden; clear: both; }
-                .wrap header .header_wrap .header_left { float: left; width: 4%; }
-                .wrap header .header_right { float: right; width: 8%; }
-
-                .wrap header .header_wrap .header_M_left .search_input /* ,.wrap header .header_wrap .header_M_left .search_button */ { display: none; }
-
-                .wrap header .header_wrap .header_left { width: 33%; text-align: center; }
-                .wrap header .header_wrap .header_left h1 a img { width: 100%; }
-
-                /* .wrap header .header_wrap .header_M_left .search_input input
-                { float: left; width: 80%; height: 38px; background-color: white; border: none; border-right: transparent; border-radius: 10px; }
-                .wrap header .header_wrap .header_M_left .search_input::after { content: ''; display: block; overflow: hidden; clear: both; }
-                .wrap header .header_wrap .header_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
-                .wrap header .header_wrap .header_middle button { float: right; width: 50px; height: 38px; border: none; background-color: white; border-radius: 10px;  } */
-                /* .wrap header .header_wrap .header_M_left div:not(#search_icon){ float: left; } */
-                /* .wrap header .header_wrap .header_M_left .search_wrap { overflow: hidden; } */
-                /* .wrap header .header_wrap .header_M_left .search_wrap div { float: left; } */
-                .wrap header .header_wrap .header_M_left .search_wrap .search_input ul li input { border: none; border-radius: 10px; border: 1px solid #ddd; }
-                .wrap header .header_wrap .header_M_left .search_wrap .search_input ul li { float: left; }
-                .wrap header .header_wrap .header_M_left .search_wrap .search_input ul::after { content: ''; display: block; overflow: hidden; clear: both; }
-
-
-            }
-            @media (max-width:600px) {
-                .wrap header .header_wrap .header_bottom .hb_menu .swiper-slide { font-size: 14px; }
-            }
- 
-        </style>
-        <script>
-            $(document).ready( function(){
-                //header_M_left search_icon toggle
-                $('.header_M_left #search_icon').click( function(){
-                    $('.search_input,.search_button').toggle();
-                });
-            });
-        </script>
-
         <!--header {-->
         <header>
             <div class="header_wrap dw_1400px">
                 <!--mobile menu 변경-->
                 <div class="header_M_left">
                     <div id="search_icon"><a href="#"><img src="../recover_flower/images/search_icon.png" alt="search_icon"></a></div>
-                    <div class="search_wrap">
-                        <div class="search_input">
-                            <ul>
-                                <li><input type="text" class="search_box"></li>
-                                <li><button type="submit" id="sch_submit" class="cursor"><a href="#">검색</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="header_left t_left">
-                    
-                    <h1><a href="index.html"><img src="../recover_flower/images/recoverflower_logo.png" alt="recoverflower_logo"></a></h1>
+                    <a href="#"><img src="../recover_flower/images/recoverflower_logo.png" alt="recoverflower_logo"></a>    
                 </div>
 
                 <div class="header_middle t_center">
@@ -160,7 +49,7 @@
 
                 <div class="header_right t_right">
                     <ul>
-                        <li class="header_login mt10px"><a href="#">로그인</a></li>
+                        <li class="header_login mt10px"><a href="../recover_flower/login/login.html">로그인</a></li>
                         <li class="header_join mt10px"><a href="#">회원가입</a></li>
                         <li><a href="#"><img src="../recover_flower/images/cart_icon.png" alt="cart_icon"></a></li>
                         <li><a href="#"><img src="../recover_flower/images/mypage_icon.png" alt="mypage_icon"></a></li>
@@ -169,6 +58,12 @@
                 </div>
 
                 <div class="header_bottom main_menu-container">
+                    <div class="search_wrap t_center">
+                        <div class="search_input">
+                            <input type="text" class="search_box"><button type="submit" id="sch_submit" class="cursor f14">검색<!-- </li> -->
+                        </div>
+                    </div>
+
                     <div class="hb_menu swiper-wrapper">
                         <div class="swiper-slide"><a href="#">꽃바구니</a></div>
                         <div class="swiper-slide"><a href="#">개업화분</a></div>
@@ -182,55 +77,10 @@
                         <div class="swiper-slide"><a href="#">과일바구니</a></div>
                     </div>
                 </div>
-                
-
             </div>
-
         </header>
         <!--} header-->
-
-
-        <style>
-            .wrap .menu_bg {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.486);
-                z-index: 11;    
-            }
-            .wrap .left_menu { position: absolute; top: 0; height: 100%; display: none; }
-            .wrap .left_menu .left_menu_wrap {
-                width: 260px;
-                height: 100%;
-                background-color: white;
-                padding: 15px;
-                position: absolute;
-                z-index: 100;
-
-            }
-            .wrap .left_menu .left_menu_wrap .login_wrap { position: relative; margin: 0 0 10px; padding: 10px 0; }
-            .wrap .left_menu .close_btn {
-                position: absolute;
-                top: 0;
-                z-index: 11;
-                left: 260px;
-                background-color: #09240f;
-                padding: 10px 15px;
-                display: none;
-            }
-            .wrap .left_menu .close_btn a i { color: white; font-size: 20px; }
-            .wrap .left_menu .left_menu_wrap .login_wrap .login_form_wrap form fieldset input { width: 100%; padding: 5px; border: 1px solid rgb(168, 168, 168); }
-            .wrap .left_menu .left_menu_wrap .login_wrap .login_form_wrap form fieldset #login_id { margin-bottom: 10px; }
-            .wrap .left_menu .left_menu_wrap .login_wrap .login_form_wrap form fieldset #login_submit { background-color: rgb(9, 36, 15); color: white; padding: 10px; border: none; }
-            .wrap .left_menu .catego_menu { width: 100%; margin: 0 auto; max-width: 210px; }
-
-           
-
-
-        </style>
+        
         <!--{ aside left_menu-->
         <aside class="left_menu">
             <div class="close_btn">
@@ -248,9 +98,11 @@
                                 <input type="password" name="mb_password" id="login_pw" placeholder="비밀번호" maxlength="20">
 
                                 <div id="login_checkbox">
-                                    <input type="checkbox" id="auto_login" name="auto_login" value="1">
-                                    <label for="auto_login" id="auto_login_label">자동로그인</label>
-                                    <label for="join_login" id="join_login_label">회원가입</label>
+                                    <ul class="mtb10px p5px">
+                                        <li><input type="checkbox" id="auto_login" name="auto_login" value="1"></li>
+                                        <li class="f14 mt3px"><label for="auto_login" id="auto_login_label"><a href="#">자동로그인</a></label></li>
+                                        <li class="f14 mt3px"><label for="join_login" id="join_login_label"><a href="#">회원가입</a></label></li>
+                                    </ul>
                                 </div>
                                 
                                 <input type="submit" id="login_submit" value="로그인" class="btn_submit ft_600">
@@ -294,49 +146,49 @@
                 <!--catego_menu {-->
                 <div class="catego_menu t_center">
                     <div class="left_tab_subject">
-                        <ul>
-                            <li class="left_tablinks cursor catego_active" tab_name="left_tab1"><a href="#">카테고리</a></li>
-                            <li class="left_tablinks cursor" tab_name="left_tab2"><a href="#">프로모션</a></li>
-                            <li class="left_tablinks cursor" tab_name="left_tab3"><a href="#">마이페이지</a></li>
+                        <ul class="mb10px">
+                            <li class="left_tablinks f14 cursor catego_active" tab_name="left_tab1"><a href="#">카테고리</a></li>
+                            <li class="left_tablinks f14 cursor" tab_name="left_tab2"><a href="#">프로모션</a></li>
+                            <li class="left_tablinks f14 cursor" tab_name="left_tab3"><a href="#">마이페이지</a></li>
                         </ul>
                     </div>
                 
                     <div class="left_tab left_tab_active" id="left_tab1">
-                        <ul>
-                            <li><a href="#">꽃바구니</a></li>
-                            <li><a href="#">꽃다발</a></li>
-                            <li><a href="#">개업화분</a></li>
-                            <li><a href="#">축하화환</a></li>
-                            <li><a href="#">근조화환</a></li>
-                            <li><a href="#">공기정화식물</a></li>
-                            <li><a href="#">동양란</a></li>
-                            <li><a href="#">서양란</a></li>
-                            <li><a href="#">분재</a></li>
-                            <li><a href="#">과일바구니</a></li>
+                        <ul class="t_left">
+                            <li class="mb5per f14"><a href="#">꽃바구니</a></li>
+                            <li class="mb5per f14"><a href="#">꽃다발</a></li>
+                            <li class="mb5per f14"><a href="#">개업화분</a></li>
+                            <li class="mb5per f14"><a href="#">축하화환</a></li>
+                            <li class="mb5per f14"><a href="#">근조화환</a></li>
+                            <li class="mb5per f14"><a href="#">공기정화식물</a></li>
+                            <li class="mb5per f14"><a href="#">동양란</a></li>
+                            <li class="mb5per f14"><a href="#">서양란</a></li>
+                            <li class="mb5per f14"><a href="#">분재</a></li>
+                            <li class="f14"><a href="#">과일바구니</a></li>
                         </ul>
                     </div>
                 
                     <div class="left_tab" id="left_tab2">
-                        <ul>
-                            <li><a href="#">창업/개업</a></li>
-                            <li><a href="#">출산/문병방문</a></li>
-                            <li><a href="#">생일/기념일</a></li>
-                            <li><a href="#">결혼/회갑/칠순</a></li>
-                            <li><a href="#">전시회/행사</a></li>
-                            <li><a href="#">졸업/입학</a></li>
-                            <li><a href="#">할인상품</a></li>
+                        <ul class="t_left">
+                            <li class="mb5per f14"><a href="#">창업/개업</a></li>
+                            <li class="mb5per f14"><a href="#">출산/문병방문</a></li>
+                            <li class="mb5per f14"><a href="#">생일/기념일</a></li>
+                            <li class="mb5per f14"><a href="#">결혼/회갑/칠순</a></li>
+                            <li class="mb5per f14"><a href="#">전시회/행사</a></li>
+                            <li class="mb5per f14"><a href="#">졸업/입학</a></li>
+                            <li class="f14"><a href="#">할인상품</a></li>
                         </ul>
                     </div>
                 
                     <div class="left_tab" id="left_tab3">
-                        <ul>
-                            <li><a href="#">마이페이지</a></li>
-                            <li><a href="#">주문내역</a></li>
-                            <li><a href="#">주문배송조회</a></li>
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">1:1문의</a></li>
-                            <li><a href="#">입금계좌안내</a></li>
-                            <li><a href="#">증빙서류신청/출력</a></li> 
+                        <ul class="t_left">
+                            <li class="mb5per f14"><a href="#">마이페이지</a></li>
+                            <li class="mb5per f14"><a href="#">주문내역</a></li>
+                            <li class="mb5per f14"><a href="#">주문배송조회</a></li>
+                            <li class="mb5per f14"><a href="../recover_flower/board/info_list.html">공지사항</a></li>
+                            <li class="mb5per f14"><a href="../recover_flower/board/info_write.html">1:1문의</a></li>
+                            <li class="mb5per f14"><a href="#">입금계좌안내</a></li>
+                            <li class="f14"><a href="#">증빙서류신청/출력</a></li> 
                         </ul>
                     </div>
                     
@@ -345,7 +197,6 @@
                     
             </div>
             <!--} left_menu_wrap-->
-            
         </aside>
         <!--} aside menu-->
 
@@ -376,30 +227,14 @@
             <div class="c_middle dw_1400px">
                 <div class="c_middle_tab sub_menu-container">
                     <div class="swiper-wrapper">
-                        <button class="tablinks swiper-slide sub_menu_active" tab_name="tab1">축하화환</button>
-                        <button class="tablinks swiper-slide" tab_name="tab2">꽃다발</button>
-                        <button class="tablinks swiper-slide" tab_name="tab3">꽃바구니</button>
-                        <button class="tablinks swiper-slide" tab_name="tab4">관엽식물</button>
-                        <button class="tablinks swiper-slide" tab_name="tab5">동양란</button>
-                        <button class="tablinks swiper-slide" tab_name="tab6">서양란</button>
+                        <button class="tablinks swiper-slide f20 sub_menu_active" tab_name="tab1">축하화환</button>
+                        <button class="tablinks swiper-slide f20" tab_name="tab2">꽃다발</button>
+                        <button class="tablinks swiper-slide f20" tab_name="tab3">꽃바구니</button>
+                        <button class="tablinks swiper-slide f20" tab_name="tab4">관엽식물</button>
+                        <button class="tablinks swiper-slide f20" tab_name="tab5">동양란</button>
+                        <button class="tablinks swiper-slide f20" tab_name="tab6">서양란</button>
                     </div>
                 </div>
-
-                <style>
-
-                .wrap .contents .c_middle .c_middle_tab .swiper-wrapper button  { padding: 11px; border: none; background-color: #898989; color: white; font-size: 20px; }
-                .wrap .contents .c_middle .c_middle_tab .swiper-wrapper .sub_menu_active { background-color: #403a3a; color: white; }
-                .wrap .contents .c_middle .c_middle_tab { margin-top: 55px; margin-bottom: 60px;  }
-                .wrap .contents .c_middle .tabcontent .cm_top { margin-bottom: 20px; }
-                .wrap .contents .c_middle .tabcontent .cm_top h2 { font-size: 28px; }
-
-                .wrap .contents .c_middle .tabcontent .cm_middle ul li { text-align: center; }
-                .wrap .contents .c_middle .tabcontent .cm_middle ul li ul li:first-child { margin-bottom: 20px; }
-                .wrap .contents .c_middle .tabcontent .cm_middle ul li ul li p { margin-bottom: 10px; }
-                .wrap .contents .c_middle .tabcontent .cm_middle ul li ul li:last-child p { margin-bottom: 20px; }
-                .wrap .contents .c_middle .tabcontent .cm_middle ul li ul li strong { display: inline-block; margin-bottom: 10px; font-weight: 600; }
-
-                </style>
             
                 <div class="tabcontent tab_active" id="tab1">
                     <div class="cm_top t_center">
@@ -463,12 +298,14 @@
                             </li>
                         </ul>
                     </div>
+                </div>
 
-                    <div class="tabcontent" id="tab2">
-                        <div class="cm_top t_center">
-                            <h2>꽃다발</h2>
-                        </div>
-                        
+                <div class="tabcontent" id="tab2">
+                    <div class="cm_top t_center">
+                        <h2>꽃다발</h2>
+                    </div>
+
+                    <div class="cm_middle">
                         <ul>
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
@@ -478,7 +315,7 @@
                                     <li><p>1,334P</p></li>
                                 </ul>
                             </li>
-
+    
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
                                     <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
@@ -487,7 +324,7 @@
                                     <li><p>1,334P</p></li>
                                 </ul>
                             </li>
-
+    
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
                                     <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
@@ -496,7 +333,7 @@
                                     <li><p>1,334P</p></li>
                                 </ul>
                             </li>
-
+    
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
                                     <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
@@ -505,7 +342,7 @@
                                     <li><p>1,334P</p></li>
                                 </ul>
                             </li>
-
+    
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
                                     <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
@@ -514,7 +351,7 @@
                                     <li><p>1,334P</p></li>
                                 </ul>
                             </li>
-
+    
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
                                     <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section1_img.png" alt="flower_section1_img"></a></li>
@@ -526,11 +363,14 @@
                         </ul> 
                     </div>
 
-                    <div class="tabcontent" id="tab3">
-                        <div class="cm_top t_center">
-                            <h2>꽃바구니</h2>
-                        </div>
+                </div>
 
+                <div class="tabcontent" id="tab3">
+                    <div class="cm_top t_center">
+                        <h2>꽃바구니</h2>
+                    </div>
+
+                    <div class="cm_middle">
                         <ul>
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
@@ -587,12 +427,14 @@
                             </li>
                         </ul> 
                     </div>
+                </div>
 
-                    <div class="tabcontent" id="tab4">
-                        <div class="cm_top t_center">
-                            <h2>관엽식물</h2>
-                        </div> 
+                <div class="tabcontent" id="tab4">
+                    <div class="cm_top t_center">
+                        <h2>관엽식물</h2>
+                    </div> 
 
+                    <div class="cm_middle">
                         <ul>
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
@@ -649,12 +491,14 @@
                             </li>
                         </ul> 
                     </div>
+                </div>
 
-                    <div class="tabcontent" id="tab5">
-                        <div class="cm_top t_center">
-                            <h2>동양란</h2>
-                        </div>
-                        
+                <div class="tabcontent" id="tab5">
+                    <div class="cm_top t_center">
+                        <h2>동양란</h2>
+                    </div>
+                    
+                    <div class="cm_middle">
                         <ul>
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
@@ -711,12 +555,14 @@
                             </li>
                         </ul> 
                     </div>
+                </div>
 
-                    <div class="tabcontent" id="tab6">
-                        <div class="cm_top t_center">
-                            <h2>서양란</h2>
-                        </div>
+                <div class="tabcontent" id="tab6">
+                    <div class="cm_top t_center">
+                        <h2>서양란</h2>
+                    </div>
 
+                    <div class="cm_middle">
                         <ul>
                             <li class="col-xs-6 col-md-2">
                                 <ul>                           
@@ -773,70 +619,55 @@
                             </li>
                         </ul> 
                     </div>
-
                 </div>
-
-                
 
             </div>
             <!--} c_middle-->
 
-            <style>
-
-                .wrap .contents .c_bottom .cb_top { margin-top: 80px; margin-bottom: 25px; }
-                .wrap .contents .c_bottom .cb_top h2 { font-size: 28px; }
-                .wrap .contetns .c_bottom .cb_middle .cbm_middle .cbmm_pro li { margin-top: 10px; }
-                .wrap .contetns .c_bottom .cb_middle .cbm_middle .cbmm_pro li p { margin-bottom: 10px; }
-                .wrap .contetns .c_bottom .cb_middle .cbm_middle .cbmm_pro li h3 > del { display: inline-block; color: red; margin-bottom: 10px; margin-right: 10px; }
-                .wrap .contetns .c_bottom .cb_middle .cbm_middle .cbmm_pro li:last-child p { margin-bottom: 20px; }
-                
-                
-
-            </style>
             <!--c_bottom {-->
-            <div class="c_bottom dw_1400px">
+            <div class="c_bottom dw_1400px mb3per">
                 <div class="cb_top t_center">
                     <h2>리커버플라워 오늘의 특가</h2>
                 </div>
 
                 <div class="cb_middle">
-                    <div class="cbm_middle">
-                        <ul class="col-md-12 col-lg-4 t_center cbmm_pro">
-                            <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/section2.png" alt="flower_section2_1img"></a></li>
-                            <li><p>축하화환3단</p></li>
-                            <li>
-                                <h3>
-                                    <del>140,700원</del>
-                                    120,700원
-                                </h3>
-                            </li>
-                            <li><p>10,334P</p></li>
-                        </ul>
+                    <!-- <div class="cbm_middle"> -->
+                    <ul class="col-md-12 col-lg-4 t_center">
+                        <li class="mt10px mb10px"><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_1img"></a></li>
+                        <li class="mt20px mb10px"><p>축하화환3단</p></li>
+                        <li class="mb10px f18">
+                            <h3 class="fw_bold">
+                                <del class="red_color f16 fw_initial">140,700원</del>
+                                120,700원
+                            </h3>
+                        </li>
+                        <li class="mb10px grey_color"><p>10,334P</p></li>
+                    </ul>
 
-                        <ul class="col-md-12 col-lg-4 t_center">
-                            <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_2img"></a></li>
-                            <li><p>축하화환3단</p></li>
-                            <li>
-                                <h3>
-                                    <del>140,700원</del>
-                                    120,700원
-                                </h3>
-                            </li>
-                            <li><p>10,334P</p></li>
-                        </ul>
+                    <ul class="col-md-12 col-lg-4 t_center">
+                        <li class="mt10px mb10px"><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_2img"></a></li>
+                        <li class="mt20px mb10px"><p>축하화환3단</p></li>
+                        <li class="mb10px f18">
+                            <h3 class="fw_bold">
+                                <del class="red_color f16 fw_initial">140,700원</del>
+                                120,700원
+                            </h3>
+                        </li>
+                        <li class="mb10px grey_color"><p>10,334P</p></li>
+                    </ul>
 
-                        <ul class="col-md-12 col-lg-4 t_center">
-                            <li><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_3img"></a></li>
-                            <li><p>축하화환3단</p></li>
-                            <li>
-                                <h3>
-                                    <del>140,700원</del>
-                                    120,700원
-                                </h3>
-                            </li>
-                            <li><p>10,334P</p></li>
-                        </ul>
-                    </div>
+                    <ul class="col-md-12 col-lg-4 t_center">
+                        <li class="mt10px mb10px"><a href="#"><img class="img-thumbnail" src="../recover_flower/images/flower_section2_img.png" alt="flower_section2_3img"></a></li>
+                        <li class="mt20px mb10px"><p>축하화환3단</p></li>
+                        <li class="mb10px f18">
+                            <h3 class="fw_bold ">
+                                <del class="red_color f16 fw_initial">140,700원</del>
+                                120,700원
+                            </h3>
+                        </li>
+                        <li class="mb20px grey_color"><p>10,334P</p></li>
+                    </ul>
+                    <!-- </div> -->
                 </div>
 
             </div>
@@ -844,43 +675,18 @@
         </div>
         <!--} contents-->
 
-        <style>
-            .wrap footer { background-color: #3e3e3e; color: white; }
-            /* .wrap footer .ft_wrap .ft_top { margin-left: 15px; } */
-            /* .wrap footer .ft_wrap .ft_top ul li { float: left; width: 15%; }
-            .wrap footer .ft_wrap .ft_top ul::after { content: ''; display: block; overflow: hidden; clear: both; } */
-            .wrap footer .ft_wrap .ft_middle { padding-top: 20px; padding-bottom: 10%; }
-            /* .wrap footer .ft_wrap .ft_middle div { float: left; width: 33.3%; }
-            .wrap footer .ft_wrap .ft_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
-            .wrap footer .ft_wrap .ft_middle ul li { margin-bottom: 10px; }
-            .wrap footer .ft_wrap .ft_middle .ftm_right ul li { margin-bottom: 10px; }
-            .wrap footer .ft_wrap .ft_middle .ftm_left { width: 15%; } */
-            .wrap footer .ft_wrap .ft_middle { overflow: hidden; }
-            .wrap footer .ft_wrap .ft_middle ul li { margin-bottom: 10px; }
-            .wrap footer .ft_wrap .ft_top .ft_menu .swiper-slide { background-color: #3e3e3e; }
-            .wrap footer .ft_wrap .ft_top .ft_menu .swiper-slide a { color: white; }
-            .wrap footer .ft_wrap .ft_middle .ftm_left a img { width: 65%; }
-
-            @media (max-width:992px) {
-                .wrap footer .ft_wrap .ft_middle .ftm_left { margin-bottom: 10px; }
-                .wrap footer .ft_wrap .ft_middle .ftm_middle { margin-bottom: 10px; }
-                .wrap footer .ft_wrap .ft_middle .ftm_left a img { width: 155px; } 
-            }
-
-        </style>
-
         <!--footer {-->
         <footer>
             <!--ft_wrap {-->
             <div class="ft_wrap dw_1400px">
                 <div class="ft_top t_center ft_menu-container">
                     <div class="ft_menu swiper-wrapper pt20px pb20px t_left">
-                        <div class="swiper-slide"><a href="#">회사소개</a></div>
+                        <div class="swiper-slide"><a href="../recover_flower/contents/contents.html">회사소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스이용약관</a></div>
                         <div class="swiper-slide"><a href="#">개인정보처리방침</a></div>
                         <div class="swiper-slide"><a href="#">이벤트</a></div>
-                        <div class="swiper-slide"><a href="#">공지사항</a></div>
+                        <div class="swiper-slide"><a href="../recover_flower/board/info_list.html">공지사항</a></div>
                     </div>
                 </div>
 
@@ -890,7 +696,7 @@
                     </div>
                     
                     <div class="ftm_middle col-xs-12 col-md-6">
-                        <ul>
+                        <ul class="ftmm_top">
                             <li><strong>주식회사 예원엠엔디</strong></li>
                             <li>주소: 경기도 광명시 오리로길 619번길 11 (하안동 232번지) 예원이케이빌딩</li>
                             <li>사업자 등록번호 : 835-87-00673 대표 : 서제학</li>
@@ -901,9 +707,9 @@
 
                     <div class="ftm_right col-xs-12 col-md-3">
                         <ul>
-                            <li><p>고객만족센터</p></li>
-                            <li>평일: 9:00 - 18:00 / 점심시간 12:00 - 13:00 </li>
-                            <li>문의전화 <strong>02-2616-8952</strong></li>
+                            <li class="f22 fw_bold mb20px"><p>고객만족센터</p></li>
+                            <li class="f16 mb20px">평일: 9:00 - 18:00 / 점심시간 12:00 - 13:00 </li>
+                            <li class="f18 fw_bold">문의전화 <strong>02-2616-8952</strong></li>
                         </ul>
                     </div>
                 </div>

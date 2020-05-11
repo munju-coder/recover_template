@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리커버플라워</title>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--goolge webfont-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet"> 
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="../js/swiper.js"></script>
+    <!--js-->
+    <script src="../js/main.js"></script>
+    <!--style sheet-->
+    <link rel="stylesheet" href="../css/import.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+    <!--wrap {-->
+    <div class="wrap">
+        <!--menu click bg call-->
+        <div class="menu_bg"></div>
+        <!--header {-->
+        <header>
+            <div class="header_wrap dw_1400px">
+                <!--mobile menu 변경-->
+                <div class="header_M_left">
+                    <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
+                </div>
+
+                <div class="header_left t_left">
+                    <a href="#"><img src="..//images/recoverflower_logo.png" alt="recoverflower_logo"></a>    
+                </div>
+
+                <div class="header_middle t_center">
+                    <div class="search_input"><input type="text" class="search_box"></div>
+                    <div class="search_button">
+                        <button type="submit" id="sch_submit" class="cursor"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a>
+                    </div>
+                </div>
+
+                <div class="header_right t_right">
+                    <ul>
+                        <li class="header_login mt10px"><a href="#">로그인</a></li>
+                        <li class="header_join mt10px"><a href="#">회원가입</a></li>
+                        <li><a href="#"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
+                        <li><a href="#"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
+                        <li class="menu_icon"><a href="#"><img src="../images/menu_icon.png" alt="menu_icon"></a></li>
+                    </ul>
+                </div>
+
+                <div class="header_bottom main_menu-container">
+                    <div class="search_wrap t_center">
+                        <div class="search_input">
+                            <input type="text" class="search_box"><button type="submit" id="sch_submit" class="cursor f14">검색<!-- </li> -->
+                        </div>
+                    </div>
+
+                    <div class="hb_menu swiper-wrapper">
+                        <div class="swiper-slide"><a href="#">꽃바구니</a></div>
+                        <div class="swiper-slide"><a href="#">개업화분</a></div>
+                        <div class="swiper-slide"><a href="#">축하화환</a></div>
+                        <div class="swiper-slide"><a href="#">근조화환</a></div>
+                        <div class="swiper-slide"><a href="#">공기정화식물</a></div>
+                        <div class="swiper-slide"><a href="#">동양란</a></div>
+                        <div class="swiper-slide"><a href="#">서양란</a></div>
+                        <div class="swiper-slide"><a href="#">꽃다발</a></div>
+                        <div class="swiper-slide"><a href="#">분재</a></div>
+                        <div class="swiper-slide"><a href="#">과일바구니</a></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--} header-->
+        
+        <!--{ aside left_menu-->
+        <aside class="left_menu">
+            <div class="close_btn">
+                <a href="#"><i class="fas fa-times"></i></a>
+            </div>
+
+            <!--left_menu_wrap {-->
+            <div class="left_menu_wrap">
+                <div class="login_wrap t_center">
+                    <div class="login_form_wrap">
+                        <form name="" action="" id="login_form">
+                            <!-- 로그인 전 적용해야할 폼 -->
+                            <fieldset class="before_logoin">
+                                <input type="text" name="mb_id" id="login_id" placeholder="아이디" maxlength="20">
+                                <input type="password" name="mb_password" id="login_pw" placeholder="비밀번호" maxlength="20">
+
+                                <div id="login_checkbox">
+                                    <ul class="mtb10px p5px">
+                                        <li><input type="checkbox" id="auto_login" name="auto_login" value="1"></li>
+                                        <li class="f14 mt3px"><label for="auto_login" id="auto_login_label"><a href="#">자동로그인</a></label></li>
+                                        <li class="f14 mt3px"><label for="join_login" id="join_login_label"><a href="#">회원가입</a></label></li>
+                                    </ul>
+                                </div>
+                                
+                                <input type="submit" id="login_submit" value="로그인" class="btn_submit ft_600">
+                            </fieldset>
+
+                            <!-- 로그인 후 적용해야할 폼
+                            <div class="after_login">
+                                <div class="al_top">
+                                    <div class="alt_right">
+                                        <img src="images/no_profile.gif" alt="profile image">
+                                        <a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+                                    </div>
+
+                                    <div class="alt_left">
+                                        <p>테스트28님</p>
+                                        <button type="text">로그아웃</button>
+                                    </div>
+                                </div>
+
+                                <div class="al_bottom">
+                                    <div class="alb_right">
+                                        <div class="">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <span>0</span>
+                                    </div>
+
+                                    <div class="alb_left">
+                                        <div class="">
+                                            <i class="fa fa-database"></i>
+                                        </div>
+                                        <span>1,015,564</span>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </form>
+                    </div>
+                </div>
+
+                <!--catego_menu {-->
+                <div class="catego_menu t_center">
+                    <div class="left_tab_subject">
+                        <ul class="mb10px">
+                            <li class="left_tablinks f14 cursor catego_active" tab_name="left_tab1"><a href="#">카테고리</a></li>
+                            <li class="left_tablinks f14 cursor" tab_name="left_tab2"><a href="#">프로모션</a></li>
+                            <li class="left_tablinks f14 cursor" tab_name="left_tab3"><a href="#">마이페이지</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="left_tab left_tab_active" id="left_tab1">
+                        <ul class="t_left">
+                            <li class="mb5per f14"><a href="#">꽃바구니</a></li>
+                            <li class="mb5per f14"><a href="#">꽃다발</a></li>
+                            <li class="mb5per f14"><a href="#">개업화분</a></li>
+                            <li class="mb5per f14"><a href="#">축하화환</a></li>
+                            <li class="mb5per f14"><a href="#">근조화환</a></li>
+                            <li class="mb5per f14"><a href="#">공기정화식물</a></li>
+                            <li class="mb5per f14"><a href="#">동양란</a></li>
+                            <li class="mb5per f14"><a href="#">서양란</a></li>
+                            <li class="mb5per f14"><a href="#">분재</a></li>
+                            <li class="f14"><a href="#">과일바구니</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="left_tab" id="left_tab2">
+                        <ul class="t_left">
+                            <li class="mb5per f14"><a href="#">창업/개업</a></li>
+                            <li class="mb5per f14"><a href="#">출산/문병방문</a></li>
+                            <li class="mb5per f14"><a href="#">생일/기념일</a></li>
+                            <li class="mb5per f14"><a href="#">결혼/회갑/칠순</a></li>
+                            <li class="mb5per f14"><a href="#">전시회/행사</a></li>
+                            <li class="mb5per f14"><a href="#">졸업/입학</a></li>
+                            <li class="f14"><a href="#">할인상품</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="left_tab" id="left_tab3">
+                        <ul class="t_left">
+                            <li class="mb5per f14"><a href="#">마이페이지</a></li>
+                            <li class="mb5per f14"><a href="#">주문내역</a></li>
+                            <li class="mb5per f14"><a href="#">주문배송조회</a></li>
+                            <li class="mb5per f14"><a href="../board/info_list.html">공지사항</a></li>
+                            <li class="mb5per f14"><a href="../board/info_write.html">1:1문의</a></li>
+                            <li class="mb5per f14"><a href="#">입금계좌안내</a></li>
+                            <li class="f14"><a href="#">증빙서류신청/출력</a></li> 
+                        </ul>
+                    </div>
+                    
+                </div>  
+                <!--} catego_menu-->
+                    
+            </div>
+            <!--} left_menu_wrap-->
+        </aside>
+        <!--} aside menu-->
+        
+        <!--contents {-->
+        <div class="contents board_list contents_border">
+            <!--info_list {-->
+            <div class="info_list dw_1400px mb5per">
+                <div class="if_top">
+                    <ul>
+                        <li class=""><a href="#">공지사항</a></li>
+                        <li class=""><a href="../board/info_write.html">문의사항</a></li>
+                    </ul>
+                </div>
+
+                <div class="if_middle">
+                    <!-- 공지사항일때 적용해주세요 -->
+                    <!-- <table>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="*">
+                            <col width="15%" class="td_none">
+                            <col width="10%">
+                        </colgroup>
+            
+                        <tbody>
+                            <tr>
+                                <th class="t_center">번호</th>
+                                <th class="t_center">제목</th>
+                                <th class="td_none t_center">날짜</th>
+                                <th class="t_center">작성자</th>
+                            </tr>
+            
+                            <tr class="bg_g">
+                                <td class="t_center txt_c seq">2</td>
+                                <td class="t_center txt_l"><a href="info_view.html">공지사항입니다.</a></td>
+                                <td class="t_center txt_l td_none">0000-00-00</td>
+                                <td class="t_center txt_c">김**</td>
+                            </tr>
+            
+                            <tr class="bg_w">
+                                <td class="t_center txt_c seq">1</td>
+                                <td class="t_center txt_l"><a href="info_view.html">공지사항 테스트입니다.</a></td>
+                                <td class="t_center txt_l td_none">2020-01-15</td>
+                                <td class="t_center txt_c">김**</td>
+                            </tr>
+                        
+                        </tbody>
+                        
+                    </table>    -->
+
+                    <!-- 문의사항일때 적용해주세요 -->
+                    <table>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="*">
+                            <col width="15%" class="td_none">
+                            <col width="10%">
+                        </colgroup>
+            
+                        <tbody>
+                            <tr>
+                                <th class="t_center">번호</th>
+                                <th class="t_center">제목</th>
+                                <th class="td_none t_center">날짜</th>
+                                <th class="t_center">작성자</th>
+                            </tr>
+            
+                            <tr class="bg_g">
+                                <td class="t_center txt_c seq">2</td>
+                                <td class="t_center txt_l"><a href="../board/info_view.html">문의사항입니다.<i class="fas fa-lock"></i></a></td>
+                                <td class="t_center txt_l td_none">0000-00-00</td>
+                                <td class="t_center txt_c">김**</td>
+                            </tr>
+            
+                            <tr class="bg_w">
+                                <td class="t_center txt_c seq">1</td>
+                                <td class="t_center txt_l"><a href="../board/info_view.html">문의사항 테스트입니다.<i class="fas fa-lock"></i></a></td>
+                                <td class="t_center txt_l td_none">2020-01-15</td>
+                                <td class="t_center txt_c">김**</td>
+                            </tr>
+                        
+                        </tbody>
+                        
+                    </table>
+                    <!--공지사항 페이지에서는 삭제해주세요-->
+                    <!-- <div class="i_btn">
+                        <div><a href="#">등록</a></div>
+                    </div> -->
+                </div>
+
+            </div>
+            <!--} info_list-->
+
+            <div class="p_paging t_center">
+                <div class="pp_wrap">
+                    <a href=""><i class="fas fa-angle-left"></i></a>
+                    <a href=""><i class="fas fa-angle-double-left"></i></a>
+                    <a class="a_active fw_600" href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="">7</a>
+                    <a href="">8</a>
+                    <a href="">9</a>
+                    <a class="tw_num" href="">10</a>
+                    <a href=""><i class="fas fa-angle-right"></i></a>
+                    <a href=""><i class="fas fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--} contents-->
+
+        <!--footer {-->
+        <footer>
+            <!--ft_wrap {-->
+            <div class="ft_wrap dw_1400px">
+                <div class="ft_top t_center ft_menu-container">
+                    <div class="ft_menu swiper-wrapper pt20px pb20px t_left">
+                        <div class="swiper-slide"><a href="#">회사소개</a></div>
+                        <div class="swiper-slide"><a href="#">서비스소개</a></div>
+                        <div class="swiper-slide"><a href="#">서비스이용약관</a></div>
+                        <div class="swiper-slide"><a href="#">개인정보처리방침</a></div>
+                        <div class="swiper-slide"><a href="#">이벤트</a></div>
+                        <div class="swiper-slide"><a href="#">공지사항</a></div>
+                    </div>
+                </div>
+
+                <div class="ft_middle">
+                    <div class="ftm_left col-xs-12 col-md-3">
+                        <a href="#"><img src="../images/recoverflower_ft_logo.png" alt="recoverflower_logo"></a>
+                    </div>
+                    
+                    <div class="ftm_middle col-xs-12 col-md-6">
+                        <ul class="ftmm_top">
+                            <li><strong>주식회사 예원엠엔디</strong></li>
+                            <li>주소: 경기도 광명시 오리로길 619번길 11 (하안동 232번지) 예원이케이빌딩</li>
+                            <li>사업자 등록번호 : 835-87-00673 대표 : 서제학</li>
+                            <li>팩스 : 02-897-8952  개인정보 보호책임자 : 김영민  부가통신사업신고번호 : 제2017-경기광명-0300호</li>
+                            <li>Copyright © 2018 주식회사 예원엠앤디. All Rights Reserved.</li>
+                        </ul>
+                    </div>
+
+                    <div class="ftm_right col-xs-12 col-md-3">
+                        <ul>
+                            <li class="f22 fw_bold mb20px"><p>고객만족센터</p></li>
+                            <li class="f16 mb20px">평일: 9:00 - 18:00 / 점심시간 12:00 - 13:00 </li>
+                            <li class="f18 fw_bold">문의전화 <strong>02-2616-8952</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--} ft_wrap-->
+        </footer>
+        <!--} footer-->
+    </div>
+    <!--} wrap-->
+    
+</body>
+</html>

@@ -5,6 +5,24 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 .dw_100p { width: 100%; margin: 0 auto; }
 .cursor { cursor: pointer; }
 .fw_bold { font-weight: bold; }
+.fw_initial { font-weight: initial; }
+/*swiper slide*/
+.swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 
 /*width*/
 .w100 { width: 100%; }
@@ -29,20 +47,36 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 .f22 { font-size: 22px; }
 .f24 {font-size: 24px; }
 
+/*font-color*/
+.red_color { color: red; }
+.grey_color { color: grey; }
+
 /*text-align*/
 .t_center { text-align: center; }
 .t_left { text-align: left; }
 .t_right { text-align: right; }
 
 /*margin*/
+.mt3px { margin-top: 3px; }
+.mt5px { margin-top: 5px; }
 .mt10px { margin-top: 10px; }
+.mt20px { margin-top: 20px; }
 .mt3per { margin-top: 3%; }
+.mt10per { margin-top: 10%; }
+.mtb10px { margin: 10px 0; }
+
+.mleft_1per { margin-left: 1%; }
+
 
 .mb10px { margin-bottom: 10px; }
+.mb20px { margin-bottom: 20px; }
 .mb3per { margin-bottom: 3%; }
+.mb5per { margin-bottom: 5%; }
 .mb10per { margin-bottom: 10%; }
 
+
 /*padding*/
+.p5px { padding: 5px; }
 .pt3per { padding-top: 3%; }
 .pt10px { padding-top: 10px; }
 .pt20px { padding-top: 20px; }
@@ -50,3 +84,16 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 .pb3per { padding-bottom: 3%; }
 .pb10px { padding-bottom: 10px; }
 .pb20px { padding-bottom: 20px; }
+
+/*border*/
+.wrap .contents_border { border-top: 1px solid #ddd; padding-top: 3%; }
+
+/* paging  */
+.p_paging .pp_wrap a {  display: inline-block; width: 24px; padding: 5px; background-color: white; /* border: 1px solid #c1c0c0; */  border-radius: 5px; color: #555;  }
+.p_paging .pp_wrap a:hover { background-color: #b4b4b4; color: white; font-weight: 600;  }
+.p_paging .pp_wrap .a_active { background-color: #b4b4b4; color: white; }
+.p_paging .pp_wrap .tw_num { padding-left: 1px; } 
+
+/*board common btn*/
+.wrap .info_write_contents .board_write_wrap .write_btn a { background-color: #686868; color: white; font-size: 14px; padding: 10px; display: inline-block; }
+.wrap .info_write_contents .board_write_wrap .write_btn a i { margin-right: 5px; }
