@@ -37,21 +37,25 @@
                 </div>
 
                 <div class="header_left t_left">
-                    <a href="#"><img src="..//images/recoverflower_logo.png" alt="recoverflower_logo"></a>    
+                    <a href="../index.html"><img src="../images/recoverflower_logo.png" alt="recoverflower_logo"></a>
                 </div>
 
                 <div class="header_middle t_center">
-                    <div class="search_input"><input type="text" class="search_box"></div>
-                    <div class="search_button">
-                        <button type="submit" id="sch_submit" class="cursor"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a>
-                    </div>
+                    <form action="http://naver.com">
+                        <div class="search_input"><input type="text" class="search_box"></div>
+                        <div class="search_button">
+                            <button type="submit" id="sch_submit" class="cursor">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="header_right t_right">
                     <ul>
                         <li class="header_login mt10px"><a href="#">로그인</a></li>
                         <li class="header_join mt10px"><a href="#">회원가입</a></li>
-                        <li><a href="#"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
+                        <li><a href="../member/mb_cart.html"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
                         <li><a href="#"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
                         <li class="menu_icon"><a href="#"><img src="../images/menu_icon.png" alt="menu_icon"></a></li>
                     </ul>
@@ -59,9 +63,11 @@
 
                 <div class="header_bottom main_menu-container">
                     <div class="search_wrap t_center">
-                        <div class="search_input">
-                            <input type="text" class="search_box"><button type="submit" id="sch_submit" class="cursor f14">검색<!-- </li> -->
-                        </div>
+                        <form action="http://naver.com">
+                            <div class="search_input">
+                                <input type="text" class="search_box"><button type="submit" id="sch_submit" class="cursor f14">검색</button>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="hb_menu swiper-wrapper">
@@ -186,7 +192,7 @@
                             <li class="mb5per f14"><a href="#">주문내역</a></li>
                             <li class="mb5per f14"><a href="#">주문배송조회</a></li>
                             <li class="mb5per f14"><a href="../board/info_list.html">공지사항</a></li>
-                            <li class="mb5per f14"><a href="#">1:1문의</a></li>
+                            <li class="mb5per f14"><a href="../board/info_write.html">1:1문의</a></li>
                             <li class="mb5per f14"><a href="#">입금계좌안내</a></li>
                             <li class="f14"><a href="#">증빙서류신청/출력</a></li> 
                         </ul>
@@ -199,64 +205,40 @@
             <!--} left_menu_wrap-->
         </aside>
         <!--} aside menu-->
-
-        <style>
-            /*login > login*/
-            .wrap .login_contents { padding-top: 0; }
-            .wrap .login_contents .login_wrap { height: 57vh; }
-            .wrap .login_contents .login_wrap .login_box { width: 510px; margin:0 auto; /* margin-top: 5%; */ background-color: white; /* border: 2px solid #ddd;  */ }
-            .wrap .login_contents .login_wrap .login_box .logbox_top { padding-top: 10%; padding-bottom: 5%; }
-            .wrap .login_contents .login_wrap .login_box .logbox_top h2 { color: #777; }
-            .wrap .login_contents .login_wrap .login_box .logbox_middle { padding: 0 20px 10px 20px; }
-            .wrap .login_contents .login_wrap .login_box .logbox_middle .lbm_box { width:100%; overflow: hidden; padding-top: 15px; }
-            .wrap .login_contents .login_wrap .login_box .logbox_middle .lbm_box div { float:left; }
-            .wrap .login_contents .login_wrap .login_box .logbox_middle .lbmb_bottom { padding-top: 5px; }
-            .wrap .login_contents .login_wrap .login_box .logbox_middle .lbmb_bottom .lbmb_check { margin: 20px 0; }
-            .wrap .login_contents .login_wrap .login_box .logbox_middle .lbm_box .lbmb_ibox { width: 100%; margin-bottom: 2%; }
-            .wrap .login_contents .login_wrap .login_box .logbox_btn { width: 92%; margin: 0 auto; }
-            .wrap .login_contents .login_wrap .login_box .logbox_btn input[type=submit] { width: 100%; font-weight: 600; padding: 20px; background-color: #6d6d6d; color: white; }
-            .wrap .login_contents .login_wrap .login_box .logbox_middle .lbm_box .lbmb_ibox .lbmb_input { width: 100%; padding: 5px; border: 1px solid #b3b3b3; }
-            .wrap .login_contents .login_wrap .login_box .lbmb_check { /* text-align: center; */ margin: 20px 0; /* padding-bottom: 10%; */ }
-            .wrap .login_contents .login_wrap .login_box .lbmb_check input { margin-right: 10px; }
-            /* .wrap .login_contents .login_wrap .login_box .logbox_btn:hover { color: antiquewhite; } */
-            .wrap .login_contents .login_wrap .login_box .logbox_bottom .lbmb_footer ul li { float: left; width: 50%; }
-            .wrap .login_contents .login_wrap .login_box .logbox_bottom .lbmb_footer ul::after { content: ''; display: block; overflow: hidden; clear: both; }
-            .wrap .login_contents .login_wrap .login_box .logbox_bottom .lbmb_footer { background-color: #f0f0f0; line-height: 60px; }
-            .wrap .login_contents .login_wrap .login_box .logbox_bottom .lbmb_footer ul .lbmbf_left { border-right: 1px solid #d9d9d9; }
-            .wrap .login_contents .login_wrap .login_box .logbox_bottom .lbmb_footer ul li input[type="button"] { border: none; }
-
-        </style>
         
         <!--contents {-->
         <div class="contents contents_border login_contents">
+            <!--login_wrap { -->
             <div class="login_wrap dw_1400px">
+                <!--login_form { -->
                 <form id = "login_form">
+                    
                     <div class="login_box">
-                        <div class="logbox_top">
-                            <h2 class="login_subject f24 fw_6f00 t_center">로그인</h2>
+                        <div class="lb_top">
+                            <h2 class="login_subject fw_bold f24 t_center">로그인</h2>
                         </div>
 
-                        <div class="logbox_middle">
-                            <div class="lbm_box">
-                                <div class="lbmb_ibox">
-                                    <input type="text" class = "lbmb_input w98" name="mb_id" id="mb_id" placeholder="아이디를 입력하세요.">
+                        <div class="lb_middle">
+                            <div class="lbm_top">
+                                <div class="lbmb_ibox w100 mb5px">
+                                    <input type="text" class = "lbmb_input" name="mb_id" id="mb_id" placeholder="아이디를 입력하세요.">
                                 </div>
                             </div>
 
-                            <div class="lbm_box lbmb_bottom">
-                                <div class="lbmb_ibox">
-                                    <input type="password" class = "lbmb_input w98" name="mb_passwd" id="mb_passwd" placeholder="패스워드를 입력하세요.">
+                            <div class="lbmm_box lbm_middle pt5px">
+                                <div class="lbmb_ibox w100 mb2per">
+                                    <input type="password" class = "lbmb_input" name="mb_passwd" id="mb_passwd" placeholder="패스워드를 입력하세요.">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="logbox_btn f14">
+                        <div class="logbox_btn f18 fw_bold">
                             <input type="submit" value="로그인">
                         </div>
 
-                        <div class="logbox_bottom t_center">
+                        <div class="lb_bottom t_center">
                             <div class="lbmb_check f12"><input type="checkbox">자동로그인</div>
-                            <div class="lbmb_footer f12">
+                            <div class="lbmb_footer f14">
                                 <ul>
                                     <li class="lbmbf_left"><input type="button" value="아이디/비밀번호찾기"></li>
                                     <li><input type="button" value="회원가입"></li>
@@ -266,10 +248,10 @@
 
                     </div>
                 </form>
-
+                <!--} login_form-->
             </div>
+            <!-- } login_wrap-->
         </div>
-         
         <!--} contents-->
 
         <!--footer {-->
@@ -278,12 +260,12 @@
             <div class="ft_wrap dw_1400px">
                 <div class="ft_top t_center ft_menu-container">
                     <div class="ft_menu swiper-wrapper pt20px pb20px t_left">
-                        <div class="swiper-slide"><a href="#">회사소개</a></div>
+                        <div class="swiper-slide"><a href="../contents/contents.html">회사소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스이용약관</a></div>
                         <div class="swiper-slide"><a href="#">개인정보처리방침</a></div>
                         <div class="swiper-slide"><a href="#">이벤트</a></div>
-                        <div class="swiper-slide"><a href="#">공지사항</a></div>
+                        <div class="swiper-slide"><a href="../board/info_list.html">공지사항</a></div>
                     </div>
                 </div>
 

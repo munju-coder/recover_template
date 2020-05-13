@@ -33,7 +33,9 @@
             <div class="header_wrap dw_1400px">
                 <!--mobile menu 변경-->
                 <div class="header_M_left">
-                    <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
+                    <form action="">
+                        <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
+                    </form>
                 </div>
 
                 <div class="header_left t_left">
@@ -45,7 +47,7 @@
                         <div class="search_input"><input type="text" class="search_box"></div>
                         <div class="search_button">
                             <button type="submit" id="sch_submit" class="cursor">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                         </div>
                     </form>
@@ -56,7 +58,7 @@
                         <li class="header_login mt10px"><a href="#">로그인</a></li>
                         <li class="header_join mt10px"><a href="#">회원가입</a></li>
                         <li><a href="../member/mb_cart.html"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
-                        <li><a href="#"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
+                        <li><a href="../member/my_page.html"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
                         <li class="menu_icon"><a href="#"><img src="../images/menu_icon.png" alt="menu_icon"></a></li>
                     </ul>
                 </div>
@@ -155,7 +157,7 @@
                         <ul class="mb10px">
                             <li class="left_tablinks f14 cursor catego_active" tab_name="left_tab1"><a href="#">카테고리</a></li>
                             <li class="left_tablinks f14 cursor" tab_name="left_tab2"><a href="#">프로모션</a></li>
-                            <li class="left_tablinks f14 cursor" tab_name="left_tab3"><a href="#">마이페이지</a></li>
+                            <li class="left_tablinks f14 cursor" tab_name="left_tab3"><a href="../member/my_page.html">마이페이지</a></li>
                         </ul>
                     </div>
                 
@@ -188,11 +190,11 @@
                 
                     <div class="left_tab" id="left_tab3">
                         <ul class="t_left">
-                            <li class="mb5per f14"><a href="#">마이페이지</a></li>
+                            <li class="mb5per f14"><a href="../member/my_page.html">마이페이지</a></li>
                             <li class="mb5per f14"><a href="#">주문내역</a></li>
                             <li class="mb5per f14"><a href="#">주문배송조회</a></li>
                             <li class="mb5per f14"><a href="../board/info_list.html">공지사항</a></li>
-                            <li class="mb5per f14"><a href="#">1:1문의</a></li>
+                            <li class="mb5per f14"><a href="../board/info_write.html">1:1문의</a></li>
                             <li class="mb5per f14"><a href="#">입금계좌안내</a></li>
                             <li class="f14"><a href="#">증빙서류신청/출력</a></li> 
                         </ul>
@@ -200,70 +202,116 @@
                     
                 </div>  
                 <!--} catego_menu-->
-                    
             </div>
             <!--} left_menu_wrap-->
         </aside>
         <!--} aside menu-->
         
         <!--contents {-->
-        <div class="contents contents_border info_write_contents">
-            <div class="board_write_wrap dw_1400px">
-                <div class="if_write">
-                    <div class="ifw_txt mb20px">
-                        <h2 class="f22 mb20px">문의하기</h2>
-                        <p class="mb10px f14">궁금한 점을 문의해 주시면 담당자가 메일을 통해 친절하게 답변해드립니다.</p>
-                        <p class="mb10px f14">아래의 양식에 맞춰 정보를 정확하게 입력해 주시기 바랍니다.</p>
-                        <p class="mb10px form_info"><i class="fas fa-asterisk"></i>필수 입력사항입니다.</p>
+        <div class="contents member_contents contents_border">
+            <form class="member_form dw_1400px">
+                <!--member_wrap {-->
+                <div class="member_wrap dw_1400px">
+                    <div class="member_top">
+                        <h2 class="f24 mb2per">장바구니</h2>
                     </div>
 
-                    <form action="">
-                    
-                        <table class="ifw_table">
-                            <colgroup>
-                                <col width = "25%">
-                                <col width = "75%">
-                            </colgroup>
+                    <div class="member_middle mb1per">
+                        <div class="member_list">
+                            <div class="w40 mbl_subject t_center">
+                                <div class="w7"><input type="checkbox" id="pd_all_input" name="pr_price" ></div>
+                                <div class="w80 t_center">상품명</div>                            
+                            </div>
 
-                            <tbody>
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>성명</td>
-                                    <td><input type="text" placeholder="성명"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>제목</td>
-                                    <td><input type="text" placeholder="제목"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>전화번호</td>
-                                    <td><input type="text" placeholder="010-0000-0000"></td>
-                                </tr>
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>이메일</td>
-                                    <td><input type="text" placeholder=""></td>
-                                </tr>
-
-                                <tr class="inqury_td">
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>문의내용</td>
-                                    <td>
-                                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="ifw_btn t_center mt2">
-                            <input class="submit_btn f14 fw_600" type="submit" value="등록">
-                            <input class="cancel_btn f14 fw_600" type="submit" value="취소">
+                            <div class="w10 mbl_subject t_center">총수량</div>
+                            <div class="w20 mbl_subject t_center">판매가</div>
+                            <div class="w10 mbl_subject t_center">포인트</div>
+                            <div class="w10 mbl_subject t_center">배송비</div>
+                            <div class="w10 mbl_subject t_center">소계</div>
                         </div>
-                    </form>
+
+                        <div class="mbl_middle mt20px">
+                            <div class="w40 mbl_box t_center fw_600">
+                                <ul class="cart_left w40">
+                                    <li class="w20"><input type="checkbox" pd_price="49000" class="each_chk"></li>
+                                    <li class="w80"><a href="../product/product_view.html"><img src="../images/section1.png" alt="product image"></a></li>
+                                </ul>
+
+                                <ul class="cart_right w60">
+                                    <li class="f14"><span>로맨틱 꽃다발 * 1</span></li>
+                                </ul>
+                            </div>
+                            <div class="w10 mbl_box t_center">1</div>
+                            <div class="w20 mbl_box t_center">49,000원</div>
+                            <div class="w10 mbl_box t_center">0</div>
+                            <div class="w10 mbl_box t_center">선불</div>
+                            <div class="w10 mbl_box t_center">49,000원</div>
+                        </div>
+
+                        <div class="mbl_middle pt20px">
+                            <div class="w40 mbl_box t_center fw_600">
+                                <ul class="cart_left w40">
+                                    <li class="w20"><input type="checkbox" pd_price="19000" class="each_chk"></li>
+                                    <li class="w80"><a href="../product/product_view.html"><img src="../images/section1.png" alt="product image"></a></li>
+                                </ul>
+
+                                <ul class="cart_right w60">
+                                    <li class="f14"><span>SJWT1237M 로맨틱 꽃바구니 * 1</span></li>
+                                </ul>
+                            </div>
+                            <div class="w10 mbl_box t_center">1</div>
+                            <div class="w20 mbl_box t_center">19,000원</div>
+                            <div class="w10 mbl_box t_center">0</div>
+                            <div class="w10 mbl_box t_center">선불</div>
+                            <div class="w10 mbl_box t_center">19,000원</div>
+                        </div>
+
+                    </div>
+
+                   
+                    <div class="mbcart_bottom">
+                        <div class="mb_btn mb_left_btn t_left">
+                            <div class="btn_box">
+                                <input type="button" class="delete_btn" value="선택삭제">
+                                <input type="button" class="empty_btn" value="비우기">
+                            </div>
+                        </div>
+                        
+                        <div class="mb_right_info">
+                            <ul>
+                                <li class="">
+                                    <span>배송비</span>
+                                    <strong>0</strong> 원
+                                </li>
+                    
+                                <li class="">
+                                    <span>포인트</span>
+                                    <strong>0</strong> 점
+                                </li>
+                    
+                                <li class="">
+                                    <span>총계</span>
+                                    <strong id = "cart_sum_price">0</strong> 원 
+                                </li>
+                            
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+                    <div class="mb_bottom mt3per mb5per">
+                        <div class="mbb_btn t_center fw_bold">
+                            <input type="button" class="color_red mbb_left" value="쇼핑계속하기">
+                            <input type="button" class="color_5151 mbb_right" value="주문하기">
+                        </div>                    
+                    </div>
 
                 </div>
-            </div>
-        </div> 
-        <!--} contents-->
+                <!-- } member_wrap-->
+                
+            </form>
+        </div>
+        <!--} content-->
 
         <!--footer {-->
         <footer>
@@ -271,12 +319,12 @@
             <div class="ft_wrap dw_1400px">
                 <div class="ft_top t_center ft_menu-container">
                     <div class="ft_menu swiper-wrapper pt20px pb20px t_left">
-                        <div class="swiper-slide"><a href="#">회사소개</a></div>
+                        <div class="swiper-slide"><a href="../contents/contents.html">회사소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스이용약관</a></div>
                         <div class="swiper-slide"><a href="#">개인정보처리방침</a></div>
                         <div class="swiper-slide"><a href="#">이벤트</a></div>
-                        <div class="swiper-slide"><a href="#">공지사항</a></div>
+                        <div class="swiper-slide"><a href="../board/info_list.html">공지사항</a></div>
                     </div>
                 </div>
 

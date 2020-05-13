@@ -33,35 +33,41 @@
             <div class="header_wrap dw_1400px">
                 <!--mobile menu 변경-->
                 <div class="header_M_left">
-                    <div id="search_icon"><a href="#"><img src="../recover_flower/images/search_icon.png" alt="search_icon"></a></div>
+                    <div id="search_icon"><a href="#"><img src="images/search_icon.png" alt="search_icon"></a></div>
                 </div>
 
                 <div class="header_left t_left">
-                    <a href="#"><img src="../recover_flower/images/recoverflower_logo.png" alt="recoverflower_logo"></a>    
+                    <a href="index.html"><img src="images/recoverflower_logo.png" alt="recoverflower_logo"></a>
                 </div>
 
                 <div class="header_middle t_center">
-                    <div class="search_input"><input type="text" class="search_box"></div>
-                    <div class="search_button">
-                        <button type="submit" id="sch_submit" class="cursor"><a href="#"><img src="../recover_flower/images/search_icon.png" alt="search_icon"></a>
-                    </div>
+                    <form action="http://naver.com">
+                        <div class="search_input"><input type="text" class="search_box"></div>
+                        <div class="search_button">
+                            <button type="submit" id="sch_submit" class="cursor">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="header_right t_right">
                     <ul>
                         <li class="header_login mt10px"><a href="../recover_flower/login/login.html">로그인</a></li>
-                        <li class="header_join mt10px"><a href="#">회원가입</a></li>
-                        <li><a href="#"><img src="../recover_flower/images/cart_icon.png" alt="cart_icon"></a></li>
-                        <li><a href="#"><img src="../recover_flower/images/mypage_icon.png" alt="mypage_icon"></a></li>
-                        <li class="menu_icon"><a href="#"><img src="../recover_flower/images/menu_icon.png" alt="menu_icon"></a></li>
+                        <li class="header_join mt10px"><a href="../recover_flower/member/mb_reg_chk.html">회원가입</a></li>
+                        <li><a href="../recover_flower/member/mb_cart.html"><img src="images/cart_icon.png" alt="cart_icon"></a></li>
+                        <li><a href="../recover_flower/member/my_page.html"><img src="images/mypage_icon.png" alt="mypage_icon"></a></li>
+                        <li class="menu_icon"><a href="#"><img src="images/menu_icon.png" alt="menu_icon"></a></li>
                     </ul>
                 </div>
-
+                <!--mobile menu 변경-->
                 <div class="header_bottom main_menu-container">
                     <div class="search_wrap t_center">
-                        <div class="search_input">
-                            <input type="text" class="search_box"><button type="submit" id="sch_submit" class="cursor f14">검색<!-- </li> -->
-                        </div>
+                        <form action="http://naver.com">
+                            <div class="search_input">
+                                <input type="text" class="search_box"><button type="submit" id="sch_submit" class="cursor f14">검색</button>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="hb_menu swiper-wrapper">
@@ -101,7 +107,7 @@
                                     <ul class="mtb10px p5px">
                                         <li><input type="checkbox" id="auto_login" name="auto_login" value="1"></li>
                                         <li class="f14 mt3px"><label for="auto_login" id="auto_login_label"><a href="#">자동로그인</a></label></li>
-                                        <li class="f14 mt3px"><label for="join_login" id="join_login_label"><a href="#">회원가입</a></label></li>
+                                        <li class="f14 mt3px"><label for="join_login" id="join_login_label"><a href="../recover_flower/member/mb_reg_chk.html">회원가입</a></label></li>
                                     </ul>
                                 </div>
                                 
@@ -182,7 +188,7 @@
                 
                     <div class="left_tab" id="left_tab3">
                         <ul class="t_left">
-                            <li class="mb5per f14"><a href="#">마이페이지</a></li>
+                            <li class="mb5per f14"><a href="../recover_flower/member/my_page.html">마이페이지</a></li>
                             <li class="mb5per f14"><a href="#">주문내역</a></li>
                             <li class="mb5per f14"><a href="#">주문배송조회</a></li>
                             <li class="mb5per f14"><a href="../recover_flower/board/info_list.html">공지사항</a></li>

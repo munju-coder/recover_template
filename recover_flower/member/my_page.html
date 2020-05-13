@@ -33,7 +33,9 @@
             <div class="header_wrap dw_1400px">
                 <!--mobile menu 변경-->
                 <div class="header_M_left">
-                    <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
+                    <form action="">
+                        <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
+                    </form>
                 </div>
 
                 <div class="header_left t_left">
@@ -45,7 +47,7 @@
                         <div class="search_input"><input type="text" class="search_box"></div>
                         <div class="search_button">
                             <button type="submit" id="sch_submit" class="cursor">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                         </div>
                     </form>
@@ -56,7 +58,7 @@
                         <li class="header_login mt10px"><a href="#">로그인</a></li>
                         <li class="header_join mt10px"><a href="#">회원가입</a></li>
                         <li><a href="../member/mb_cart.html"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
-                        <li><a href="#"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
+                        <li><a href="../member/my_page.html"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
                         <li class="menu_icon"><a href="#"><img src="../images/menu_icon.png" alt="menu_icon"></a></li>
                     </ul>
                 </div>
@@ -188,11 +190,11 @@
                 
                     <div class="left_tab" id="left_tab3">
                         <ul class="t_left">
-                            <li class="mb5per f14"><a href="#">마이페이지</a></li>
+                            <li class="mb5per f14"><a href="../member/my_page.html">마이페이지</a></li>
                             <li class="mb5per f14"><a href="#">주문내역</a></li>
                             <li class="mb5per f14"><a href="#">주문배송조회</a></li>
                             <li class="mb5per f14"><a href="../board/info_list.html">공지사항</a></li>
-                            <li class="mb5per f14"><a href="#">1:1문의</a></li>
+                            <li class="mb5per f14"><a href="../board/info_write.html">1:1문의</a></li>
                             <li class="mb5per f14"><a href="#">입금계좌안내</a></li>
                             <li class="f14"><a href="#">증빙서류신청/출력</a></li> 
                         </ul>
@@ -200,69 +202,129 @@
                     
                 </div>  
                 <!--} catego_menu-->
-                    
             </div>
             <!--} left_menu_wrap-->
         </aside>
         <!--} aside menu-->
-        
+        <style>
+            /*member > mypage.html*/
+            .wrap .mypage_contents .mypage_top .my_option ul { overflow: hidden; }
+            .wrap .mypage_contents .member_box .mypage_middle .mbm_top .mbmt_top { overflow: hidden; }
+            .wrap .mypage_contents .mypage_top ul li { float: right; padding: 10px; border: 1px solid #dbdbdb; margin-right: 1%; }
+            .wrap .mypage_contents .mypage_top ul li:hover { background-color: #8c8c8c; }
+            .wrap .mypage_contents .mypage_top ul li:hover a { color: white; } 
+            .wrap .mypage_contents .mypage_middle { width: 100%; padding-top: 0; }
+            .wrap .mypage_contents .mypage_middle .mbm_top { border: 1px solid #dddddd;  }
+            .wrap .mypage_contents .mypage_middle .mbm_top div { padding: 10px 0; overflow: hidden; }
+            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_right ul li { float: left; padding-right: 2%; } 
+            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom { display: none; background-color: #f8f8f8; border-top:1px solid #dddddd;  }
+
+            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_left { float: left; width:50%; margin-right: 30px; padding-left: 10px; border-right: 1px solid #ddd; padding-right: 20px; }
+            .wrap .mypage_contents .mypage_middle .mbm_top::after { content: ''; display: block; overflow: hidden; clear: both; } 
+            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom .mbmtb_info .mbmtb_info_div { float: left; width: 45%; margin-right: 20px; }
+            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom .mbmtb_info::after { content: ''; display: block; overflow: hidden; clear: both; }
+            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom { padding-left: 1%; }
+            .wrap .mypage_contents .mypage_middle .caret-up_btn 
+            { position: absolute; left: 50%;  background-color: #fff; border: 1px solid #dbdbdb; border-top: none; display: inline-block; width: 45px; padding: 5px; }
+
+        </style>
+
+        <script>
+            $(document).ready(function(){
+
+                $('.caret-up_btn').click( function(){
+
+                    $('.mbmt_bottom').toggle();
+                    
+                    if ($(".mbmt_bottom").css("display") == "block") {
+                        $('.caret-up_btn a i').attr('class', 'fa fa-caret-up');
+                    } else {
+                        $('.caret-up_btn a i').attr('class', 'fa fa-caret-down');
+                    }
+                });
+                
+
+            });
+        </script>
+
         <!--contents {-->
-        <div class="contents contents_border info_write_contents">
-            <div class="board_write_wrap dw_1400px">
-                <div class="if_write">
-                    <div class="ifw_txt mb20px">
-                        <h2 class="f22 mb20px">문의하기</h2>
-                        <p class="mb10px f14">궁금한 점을 문의해 주시면 담당자가 메일을 통해 친절하게 답변해드립니다.</p>
-                        <p class="mb10px f14">아래의 양식에 맞춰 정보를 정확하게 입력해 주시기 바랍니다.</p>
-                        <p class="mb10px form_info"><i class="fas fa-asterisk"></i>필수 입력사항입니다.</p>
+        <div class="contents member_contents mypage_contents contents_border">
+            <!--member_wrap {-->
+            <div class="member_wrap mp_wrap dw_1400px">
+                <div class="member_top mb2per mypage_top">
+                    <div class="f24">마이페이지</div>
+
+                    <div class="my_option">
+                        <ul>
+                            <li class="f12"><a href="#">포인트 등록</a></li>
+                            <li class="f12"><a href="#">정보수정</a></li>
+                            <li class="f12"><a href="#">회원탈퇴</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--member_middle {-->
+                <div class="member_middle mypage_middle">
+                    <div class="mbm_top">
+                        <div class="mbmt_top">
+                            <div class="mbmt_left fw_blod">
+                                <i class="far fa-user mr5px"></i> 조문주
+                            </div>
+
+                            <div class="mbmt_right f14">
+                                <ul>
+                                    <li class="fw_bold">보유포인트 : <span class="red_color">100,000</span> P</li>
+                                    <li class="fw_bold">보유쿠폰 : <span class="">0</span> 개</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mbmt_bottom">
+                            <div class="mbmtb_info">
+                                <div class="mbmtb_info_div f14"><span class="fw_bold">연락처:</span> 010-1234-5678</div>
+                                <div class="mbmtb_info_div f14"><span class="fw_bold">E-Mail:</span> aaa@aaa.com</div>
+                                <div class="mbmtb_info_div f14"><span class="fw_bold">최종접속일시:</span> 2020-04-16 08:47:36</div>
+                                <div class="mbmtb_info_div f14"><span class="fw_bold">회원가입일시:</span> 2020-04-16 11:20:33</div>
+                                <div class="mbmtb_info_div f14 word_break"><span class="fw_bold">주소:</span> (11111) 경기도 광명시 오리로619 11, 예원이케이빌딩 2층</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <form action="">
+                    <div class="caret-up_btn t_center">
+                        <a href="#"><i class="fa fa-caret-down"></i></a>
+                    </div>
                     
-                        <table class="ifw_table">
-                            <colgroup>
-                                <col width = "25%">
-                                <col width = "75%">
-                            </colgroup>
-
-                            <tbody>
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>성명</td>
-                                    <td><input type="text" placeholder="성명"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>제목</td>
-                                    <td><input type="text" placeholder="제목"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>전화번호</td>
-                                    <td><input type="text" placeholder="010-0000-0000"></td>
-                                </tr>
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>이메일</td>
-                                    <td><input type="text" placeholder=""></td>
-                                </tr>
-
-                                <tr class="inqury_td">
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>문의내용</td>
-                                    <td>
-                                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="ifw_btn t_center mt2">
-                            <input class="submit_btn f14 fw_600" type="submit" value="등록">
-                            <input class="cancel_btn f14 fw_600" type="submit" value="취소">
+                    <div class="member_middle mp_middle mtb3per">
+                        <div class="member_top ptb10px">
+                            <div class="f20">최근 주문 내역</div>
+                            <div class="m_btn t_right f14"><a href="mb_order_list.html"><i class="fas fa-plus mr5px"></i>더보기</a></div>
                         </div>
-                    </form>
 
+                        <div class="member_list">
+                            <div class="w20 mbl_subject t_center">주문번호</div>
+                            <div class="w20 mbl_subject t_center">주문일시</div>
+                            <div class="w10 mbl_subject t_center">상품수</div>
+                            <div class="w15 mbl_subject t_center">주문금액</div>
+                            <div class="w15 mbl_subject t_center">입금액</div>
+                            <div class="w10 mbl_subject t_center">미입금액</div>
+                            <div class="w10 mbl_subject t_center">상태</div>
+                        </div>
+
+                        <div class="mbl_middle ptb20px">
+                            <div class="w20 mbl_subject t_center">2019032915462525</div>
+                            <div class="w20 mbl_subject t_center">19-03-29 15:46 (금)</div>
+                            <div class="w10 mbl_subject t_center">1</div>
+                            <div class="w15 mbl_subject t_center">39,000원</div>
+                            <div class="w15 mbl_subject t_center">39,000원</div>
+                            <div class="w10 mbl_subject t_center">39,000원</div>
+                            <div class="w10 mbl_subject t_center red_color fw_bold">주문취소</div>
+                        </div>
+                    </div>
                 </div>
+                <!--} mb_middle-->
             </div>
-        </div> 
+            <!--} member_wrap-->
+        </div>
         <!--} contents-->
 
         <!--footer {-->
@@ -271,12 +333,12 @@
             <div class="ft_wrap dw_1400px">
                 <div class="ft_top t_center ft_menu-container">
                     <div class="ft_menu swiper-wrapper pt20px pb20px t_left">
-                        <div class="swiper-slide"><a href="#">회사소개</a></div>
+                        <div class="swiper-slide"><a href="../contents/contents.html">회사소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스이용약관</a></div>
                         <div class="swiper-slide"><a href="#">개인정보처리방침</a></div>
                         <div class="swiper-slide"><a href="#">이벤트</a></div>
-                        <div class="swiper-slide"><a href="#">공지사항</a></div>
+                        <div class="swiper-slide"><a href="../board/info_list.html">공지사항</a></div>
                     </div>
                 </div>
 

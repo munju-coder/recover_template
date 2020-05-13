@@ -33,7 +33,9 @@
             <div class="header_wrap dw_1400px">
                 <!--mobile menu 변경-->
                 <div class="header_M_left">
-                    <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
+                    <form action="">
+                        <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
+                    </form>
                 </div>
 
                 <div class="header_left t_left">
@@ -45,7 +47,7 @@
                         <div class="search_input"><input type="text" class="search_box"></div>
                         <div class="search_button">
                             <button type="submit" id="sch_submit" class="cursor">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                         </div>
                     </form>
@@ -192,7 +194,7 @@
                             <li class="mb5per f14"><a href="#">주문내역</a></li>
                             <li class="mb5per f14"><a href="#">주문배송조회</a></li>
                             <li class="mb5per f14"><a href="../board/info_list.html">공지사항</a></li>
-                            <li class="mb5per f14"><a href="#">1:1문의</a></li>
+                            <li class="mb5per f14"><a href="../board/info_write.html">1:1문의</a></li>
                             <li class="mb5per f14"><a href="#">입금계좌안내</a></li>
                             <li class="f14"><a href="#">증빙서류신청/출력</a></li> 
                         </ul>
@@ -200,70 +202,117 @@
                     
                 </div>  
                 <!--} catego_menu-->
-                    
             </div>
             <!--} left_menu_wrap-->
         </aside>
         <!--} aside menu-->
-        
-        <!--contents {-->
-        <div class="contents contents_border info_write_contents">
-            <div class="board_write_wrap dw_1400px">
-                <div class="if_write">
-                    <div class="ifw_txt mb20px">
-                        <h2 class="f22 mb20px">문의하기</h2>
-                        <p class="mb10px f14">궁금한 점을 문의해 주시면 담당자가 메일을 통해 친절하게 답변해드립니다.</p>
-                        <p class="mb10px f14">아래의 양식에 맞춰 정보를 정확하게 입력해 주시기 바랍니다.</p>
-                        <p class="mb10px form_info"><i class="fas fa-asterisk"></i>필수 입력사항입니다.</p>
+
+        <style>
+            .wrap .reg_chk_contents .reg_chk_box { background-color: #dddddd; }
+            .wrap .reg_chk_contents .rcm_top, .contents .rcm_middle { padding:2%; }
+            .wrap .reg_chk_contents .rcm_middle { padding-top: 0; }
+
+            .wrap .reg_chk_contents .rcm_top .ncb_top, .reg_chk_contents .rcm_top .ncb_chk { background-color: #ffffff; padding: 1.5% 1%; }
+            .wrap .reg_chk_contents .rcm_top .ncb_btn { padding: 2%; margin:0 auto; color:#ffffff; margin-top: 2%; margin-bottom: 5%; }
+
+            .wrap .reg_chk_contents .reg_chk_middle .rcm_middle .rcmm_subject,
+            .wrap .reg_chk_contents .reg_chk_middle .rcm_middle .rcmm_textarea { padding: 1% 0;}
+
+
+            @media (max-width: 768px) {
+                
+                .wrap .reg_chk_contents .rcm_top .ncb_btn { font-size: 14px; }
+                .wrap .reg_chk_contents .reg_chk_middle .rcm_middle .rcmm_chk_box .rcmm_subject { font-size: 15px; }
+                .wrap .reg_chk_contents .reg_chk_middle .rcm_middle .rcmm_chk_box .rcmm_chk_1 { font-size: 13px; }
+
+                .wrap .reg_chk_contents .reg_chk_middle .rcm_top .nice_chk_box .ncb_chk { font-size: 14px; }
+            }            
+            @media (max-width:600px) {
+                .wrap .reg_chk_contents .rcm_top .ncb_btn { width: 140px; padding: 10px; font-size: 13px; }
+                .wrap .reg_chk_contents .rcm_top, .reg_chk_contents .rcm_middle { padding: 5%; }
+                .wrap .reg_chk_contents .rcm_top { padding-bottom: 0; }
+
+            }
+        </style>
+
+        <!--content 시작 {-->
+        <div class="contents reg_chk_contents contents_border pb3per">
+            <!--reg_chk_form {-->
+            <form action="" id="mb_chk_form" name="mb_chk_form" class="dw_1400px reg_chk_form">
+                <!--reg_chk_box {-->
+                <div class="reg_chk_middle reg_chk_box"> 
+                    <div class="rcm_top">
+                        <div class="nice_chk_box">
+                            <div class="ncb_top word_break f14">나이스평가정보에서 인증 받은 휴대폰 번호를 사용하고 있습니다.</div>
+
+                            <div class="ncb_btn fw_bold cursor color_red t_center w40">휴대폰 본인인증</div>
+
+                            <div class="ncb_chk">
+                                하단 약관에 모두 동의합니다.
+                                <input type="checkbox" name="all_chk" id="all_chk">
+                            </div>
+                        </div>
                     </div>
 
-                    <form action="">
-                    
-                        <table class="ifw_table">
-                            <colgroup>
-                                <col width = "25%">
-                                <col width = "75%">
-                            </colgroup>
+                    <div class="rcm_middle">
+                        <div class="rcmm_chk_box mb5per">
+                            <div class="rcmm_subject f17 fw_600">1. 리커버샵 이용약관</div>
+                            
+                            <div class="rcmm_textarea">
+                                <textarea class="w100" name="" id="" ></textarea>
+                            </div>
 
-                            <tbody>
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>성명</td>
-                                    <td><input type="text" placeholder="성명"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>제목</td>
-                                    <td><input type="text" placeholder="제목"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>전화번호</td>
-                                    <td><input type="text" placeholder="010-0000-0000"></td>
-                                </tr>
-                                <tr>
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>이메일</td>
-                                    <td><input type="text" placeholder=""></td>
-                                </tr>
-
-                                <tr class="inqury_td">
-                                    <td class="t_color"><i class="fas fa-asterisk f12"></i>문의내용</td>
-                                    <td>
-                                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="ifw_btn t_center mt2">
-                            <input class="submit_btn f14 fw_600" type="submit" value="등록">
-                            <input class="cancel_btn f14 fw_600" type="submit" value="취소">
+                            <div class="rcmm_chk_1">
+                                리커버샵 이용약관에 동의합니다.
+                                <input type="checkbox" name="chk_1" id="chk_1">
+                            </div>                        
                         </div>
-                    </form>
 
+                        <div class="rcmm_chk_box mtb5per">
+                            <div class="rcmm_subject f17 fw_600">2. 개인정보취급방침</div>
+                            
+                            <div class="rcmm_textarea">
+                                <textarea class="w100" name="" id="" ></textarea>
+                            </div>
+                            
+                            <div class="rcmm_chk_1">
+                                개인정보취급방침에 동의합니다.
+                                <input type="checkbox" name="chk_2" id="chk_1">
+                            </div>                        
+                        </div>
+
+                        <div class="rcmm_chk_box mtb5per">
+                            <div class="rcmm_subject f17 fw_600">3. 포인트 지급 및 사용에 대한 약관</div>
+                            
+                            <div class="rcmm_textarea">
+                                <textarea class="w100" name="" id="" ></textarea>
+                            </div>
+                            
+                            <div class="rcmm_chk_1">
+                                포인트 지급 및 사용에 대한 약관에 동의합니다.
+                                <input type="checkbox" name="chk_3" id="chk_1">
+                            </div>                        
+                        </div>
+
+                        <div class="rcmm_chk_box mtb5per">
+                            <div class="rcmm_subject f17 fw_600">4. 캐쉬 지급 및 사용에 대한 약관</div>
+                            
+                            <div class="rcmm_textarea">
+                                <textarea class="w100" name="" id="" ></textarea>
+                            </div>
+                            
+                            <div class="rcmm_chk_1">
+                                캐쉬 지급 및 사용에 대한 약관에 동의합니다.
+                                <input type="checkbox" name="chk_4" id="chk_1">
+                            </div>                        
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div> 
-        <!--} contents-->
+                <!--} reg_chk_box-->
+            </form>
+            <!--} reg_chk_form-->
+        </div>
+        <!--} content 끝-->
 
         <!--footer {-->
         <footer>
@@ -271,12 +320,12 @@
             <div class="ft_wrap dw_1400px">
                 <div class="ft_top t_center ft_menu-container">
                     <div class="ft_menu swiper-wrapper pt20px pb20px t_left">
-                        <div class="swiper-slide"><a href="#">회사소개</a></div>
+                        <div class="swiper-slide"><a href="../contents/contents.html">회사소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스소개</a></div>
                         <div class="swiper-slide"><a href="#">서비스이용약관</a></div>
                         <div class="swiper-slide"><a href="#">개인정보처리방침</a></div>
                         <div class="swiper-slide"><a href="#">이벤트</a></div>
-                        <div class="swiper-slide"><a href="#">공지사항</a></div>
+                        <div class="swiper-slide"><a href="../board/info_list.html">공지사항</a></div>
                     </div>
                 </div>
 
