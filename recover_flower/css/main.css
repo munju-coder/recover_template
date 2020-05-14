@@ -264,12 +264,21 @@
     /*member*/
     .wrap header .header_wrap .header_bottom .hb_menu .swiper-slide:first-child a { margin-left: 0; }
     .wrap .member_contents .member_wrap .mb_bottom .mbb_btn input { width: 100%; }
-    .wrap .member_contents .member_wrap .member_middle .member_list div,
+    .dn { display: none; }
+
+    /* .wrap .member_contents .member_wrap .member_middle .member_list div,
     .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div
-    { float: none; }
+    { float: none; } */
     
    /*mb_order_list*/
-   .wrap .order_contents .order_wrap .order_middle .mbl_middle div { float: none; }
+
+   .wrap .member_contents .member_wrap .member_middle .member_list .w20 { width: 24%; }
+   .wrap .member_contents .member_wrap .member_middle .member_list .w15 { width: 20%; }
+   .wrap .member_contents .member_wrap .member_middle .member_list .w10 { width: 10%; }
+   
+   .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w20 { width: 24%; }
+   .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w15 { width: 20%; }
+   .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w10 { width: 10%; }
 
 
 }

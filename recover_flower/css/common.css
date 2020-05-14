@@ -8,6 +8,7 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 .fw_initial { font-weight: initial; }
 .word_break { word-break: keep-all; }
 .wrap .contents .img-thumbnail { border: none; border-radius: 0; padding: 0; }
+td, th, tr { border: 1px solid #ddd; }
 /*swiper slide*/
 .swiper-slide {
     text-align: center;
@@ -54,6 +55,7 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 /*font-color*/
 .red_color { color: red; }
 .grey_color { color: grey; }
+.b_color { color: rgb(60, 145, 255); }
 
 /*background-color*/
 .color_red { background-color: red; }
@@ -71,7 +73,9 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 .mt20px { margin-top: 20px; }
 .mt30px { margin-top: 30px; }
 .mt3per { margin-top: 3%; }
+.mt5per { margin-top: 5%; }
 
+.mtb2per { margin: 2% 0; }
 .mtb3per { margin: 3% 0; }
 .mtb5per { margin: 5% 0; }
 .mt10per { margin-top: 10%; }
@@ -91,6 +95,7 @@ body { font-family: 'Noto Sans KR', sans-serif; }
 .mb15vh { margin-bottom: 15vh; }
 
 /*padding*/
+.pd1per { padding: 1%; }
 .p5px { padding: 5px; }
 .pt3per { padding-top: 3%; }
 .pt5per { padding-top: 5%; }
