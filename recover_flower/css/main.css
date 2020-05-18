@@ -62,7 +62,6 @@
 .wrap .contents .c_middle .tabcontent .cm_top { margin-bottom: 20px; }
 .wrap .contents .c_middle .tabcontent .cm_top h2 { font-size: 28px; }
 .wrap .contents .c_middle .tabcontent .cm_middle ul li { text-align: center; }
-/* .wrap .contents .c_middle .tabcontent .cm_middle .img-thumbnail , */
 .wrap .contents .c_middle .tabcontent .cm_middle ul li ul li:first-child { margin-bottom: 20px; }
 .wrap .contents .c_middle .tabcontent .cm_middle ul li ul li p { margin-bottom: 10px; }
 .wrap .contents .c_middle .tabcontent .cm_middle ul li ul li:last-child p { margin-bottom: 20px; color: grey; }
@@ -171,6 +170,36 @@
  .wrap .member_contents .member_wrap .mbcart_bottom .mb_left_btn input:hover { background-color: red; color: white; }
  .wrap .member_contents .member_wrap .mbcart_bottom div { float: left; }
  .wrap .member_contents .member_wrap .mb_bottom .mbb_btn input { border: 1px solid #ddd; padding: 12px; color: white; font-size: 17px; }
+ 
+ /*member > mypage.html*/
+ .wrap .mypage_contents .mypage_top .my_option ul { overflow: hidden; }
+ .wrap .mypage_contents .member_box .mypage_middle .mbm_top .mbmt_top { overflow: hidden; }
+ .wrap .mypage_contents .mypage_top ul li { float: right; padding: 10px; border: 1px solid #dbdbdb; margin-right: 1%; }
+ .wrap .mypage_contents .mypage_top ul li:hover { background-color: #cfcfd3; }
+ .wrap .mypage_contents .mypage_middle { width: 100%; padding-top: 0; }
+ .wrap .mypage_contents .mypage_middle .mbm_top { border: 2px solid #c4c4c4;  }
+ .wrap .mypage_contents .mypage_middle .mbm_top div { overflow: hidden;  }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_top { border-bottom: 1px solid rgba(206, 206, 206, 0.87); padding: 15px 20px; }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_right ul li { float: left; padding-right: 2%; } 
+
+ .wrap .mypage_contents .mypage_middle .mbm_top::after { content: ''; display: block; overflow: hidden; clear: both; } 
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom .mbmtb_info div{ float: left; width: 45%; margin-right: 20px; }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom .mbmtb_info::after { content: ''; display: block; overflow: hidden; clear: both; }
+ .wrap .mypage_contents .mypage_middle .caret-up_btn 
+ { position: absolute; left: 50%;  background-color: #fff; border: 1px solid #dbdbdb; border-top: none; display: inline-block; width: 45px; padding: 5px; }
+ .member_middle .point_box div ul li { float: left; width: 110px; font-size: 14px; }
+ .member_middle .point_box div ul li strong { color: rgb(250, 110, 110); } 
+ .member_middle .point_box div ul::after { content: ''; display: block; overflow: hidden; clear: both; }
+ .wrap .mypage_contents .mypage_middle .mbmt_top div span strong { color: rgb(255, 88, 88); }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom ul li { float: left; width: 50%; }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_middle { line-height: 45px;  padding: 20px 0; }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_middle ul { border-right: 1px solid #ddd; }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_middle ul li:last-child, .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom .mbmtb_top ul li:last-child  { color: rgb(47, 102, 253); }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom .mbmtb_top { padding: 20px 0; width: 90%; margin: 0 auto; } 
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom ul { float: left; width: 33.3%; border-right: 1px solid darkgrey; padding-left: 10px; }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom ul:last-child { border-right: 0; }
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom::after { content: ''; display: block; overflow: hidden; clear: both; } 
+ .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom  { background-color: #f4f4f4; border-top: 1px solid #ddd; }
 
  /*product > product_list*/
  .wrap .product_contents .pro_wrap .pro_top div:first-child { border-bottom: 1px solid #ddd; padding-bottom: 20px; }
@@ -261,24 +290,24 @@
     .wrap .login_contents .login_wrap .login_box .lb_top h2.f24 { font-size: 22px; }
     .wrap .login_contents .login_wrap .login_box .logbox_btn.f18 { font-size: 16px; }
 
-    /*member*/
+    /*member my_page*/
+    
+
+    /*member mb_cart*/
+    .wrap .contents .member_wrap .member_middle .mbmt_bottom .mbmtb_info .mbmtbb_info_div { width: 100%; margin-right: 0; } 
     .wrap header .header_wrap .header_bottom .hb_menu .swiper-slide:first-child a { margin-left: 0; }
     .wrap .member_contents .member_wrap .mb_bottom .mbb_btn input { width: 100%; }
-    .dn { display: none; }
+     /*반응형 작업때 빼야할 테이블 none 처리*/ .none { display: none; }
+    .wrap .member_contents .member_wrap .member_middle .member_list .w40,.wrap .member_contents .member_wrap .member_middle .mbl_middle .w40 { width: 45%; }
+    .wrap .member_contents .member_wrap .member_middle .member_list .w10,.wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w10 { width: 15%; }
+    .wrap .member_contents .member_wrap .mbcart_bottom .mb_right_info ul li { width: 100%; margin-bottom: 5px; }
+    .wrap .member_contents .member_wrap .member_middle .member_list .w20,.wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w20  { width: 24%; }
+    .wrap .member_contents .member_wrap .member_middle .member_list .w15 ,.wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w15 { width: 20%; }
+    .wrap .member_contents .member_wrap .member_top .mb2per { margin-bottom: 5%; }
+    .wrap .member_contents .member_wrap .member_middle .mbl_middle .mbl_box ul li span { width: 80px; }
 
-    /* .wrap .member_contents .member_wrap .member_middle .member_list div,
-    .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div
-    { float: none; } */
-    
-   /*mb_order_list*/
-
-   .wrap .member_contents .member_wrap .member_middle .member_list .w20 { width: 24%; }
-   .wrap .member_contents .member_wrap .member_middle .member_list .w15 { width: 20%; }
-   .wrap .member_contents .member_wrap .member_middle .member_list .w10 { width: 10%; }
-   
-   .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w20 { width: 24%; }
-   .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w15 { width: 20%; }
-   .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w10 { width: 10%; }
+    .wrap .member_contents .member_wrap .member_middle .mbl_middle div.w20 { width: 25%; }
+    .wrap .member_contents .member_wrap .member_middle .mbl_middle div.w15 { width: 26%; }
 
 
 }
@@ -302,10 +331,42 @@
     /*login > login*/
     .wrap .login_contents .login_wrap .login_box { width: 100%;  margin: 10% 0; }
 
+    /*member mb_cart*/
+    .wrap .member_contents .member_wrap .mbcart_bottom { margin-top: 10px; }
+    .wrap .member_contents .member_wrap .member_middle .mbl_middle .mbl_box ul li span { width: 50px; font-size: 12px; }
+    .text_hidden { display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+   
+    /*member mypage*/
+    .member_middle .point_box { margin-top: 20px; }
+
 }
 @media (max-width:400px) {
     /*login > login*/
     .wrap .login_contents .login_wrap .login_box .lb_top h2.f24 { font-size: 18px; }
     .wrap .login_contents .login_wrap .login_box .logbox_btn.f18 { font-size: 14px; }
     .wrap .login_contents .login_wrap .login_box .lb_bottom .lbmb_footer ul li input[type="button"] { font-size: 12px; }
+
+    /*member mb_cart*/
+   .wrap .member_contents .member_wrap .mbcart_bottom .mb_left_btn input { padding: 5px; font-size: 12px; }
+   .wrap .member_contents .member_wrap .member_middle .member_list .w40 { width: 40%; }
+   .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w10 { width: 10%; }
+   .wrap .member_contents .member_form .member_wrap .member_middle .mbl_middle div.w400_20 { width: 20%; }
+
+   /*member mypage*/
+   .member_middle .point_box div ul li { width: 100%; margin-bottom: 5px; }
+   .wrap .mypage_contents .mypage_middle .mbmt_top div span,.wrap .mypage_contents .mypage_middle .mbmt_top div span strong  { font-size: 14px; }
+   .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_middle ul li:last-child.f22 { font-size: 20px; }
+   .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_middle ul li { font-size: 16px; }
+   .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom ul li { font-size: 14px; }
+   .wrap .mypage_contents .mypage_middle .mbm_top { margin-bottom: 30px; }
+   .member_middle .point_box { margin-top: 0; }
+   .wrap .mypage_contents .mypage_top ul li:last-child { border-top: none; }
+   .wrap .mypage_contents .mypage_top ul li { float: none; margin-right: 0;  }
+   .member_middle .point_box div ul li { margin-bottom: 0; }
+   .member_middle .point_box div ul li:hover { background-color: #cfcfd3; }
+   .wrap .mypage_contents .mypage_top ul li a { font-size: 14px; }
+   
+   .member_middle .point_box div ul li { border: 1px solid #ddd; padding: 10px; }
+   .member_middle .point_box div ul li:first-child,.member_middle .point_box div ul li:nth-child(2) { border-bottom: none; }
+   
 }

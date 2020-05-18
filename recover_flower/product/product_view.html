@@ -218,29 +218,29 @@
         .wrap .product_contents .pro_middle .cm_top .cm_left .main_img,.wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul li a img  { width: 100%; }
         .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img, .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul { overflow: hidden; width: 100%; }
         .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul li { float: left; width: 17%; margin: 3% auto 3% 6%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right p { color: rgb(24, 24, 24);  margin-bottom: 10px; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right p { color: rgb(24, 24, 24);  /* margin-bottom: 10px;  */}
         .wrap .product_contents .pro_middle .cm_top .cm_right .product_text { width: 90%; margin-bottom: 3%; padding: 3% 30% 3% 2%; background-color: #fafafa; border-top: 1px solid #ddd; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .product_text .p_info_list { float: left; width: 50%; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .product_text::after { content: ''; display: block; overflow: hidden; clear: both; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .product_text ul li:not(.ft_size) { margin-bottom: 10%; color: #757575; font-size: 14px; font-weight: 600; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .product_text .p_info_contents { float: right; width: 50%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option select { width: 90%;  }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option select { width: 100%;  }
         
         .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top { position: relative; } 
         .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top a span { position: absolute; top: 41%; margin-left: 10px; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top a img { width: 100px; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn { width: 90%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn { float: left; width: 30%; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn { width: 100%; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn { float: left; width: 33%; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn button { border: 1px solid #ddd; background-color: white; padding: 7px; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn input { padding: 3px; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn { float: left; width: 35%;  background-color: #d50c0c; width: 33%; padding: 3% 2%; color: white; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { float: right; width: 35%; border: 1px solid #d50c0c; width: 35%; padding: 2.9% 2%; color: #d50c0c; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn i { margin-right: 5px; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn { float: left; background-color: #d50c0c; width: 33%; padding: 3% 2%; color: white; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { float: right; border: 1px solid #d50c0c; width: 33%; padding: 2.9% 2%; color: #d50c0c; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn i, .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn i { margin-right: 5px; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn::after { content: ''; overflow: hidden; display: block; clear: both; } 
         .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name { overflow: hidden; width: 90%; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name li button { border: 1px solid #ddd; background-color: white; padding: 5px 10px; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name li,.wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price li { float: left; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price { width: 90%; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price { width: 100%; }
         .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price::after { content: ''; display: block; overflow: hidden; clear: both;}
         .wrap .product_contents .cm_bottom .cmb_tab, .wrap .product_contents .cm_bottom .cmb_tab ul { overflow: hidden; }
         .wrap .product_contents .cm_bottom .cmb_tab ul li { float: left; width: 20%; }
@@ -250,10 +250,13 @@
         .wrap .product_contents .cm_bottom .item_active { background-color: #55bfb1;; }
         .wrap .product_contents .cm_bottom .tab1 .cmb_tab ul::after { content: ''; display: block; overflow: hidden; clear: both; }
         .wrap .product_contents .cm_bottom .tab1 .ptab_contents img { width: 100%; }
-        .wrap .product_contents .cm_bottom .p_btn > div { float: right;  }
+        
+        .wrap .product_contents .cm_bottom .p_btn > div { float: right; width: 50%;  }
         .wrap .product_contents .cm_bottom .p_btn::after { content: ''; display: block; overflow: hidden; clear: both; }
-        .wrap .product_contents .cm_bottom .p_btn .w_btn { width: 15%; padding: 1%; background-color: #d50c0c; color: white; }
-        .wrap .product_contents .cm_bottom .p_btn .m_btn { width: 9%; padding: 0.99%; margin-left: 1%; border: 1px solid #ddd; }
+        
+        .wrap .product_contents .cm_bottom .p_btn .w_btn { width: 33%; padding: 15px;  background-color: #d50c0c; color: white; }
+        .wrap .product_contents .cm_bottom .p_btn .m_btn { width: 20%; padding: 15px; margin-left: 1%; border: 1px solid #ddd; }
+
         .wrap .product_contents .cm_bottom table th { padding: 2%; } 
         .wrap .product_contents .cm_bottom table ul li { margin-bottom: 10px; word-break: keep-all; }
         .wrap .product_contents .cm_bottom .p_delivery table .d_info { padding: 0 0 0 3%; }
@@ -277,7 +280,7 @@
                     <div class="cm_top">
                         <div class="cm_left">
                             <div class="main_img">
-                                <a href=""><img class="main_img bbb_img" src="../images/main_img1.jpg" before_img = "../images/main_img1.jpg" alt="product detail image"></a>
+                                <a href=""><img class="main_img" id="main_img" src="../images/main_img1.jpg" before_img = "../images/main_img1.jpg" alt="product detail image"></a>
                             </div>
     
                             <div class="sub_img">
@@ -294,34 +297,19 @@
                         <script>
 
                             $(document).ready( function(){
-                                
-                                // $('.sub_img ul li a img').click( function(){
-                                //     event.preventDefault();
-        
-                                //     $('.main_img').attr('src',$(this).attr('src'));
-                                // });
-                                
-                                $('.sub_img ul li a img').on("mouseenter", function(){
-        
+
+                                $('.sub_img ul li a img').mouseenter( function(){
+                                    
                                     $('.main_img').attr('src',$(this).attr('src'));
                                 });
-        
-                                $('.sub_img ul li a img').on("mouseleave", function(){
-                                     //console.log(1);
-                                     var zz = $(".bbb_img").attr("befor_img");
-                                     console.log(zz);
-        
-                                    $('.main_img').attr('src',$('.bbb_img').attr('befor_img'));
+
+                                $('.sub_img ul li a img').mouseleave( function(){
+                                    
+                                    var hover_img = $("#main_img").attr("before_img");
+                                    
+                                    $('.main_img').attr('src',$('#main_img').attr('before_img'));
                                 });
-                                
-                                // $('.sub_img ul li a img').mouseenter( function(){
-                                //     // console.log($(this).attr('src'))
-                                //     $('.main_img').attr('src',$(this).attr('src'));
-                                // });
-        
-                                // $('.sub_img ul li a img').mouseleave( function(){
-                                //     $('.main_img').attr('src',$('.main_img').attr('src'));
-                                // });
+
                             });
                         </script>
     
@@ -329,7 +317,7 @@
                         <form class="product_form">
                             <div class="cm_right">
                                 <div class="cmr_top">
-                                    <div class="cmrt_title">
+                                    <div class="cmrt_title mb10px">
                                         <div><p class="fw_bold f22">로맨틱 꽃바구니 A타입</p></div>
                                         
                                         <div class="favorite_icon">
@@ -351,7 +339,7 @@
 
                                 <style>
                                     .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div { float: left; }
-                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 32%; }
+                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 80%; margin-right: 10px; }
                                     .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title i { font-size: 20px; }
 
                                     .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon { border: 1px solid #ddd; padding: 8px; border-radius: 20px; margin-right: 5px; }
@@ -367,6 +355,40 @@
                                     .wrap .product_contents .product_form .cm_right .cmr_middle a img { width: 100px; margin-right: 10px; }
                                     .wrap .product_contents .product_form .cm_right .cmr_middle ul li { margin-bottom: 10px; }
                                     .wrap .product_contents .product_form .cm_right .cmr_middle ul li:first-child span del { margin-left: 10px; }
+                                    @media (max-width:1110px) {
+                                    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn { width: 100%; }
+                                    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn { width: 100%; margin-bottom: 10px; }
+                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { margin-right: 0; }
+                                    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { width: 100%; margin-top: 10px; }
+
+                                    }
+                                    @media (max-width:992px) {
+                                        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 70%; }
+                                    }
+                                    
+                                    @media (max-width:768px) {
+                                    .wrap .product_contents .pro_middle .cm_top .cm_left { width: 100%; }
+                                    .wrap .product_contents .pro_middle .cm_top .cm_right { width: 100%; text-align: left; margin-left: 0; margin-top: 20px; } 
+                                    .wrap .product_contents .pro_middle .cm_top .cm_right { border-top: 2px solid #dbdada; padding-top: 20px; }
+                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 83%; }
+                                    }
+
+                                    @media (max-width:600px) {
+                                        .wrap .product_contents .cm_bottom .cmb_tab ul li a { height: 45px; line-height: 40px; font-size: 14px; }
+                                        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn input { padding: 0; }
+                                        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 55%; }
+                                    }
+                                    @media (max-width:400px) {
+                                        .wrap .product_contents .pro_middle .cm_top .cm_right p,.wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price li { font-size: 17px; }
+                                        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn,.wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { font-size: 14px; }
+                                        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title i { font-size: 15px; }
+                                        .wrap .product_contents .product_form .cm_right .cmr_middle ul li { font-size: 12px; }
+                                        .wrap .product_contents .cm_bottom .p_btn .m_btn { width: 25%; font-size: 14px; margin-left: 10px; }
+                                        .wrap .product_contents .cm_bottom .p_btn .w_btn { width: 38%; font-size: 14px; }
+                                        
+                                        
+
+                                    }
 
 
 

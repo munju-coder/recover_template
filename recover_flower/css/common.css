@@ -34,6 +34,7 @@ td, th, tr { border: 1px solid #ddd; }
 .w70 { width:70%; }
 .w50 { width:50%; }
 .w40 { width:40%; }
+.w45 { width: 45%; }
 .w35 { width:35%; }
 .w30 { width:30%; }
 .w25 { width:25%; }
@@ -55,7 +56,7 @@ td, th, tr { border: 1px solid #ddd; }
 /*font-color*/
 .red_color { color: red; }
 .grey_color { color: grey; }
-.b_color { color: rgb(60, 145, 255); }
+.b_color { color: rgb(138, 138, 138); }
 
 /*background-color*/
 .color_red { background-color: red; }

@@ -206,95 +206,96 @@
             <!--} left_menu_wrap-->
         </aside>
         <!--} aside menu-->
-        <style>
-            /*member > mypage.html*/
-            .wrap .mypage_contents .mypage_top .my_option ul { overflow: hidden; }
-            .wrap .mypage_contents .member_box .mypage_middle .mbm_top .mbmt_top { overflow: hidden; }
-            .wrap .mypage_contents .mypage_top ul li { float: right; padding: 10px; border: 1px solid #dbdbdb; margin-right: 1%; }
-            .wrap .mypage_contents .mypage_top ul li:hover { background-color: #8c8c8c; }
-            .wrap .mypage_contents .mypage_top ul li:hover a { color: white; } 
-            .wrap .mypage_contents .mypage_middle { width: 100%; padding-top: 0; }
-            .wrap .mypage_contents .mypage_middle .mbm_top { border: 1px solid #dddddd;  }
-            .wrap .mypage_contents .mypage_middle .mbm_top div { padding: 10px 0; overflow: hidden; }
-            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_right ul li { float: left; padding-right: 2%; } 
-            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom { display: none; background-color: #f8f8f8; border-top:1px solid #dddddd;  }
-
-            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_left { float: left; width:50%; margin-right: 30px; padding-left: 10px; border-right: 1px solid #ddd; padding-right: 20px; }
-            .wrap .mypage_contents .mypage_middle .mbm_top::after { content: ''; display: block; overflow: hidden; clear: both; } 
-            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom .mbmtb_info .mbmtb_info_div { float: left; width: 45%; margin-right: 20px; }
-            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom .mbmtb_info::after { content: ''; display: block; overflow: hidden; clear: both; }
-            .wrap .mypage_contents .mypage_middle .mbm_top .mbmt_bottom { padding-left: 1%; }
-            .wrap .mypage_contents .mypage_middle .caret-up_btn 
-            { position: absolute; left: 50%;  background-color: #fff; border: 1px solid #dbdbdb; border-top: none; display: inline-block; width: 45px; padding: 5px; }
-
-        </style>
-
-        <script>
-            $(document).ready(function(){
-
-                $('.caret-up_btn').click( function(){
-
-                    $('.mbmt_bottom').toggle();
-                    
-                    if ($(".mbmt_bottom").css("display") == "block") {
-                        $('.caret-up_btn a i').attr('class', 'fa fa-caret-up');
-                    } else {
-                        $('.caret-up_btn a i').attr('class', 'fa fa-caret-down');
-                    }
-                });
-                
-
-            });
-        </script>
 
         <!--contents {-->
         <div class="contents member_contents mypage_contents contents_border">
             <!--member_wrap {-->
             <div class="member_wrap mp_wrap dw_1400px">
                 <div class="member_top mb2per mypage_top">
-                    <div class="f24">마이페이지</div>
-
+                    <h2 class="f24 mb20px">마이페이지</h2>
+                
                     <div class="my_option">
                         <ul>
-                            <li class="f12"><a href="#">포인트 등록</a></li>
                             <li class="f12"><a href="#">정보수정</a></li>
                             <li class="f12"><a href="#">회원탈퇴</a></li>
                         </ul>
                     </div>
                 </div>
-
+                
                 <!--member_middle {-->
                 <div class="member_middle mypage_middle">
+                    <div class="point_box mb20px">
+                        <div>
+                            <ul>
+                                <li>적립금: <strong>0원</strong></li>
+                                <li>마일리지: <strong>0원</strong></li>
+                                <li>쿠폰: <strong>0개</strong></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
                     <div class="mbm_top">
+                    
                         <div class="mbmt_top">
-                            <div class="mbmt_left fw_blod">
-                                <i class="far fa-user mr5px"></i> 조문주
+                            <div class="fw_blod">
+                                <i class="far fa-user mr5px"></i> 
+                                <span>나의 주문처리 현황</span> 
+                                <span>(최근 <strong>3개월</strong>기준)</span>
                             </div>
 
-                            <div class="mbmt_right f14">
-                                <ul>
-                                    <li class="fw_bold">보유포인트 : <span class="red_color">100,000</span> P</li>
-                                    <li class="fw_bold">보유쿠폰 : <span class="">0</span> 개</li>
+                        </div>
+
+                        <div class="mbmt_middle t_center">
+                            <ul class="col-xs-6 col-sm-3">
+                                <li class="">입금전</li>
+                                <li class="f22 fw_bold">0</li>
+                            </ul>
+
+                            <ul class="col-xs-6 col-sm-3">
+                                <li class="">배송준비중</li>
+                                <li class="f22 fw_bold">0</li>
+                            </ul>
+
+                            <ul class="col-xs-6 col-sm-3">
+                                <li class="">배송중</li>
+                                <li class="f22 fw_bold">0</li>
+                            </ul>
+
+                            <ul class="col-xs-6 col-sm-3">
+                                <li class="">배송완료</li>
+                                <li class="f22 fw_bold">0</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="mbmt_bottom t_left">
+                            <div class="mbmtb_top">
+                                <ul class="">
+                                    <li>취소: </li>
+                                    <li>1</li>
+                                </ul>
+
+                                <ul class="">
+                                    <li>교환: </li>
+                                    <li>0</li>
+                                </ul>
+
+                                <ul class="">
+                                    <li>반품: </li>
+                                    <li>0</li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="mbmt_bottom">
-                            <div class="mbmtb_info">
-                                <div class="mbmtb_info_div f14"><span class="fw_bold">연락처:</span> 010-1234-5678</div>
-                                <div class="mbmtb_info_div f14"><span class="fw_bold">E-Mail:</span> aaa@aaa.com</div>
-                                <div class="mbmtb_info_div f14"><span class="fw_bold">최종접속일시:</span> 2020-04-16 08:47:36</div>
-                                <div class="mbmtb_info_div f14"><span class="fw_bold">회원가입일시:</span> 2020-04-16 11:20:33</div>
-                                <div class="mbmtb_info_div f14 word_break"><span class="fw_bold">주소:</span> (11111) 경기도 광명시 오리로619 11, 예원이케이빌딩 2층</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="caret-up_btn t_center">
-                        <a href="#"><i class="fa fa-caret-down"></i></a>
+    
                     </div>
                     
-                    <div class="member_middle mp_middle mtb3per">
+                    <div class="">
+
+                    </div>
+                    
+                    <div class="member_middle mtb3per">
                         <div class="member_top ptb10px">
                             <div class="f20">최근 주문 내역</div>
                             <div class="m_btn t_right f14"><a href="mb_order_list.html"><i class="fas fa-plus mr5px"></i>더보기</a></div>
@@ -302,21 +303,21 @@
 
                         <div class="member_list">
                             <div class="w20 mbl_subject t_center">주문번호</div>
-                            <div class="w20 mbl_subject t_center">주문일시</div>
+                            <div class="w20 mbl_subject t_center">주문일</div>
                             <div class="w10 mbl_subject t_center">상품수</div>
                             <div class="w15 mbl_subject t_center">주문금액</div>
-                            <div class="w15 mbl_subject t_center">입금액</div>
-                            <div class="w10 mbl_subject t_center">미입금액</div>
+                            <div class="w15 mbl_subject t_center none">입금액</div>
+                            <div class="w10 mbl_subject t_center none">미입금액</div>
                             <div class="w10 mbl_subject t_center">상태</div>
                         </div>
 
                         <div class="mbl_middle ptb20px">
-                            <div class="w20 mbl_subject t_center">2019032915462525</div>
-                            <div class="w20 mbl_subject t_center">19-03-29 15:46 (금)</div>
+                            <div class="w20 mbl_subject t_center text_hidden">2019032915462525</div>
+                            <div class="w20 mbl_subject t_center">19-03-29</div>
                             <div class="w10 mbl_subject t_center">1</div>
                             <div class="w15 mbl_subject t_center">39,000원</div>
-                            <div class="w15 mbl_subject t_center">39,000원</div>
-                            <div class="w10 mbl_subject t_center">39,000원</div>
+                            <div class="w15 mbl_subject t_center none">39,000원</div>
+                            <div class="w10 mbl_subject t_center none">39,000원</div>
                             <div class="w10 mbl_subject t_center red_color fw_bold">주문취소</div>
                         </div>
                     </div>
