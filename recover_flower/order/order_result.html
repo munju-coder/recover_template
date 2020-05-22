@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -33,9 +34,7 @@
             <div class="header_wrap dw_1400px">
                 <!--mobile menu 변경-->
                 <div class="header_M_left">
-                    <form action="">
-                        <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
-                    </form>
+                    <div id="search_icon"><a href="#"><img src="../images/search_icon.png" alt="search_icon"></a></div>
                 </div>
 
                 <div class="header_left t_left">
@@ -58,7 +57,7 @@
                         <li class="header_login mt10px"><a href="#">로그인</a></li>
                         <li class="header_join mt10px"><a href="#">회원가입</a></li>
                         <li><a href="../member/mb_cart.html"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
-                        <li><a href="../member/my_page.html"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
+                        <li><a href="#"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
                         <li class="menu_icon"><a href="#"><img src="../images/menu_icon.png" alt="menu_icon"></a></li>
                     </ul>
                 </div>
@@ -73,16 +72,16 @@
                     </div>
 
                     <div class="hb_menu swiper-wrapper">
-                        <div class="swiper-slide"><a href="../product/product_list.html">꽃바구니</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">개업화분</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">축하화환</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">근조화환</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">공기정화식물</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">동양란</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">서양란</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">꽃다발</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">분재</a></div>
-                        <div class="swiper-slide"><a href="../product/product_list.html">과일바구니</a></div>
+                        <div class="swiper-slide"><a href="#">꽃바구니</a></div>
+                        <div class="swiper-slide"><a href="#">개업화분</a></div>
+                        <div class="swiper-slide"><a href="#">축하화환</a></div>
+                        <div class="swiper-slide"><a href="#">근조화환</a></div>
+                        <div class="swiper-slide"><a href="#">공기정화식물</a></div>
+                        <div class="swiper-slide"><a href="#">동양란</a></div>
+                        <div class="swiper-slide"><a href="#">서양란</a></div>
+                        <div class="swiper-slide"><a href="#">꽃다발</a></div>
+                        <div class="swiper-slide"><a href="#">분재</a></div>
+                        <div class="swiper-slide"><a href="#">과일바구니</a></div>
                     </div>
                 </div>
             </div>
@@ -190,7 +189,7 @@
                 
                     <div class="left_tab" id="left_tab3">
                         <ul class="t_left">
-                            <li class="mb5per f14"><a href="../member/my_page.html">마이페이지</a></li>
+                            <li class="mb5per f14"><a href="#">마이페이지</a></li>
                             <li class="mb5per f14"><a href="#">주문내역</a></li>
                             <li class="mb5per f14"><a href="#">주문배송조회</a></li>
                             <li class="mb5per f14"><a href="../board/info_list.html">공지사항</a></li>
@@ -202,144 +201,177 @@
                     
                 </div>  
                 <!--} catego_menu-->
+                    
             </div>
             <!--} left_menu_wrap-->
         </aside>
         <!--} aside menu-->
-
+        
+        
         <!--contents {-->
-        <div class="contents product_contents contents_border mb3per">
-           <!--member_wrap {-->
-            <div class="member_wrap pro_wrap dw_1400px">
-                <div class="member_top pro_top">
-                    <div class="f24 pb20px">꽃바구니</div>
-
-                    <div class="prot_bottom mt10px">
-                        <ul>
-                            <li class="f14 mr10px"><a href="#">최근등록순</a></li>
-                            <li class="f14 mr10px"><a href="#">인기순</a></li>
-                            <li class="f14"><a href="#">낮은가격순</a></li>
-                        </ul>
-                    </div>
+        <div class="contents member_contents order_contents contents_border mb15vh">
+            <!--order_wrap {-->
+            <div class="member_wrap order_wrap dw_1400px">
+                <div class="member_top">
+                    <h2 class="f24 mb20px">주문 상세내역</h2>
                 </div>
 
-                <ul class="product_box">
-                    <li class="col-xs-6 col-sm-3 t_center pt3per">
-                        <div class="pbl_img">
-                            <a href="product_view.html">
-                                <img class="img-thumbnail" src="../images/product_img1.png" alt="SJWT1237M 300g 기모 SRX 라운드 긴소매[히트기어]" width="230" height="230">
-                            </a>
+                <div class="member_middle order_middle result_middle mb10px">
+                    <div class="order_result_top">
+                        <div class="ort_left mb10px w70">
+                            <!-- <span><input class="mr5px" type="checkbox" name="" id=""></span> -->
+                            <span>주문날짜: <span>20200521 18:20</span></span>&nbsp;&nbsp;
+                            <span class="word_break">주문번호: <span>2019032915462525</span></span>
                         </div>
-                        
-                        <div class="pbl_subject pb10px t_center mt10px">
-                            <a href="#">로맨틱 꽃바구니</a>
+    
+                        <div class="ort_right w30 t_right">
+                            <!-- <a href="#">주문내역삭제</a> -->
                         </div>
-                        <div class="pbl_cost fw_bold mb10px">49,000 원</div>
-                        <div class="pbl_point"><span>10,384 P</span></div>
-                    </li>
+                    </div>
+      
+                    <div class="order_result_middle">
+                        <div class="orl_contents">
+                            <ul class="orlc_top w20">
+                                <li><a href=""><img class="w50 " src="../images/main_img1.jpg" alt="product image"></a></li>
+                            </ul>
+                             
+                            <ul class="orlc_middle w40 mt5per">
+                                <li class="word_break"><span>로맨틱 꽃바구니 (어버이날 기념일 이벤트 상품)</span> / <span>1</span></li>
+                            </ul>
 
-                    <li class="col-xs-6 col-sm-3 t_center pt3per">
-                        <div class="pbl_img">
-                            <a href="#">
-                                <img class="img-thumbnail" src="../images/product_img.png" alt="로맨틱 꽃다발" width="230" height="230">
-                            </a>
+                            <ul class="orlc_bottom w40 mt10px">
+                                <li class="mb10px">
+                                    <div class="mb10px">배송완료</div>
+                                    <div>토요일 5/16 도착</div>
+                                </li>
+                                <li class="mb10px"><a href="#">배송조회</a></li>
+                                <li class="mb10px"><a href="#">교환신청</a></li>
+                                <li class="mb10px"><a href="#">반품신청</a></li>
+                                <!-- <li class="mb10px"><a href="#">구매후기</a></li> -->
+                            </ul>
+                            
                         </div>
-                        
-                        <div class="pbl_subject pb10px t_center mt10px">
-                            <a href="#">SJWT1237M 300g</a>
-                        </div>
-                        <div class="pbl_cost fw_bold mb10px">49,000 원</div>
-                        <div class="pbl_point"><span>10,384 P</span></div>
-                    </li>
+                       
+                    </div>
 
-                    <li class="col-xs-6 col-sm-3 t_center pt3per">
-                        <div class="pbl_img">
-                            <a href="#">
-                                <img class="img-thumbnail" src="../images/product_img.png" alt="SJWT1237M 300g 기모 SRX 라운드 긴소매[히트기어]" width="230" height="230">
-                            </a>
-                        </div>
-                        
-                        <div class="pbl_subject pb10px t_center mt10px">
-                            <a href="#">SJWT1237M 300g</a>
-                        </div>
-                        <div class="pbl_cost fw_bold mb10px">49,000 원</div>
-                        <div class="pbl_point"><span>10,384 P</span></div>
-                    </li>
+                </div>
 
-                    <li class="col-xs-6 col-sm-3 t_center pt3per">
-                        <div class="pbl_img">
-                            <a href="#">
-                                <img class="img-thumbnail" src="../images/product_img.png" alt="SJWT1237M 300g 기모 SRX 라운드 긴소매[히트기어]" width="230" height="230">
-                            </a>
+                <!-- <div class="member_middle order_middle result_middle">
+                    <div class="order_result_top">
+                        <div class="ort_left mb10px w70">
+                            <input class="mr5px" type="checkbox" name="" id="">
+                            <span>주문일: <span>20200521 18:20</span></span>&nbsp;&nbsp;
+                            <span class="word_break">주문번호: <span>2019032915462525</span></span>
                         </div>
-                        
-                        <div class="pbl_subject pb10px t_center mt10px">
-                            <a href="#">SJWT1237M 300g</a>
+    
+                        <div class="ort_right w30 t_right">
+                            <a href="#">주문내역삭제</a>
                         </div>
-                        <div class="pbl_cost fw_bold mb10px">49,000 원</div>
-                        <div class="pbl_point"><span>10,384 P</span></div>
-                    </li>
+                    </div>
+      
+                    <div class="order_result_middle">
+                        <div class="orl_contents">
+                            <ul class="orlc_top w20">
+                                <li><a href=""><img class="w50 " src="../images/product_img.png" alt="product image"></a></li>
+                            </ul>
+                             
+                            <ul class="orlc_middle w40 mt5per">
+                                <li class="word_break"><span></span> 노란장미 10송이 꽃다발 / <span>1</span></li>
+                            </ul>
 
-                    <li class="col-xs-6 col-sm-3 t_center pt3per">
-                        <div class="pbl_img">
-                            <a href="#">
-                                <img class="img-thumbnail" src="../images/product_img.png" alt="SJWT1237M 300g 기모 SRX 라운드 긴소매[히트기어]" width="230" height="230">
-                            </a>
+                            <ul class="orlc_bottom w40 mt10px">
+                                <li class="mb10px">
+                                    <div class="mb10px">배송완료</div>
+                                    <div>토요일 5/16 도착</div>
+                                </li>
+                                <li class="mb10px"><a href="#">배송조회</a></li>
+                                <li class="mb10px"><a href="#">교환신청</a></li>
+                                <li class="mb10px"><a href="#">반품신청</a></li>
+                                <li class="mb10px"><a href="#">구매후기</a></li>
+                            </ul>
+                            
                         </div>
-                        
-                        <div class="pbl_subject pb10px t_center mt10px">
-                            <a href="#">SJWT1237M 300g</a>
-                        </div>
-                        <div class="pbl_cost fw_bold mb10px">49,000 원</div>
-                        <div class="pbl_point"><span>10,384 P</span></div>
-                    </li>
+                       
+                    </div>
 
-                    <li class="col-xs-6 col-sm-3 t_center pt3per">
-                        <div class="pbl_img">
-                            <a href="#">
-                                <img class="img-thumbnail" src="../images/product_img.png" alt="SJWT1237M 300g 기모 SRX 라운드 긴소매[히트기어]" width="230" height="230">
-                            </a>
-                        </div>
-                        
-                        <div class="pbl_subject pb10px t_center mt10px">
-                            <a href="#">SJWT1237M 300g</a>
-                        </div>
-                        <div class="pbl_cost fw_bold mb10px">49,000 원</div>
-                        <div class="pbl_point"><span>10,384 P</span></div>
-                    </li>
+                </div> -->
 
-                    <li class="col-xs-6 col-sm-3 t_center pt3per">
-                        <div class="pbl_img">
-                            <a href="#">
-                                <img class="img-thumbnail" src="../images/product_img.png" alt="SJWT1237M 300g 기모 SRX 라운드 긴소매[히트기어]" width="230" height="230">
-                            </a>
-                        </div>
-                        
-                        <div class="pbl_subject pb10px t_center">
-                            <a href="#">SJWT1237M 300g</a>
-                        </div>
-                        <div class="pbl_cost fw_bold mb10px">49,000 원</div>
-                        <div class="pbl_point"><span>10,384 P</span></div>
-                    </li>
+                <!--order_result_box_wrap {-->
+                <div class="order_box_wrap order_result_box_wrap">
+                    <!--odresult_box {-->
+                    <div class="order_box order_top odresult_box">
 
-                    <li class="col-xs-6 col-sm-3 t_center pt3per">
-                        <div class="pbl_img">
-                            <a href="#">
-                                <img class="img-thumbnail" src="../images/product_img.png" alt="SJWT1237M 300g 기모 SRX 라운드 긴소매[히트기어]" width="230" height="230">
-                            </a>
-                        </div>
-                        
-                        <div class="pbl_subject pb10px t_center mt10px">
-                            <a href="#">SJWT1237M 300g</a>
-                        </div>
-                        <div class="pbl_cost fw_bold mb10px">49,000 원</div>
-                        <div class="pbl_point"><span>10,384 P</span></div>
-                    </li>
+                        <div class="delivery_info receiver_info mb10px">
+                            <h4 class="f20 bor_bottom">받는사람 정보</h4>
+                            
+                            <div class="pi_wrap">
+                                <div class="ob_content mb10px">
+                                    <div class="obc_input">
+                                        받는사람 : <span>조문주</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="ob_content mb10px">
+                                    <div class="obc_input phone_num1">
+                                        연락처1 : <span>010-1234-5678</span>
+                                    </div>
 
-                </ul>
+                                    <div class="obc_input phone_num2">
+                                        연락처2 : <span>010-9630-5678</span>
+                                    </div>
+                                </div>
+
+                                <div class="ob_content mb10px">
+                                    <div class="obc_input">
+                                        받는 주소 : <span>인천광역시 남동구 구월동 1132-22</span>
+                                    </div>
+
+                                    <div class="obc_input">
+                                        배송요청사항 : <span>경비실에 맡겨주세요.</span>
+                                    </div>                                  
+                                </div>
+                            </div>
+              
+                        </div>
+                    
+                        <div class="delivery_info pay_info mb10px">
+                            <h4 class="f20 bor_bottom">결제 정보</h4>
+
+                            <div class="pi_wrap">
+                                <div class="order_result_left w20">
+                                    <ul>
+                                        <li class="mb20px">결제수단</li>
+                                        <li>
+                                            <p class="mr10px">신한카드 <span>:</span> </p> 
+                                            <p>일시불</p>
+                                        </li>
+                                    </ul>
+                                </div>
         
+                                <div class="order_result_right w80 t_right">
+                                    <ul>
+                                        <li class="mb10px"><span class="fw_bold">총 상품가격</span> : <span>139,900</span>원</li>
+                                        <li class="mb10px"><span class="fw_bold"><span>-</span> 할인금액</span> : <span class="red_color">2,000</span>원</li>
+                                        <li class="mb10px"><span class="fw_bold"> 배송비</span> : <span>2,000</span>원</li>
+                                        <li class="mb10px"><span class="fw_bold">총 결제금액</span> : <span class="red_color fw_bold">135,900</span>원</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <!--} odresult_box-->
+
+      
+                    <div class="order_result_btn t_center">
+                        <a href="../member/mb_order_list.html">주문목록돌아가기</a>
+                    </div>
+
+                </div>
+                <!--} order_result_box_wrap-->
             </div>
-            <!--} member_wrap-->
+            <!--} order_wrap-->
         </div>
         <!--} contents-->
 

@@ -26,7 +26,7 @@ td, th, tr { border: 1px solid #ddd; }
     -webkit-align-items: center;
     align-items: center;
 }
-
+.text_hidden { display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 /*width*/
 .w100 { width:100%; }
 .w98 { width:98%; }
@@ -81,10 +81,12 @@ td, th, tr { border: 1px solid #ddd; }
 
 .mtb2per { margin: 2% 0; }
 .mtb3per { margin: 3% 0; }
+.mtb4per { margin: 4% 0; }
 .mtb5per { margin: 5% 0; }
 .mt10per { margin-top: 10%; }
 .mtb10px { margin: 10px 0; }
 
+.mleft_5px { margin-left: 5px; }
 .mleft_1per { margin-left: 1%; }
 .mr5px { margin-right: 5px; }
 .mr10px { margin-right: 10px; }
@@ -116,6 +118,7 @@ td, th, tr { border: 1px solid #ddd; }
 
 /*border*/
 .wrap .contents_border { border-top: 1px solid #ddd; padding-top: 3%; }
+.bor_bottom { border-bottom: 2px solid #919191; padding-bottom: 15px; }
 
 /* paging  */
 .p_paging .pp_wrap a { display: inline-block; width: 24px; padding: 5px; background-color: white; border-radius: 5px; color: #555;  }

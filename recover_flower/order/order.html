@@ -23,6 +23,28 @@
     <link rel="stylesheet" href="../css/main.css">
 
 </head>
+<script>
+    $(document).ready( function(){
+
+        $('.charge_cash').click( function(){
+
+            $('.charge_select > div:first-child').addClass('active');           
+            $('.charge_select > div:last-child').removeClass('active');  
+            $('.cash_info').show();
+            $('.card_info').hide();
+            
+            
+        });
+
+        $('.charge_card').click( function(){
+            $('.charge_select > div:last-child').addClass('active');  
+            $('.charge_select > div:first-child').removeClass('active');
+            $('.card_info').show();
+            $('.cash_info').hide();
+        });
+
+    });
+</script>
 
 <body>
     <!--wrap {-->
@@ -216,25 +238,25 @@
                 </div>
 
                 <div class="member_middle order_middle mb10px">
-                    <div class="member_list">
-                        <div class="w50 mbl_subject order_subject t_center">상품명</div>
-                        <div class="w20 mbl_subject order_subject t_center">상품코드</div>
+                    <div class="member_list order_list">
+                        <div class="w40 mbl_subject order_subject t_center">상품명</div>
+                        <div class="w30 mbl_subject order_subject t_center">상품코드</div>
                         <div class="w10 mbl_subject order_subject t_center">수량</div>
-                        <div class="w15 mbl_subject order_subject t_center">주문금액</div>
+                        <div class="w20 mbl_subject order_subject t_center">주문금액</div>
                     </div>
 
                     <div class="mbl_middle order_middle pt20px">
-                        <div class="w50 mbl_subject order_subject t_center">
+                        <div class="w40 mbl_subject order_subject t_center">
                             <ul>
                                 <li class="w50"><img class="w40" src="../images/main_img1.jpg" alt="product image"></li>
-                                <li class="w30">로맨틱 꽃바구니<br> (어버이날 이벤트 상품)</li>
+                                <li class="w30"><a href="../product/product_view.html">로맨틱 꽃바구니<br> (어버이날 이벤트 상품)</a></li>
                                 
                             </ul>
                         </div>
                         
-                        <div class="w20 mbl_subject order_subject t_center fw_600 text_hidden"><a class="g_color" href="../order/order_result.html">2019032915462525</a></div>
+                        <div class="w30 mbl_subject order_subject t_center fw_600 text_hidden product_code"><a class="g_color" href="../order/order_result.html">2019032915462525</a></div>
                         <div class="w10 mbl_subject order_subject t_center">1</div>
-                        <div class="w15 mbl_subject order_subject t_center">39,000원</div>
+                        <div class="w20 mbl_subject order_subject t_center">139,000원</div>
                     </div>
 
                 </div>
@@ -243,26 +265,110 @@
                     /*order > order*/
                     .wrap .member_contents .member_wrap .member_middle .mbl_middle div ul li { float: left;  }
                     .point_box input ,.ob_content input { border: 1px solid rgb(173, 173, 173); padding: 3px 0; padding-left: 10px; }
-                    .wrap .order_contents .order_box_wrap .order_top .orderer_info { padding: 20px 20px 0 20px; }
-                    .wrap .order_contents .order_box_wrap .order_top .delivery_info { padding: 20px 20px 0 20px; }
+                    .wrap .order_contents .order_box_wrap .order_top .orderer_info,.wrap .order_contents .order_box_wrap .order_top .delivery_info { padding: 20px 20px 0 20px; }
                     .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content { border-bottom: 1px solid #ddd; padding-bottom: 15px; }
-                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content { border-bottom: 1px solid #ddd; padding-bottom: 15px; }
-                  
-                    .bor_bottom { border-bottom: 2px solid rgb(202, 202, 202); padding-bottom: 10px; }
-                  
-                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input { float: left; width: 50%; }
-                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content::after { content: ''; overflow: hidden; display: block; clear: both; }
-                    
-                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input .sub_input { float: left; width: 45%; }
-                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input .sub_input:first-child { margin-right: 10px; }
-                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input::after { content: ''; overflow: hidden; display: block; clear: both; }
-                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content.address_box a { display: inline-block; border: 1px solid #ddd; padding: 5px 15px; background-color: gray; color: white; }
                     .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content.order_num input { float: left; }
                     .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content::after { content: ''; display: block; overflow: hidden; clear: both; } 
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content { border-bottom: 1px solid #ddd; padding-bottom: 15px; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content::after { content: ''; overflow: hidden; display: block; clear: both; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input .sub_input { float: left; width: 48%; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input .sub_input:first-child { margin-right: 7px; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input::after { content: ''; overflow: hidden; display: block; clear: both; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content.address_box a { display: inline-block; border: 1px solid #ddd; padding: 5px 15px; background-color: gray; color: white; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .textArea2 { overflow: hidden; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content::after { content: ''; display: block; overflow: hidden; clear: both; } 
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input { width: 100%; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input { float: left; width: 50%; }
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .address_box .address_input  { width: 62%; }
 
-
+                    .point_box input::placeholder, .ob_content input::placeholder { font-size: 13px; margin-left: 10px; }
+                    .wrap .order_contents .order_box_wrap .order_middle { padding: 20px 20px 0 20px; }
+                    .wrap .order_contents .order_box_wrap .order_middle .point_info { border: 2px solid #ccc; padding: 25px; }
                     
+                    .wrap .order_contents .order_box_wrap .order_middle .point_info ul { float: left; width: 33.3%; overflow: hidden;  }
+                    .wrap .order_contents .order_box_wrap .order_middle .point_info::after { content: ''; display: block; overflow: hidden; clear: both; }
+                    
+                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content textarea { border: 1px solid #ccc; }
 
+                    .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content div { float: left; margin-right: 10px; }
+                    .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content::after { content: ''; display: block; overflow: hidden; clear: both; }
+                    .wrap .order_contents .order_box_wrap .order_middle .bill { background-color: #ececec; }
+                    .wrap .order_contents .order_box_wrap .order_middle .bill .calc div { float: left; width: 14%; padding: 4% 0; }
+                    .wrap .order_contents .order_box_wrap .order_middle .bill .calc { width: 90%; margin: 0 auto; }
+                    .wrap .order_contents .order_box_wrap .order_middle .bill .calc::after { content: ''; overflow: hidden; display: block; clear: both; }
+
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box { border-top: 2px solid #919191; }
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select > div { float: left; width: 50%; border: 1px solid #aaa; padding: 15px; }
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select > div:hover { background-color: rgb(96, 96, 96); color: white; }
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select > div:first-child { border-right: 0; }
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select > div.active { background-color: rgb(96, 96, 96); color: white; }
+
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select::after { content: ''; display: block; overflow: hidden; clear: both; }
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_info .ci_box .cib_subject input { width: 100px; }
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box .card_info { display: none; } 
+                    .wrap .order_contents .order_box_wrap .order_middle .charge_box .card_info .ci_box .cib_subject input { width: 150px; }
+
+                    .wrap .order_contents .order_box_wrap .order_btn a { display: inline-block; padding: 15px 30px; }
+                    .wrap .order_contents .order_box_wrap .order_btn a:first-child { background-color: #2d2d2d; color: white; margin-right: 10px; border: 1px solid black; }
+                    .wrap .order_contents .order_box_wrap .order_btn a:last-child { border: 1px solid #2d2d2d; color: black; }
+                    .wrap .order_contents .order_box_wrap .order_btn a:last-child:hover { border: 1px solid red; background-color: red; color: white; }
+
+                    @media (max-width: 992px) {
+                        .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content div ,.wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content { font-size: 14px; }
+                        .wrap .order_contents .order_box_wrap .order_middle .charge_box .card_info .ci_box .cib_subject input { width: 65px; margin-right: 0; }
+                        .wrap .order_contents .order_box_wrap .order_top .orderer_info, .wrap .order_contents .order_box_wrap .order_middle { padding: 20px 0; }
+                        .wrap .order_contents .order_box_wrap .order_top .delivery_info { padding: 0; }
+                    }
+                    @media (max-width:768px) {
+                        .wrap .order_contents .order_box_wrap .order_middle { padding-top: 0; }
+                        .wrap .order_contents .order_wrap .order_middle .order_list .order_subject.w40 { width: 30%;}
+                        .wrap .order_contents .order_wrap .order_middle .order_middle div.w40 { width: 30%; }
+                        .wrap .order_contents .order_wrap .order_middle div.w10 { width: 15%; }
+                        .wrap .order_contents .order_wrap .order_middle .order_subject ul li img { display: none; }
+                        .wrap .order_contents .order_wrap .order_middle .order_subject ul li { width: 100%; }
+                        .wrap .order_contents .order_wrap .order_middle .order_subject ul li.product_code { width: 50px; }
+                        .wrap .order_contents .order_box_wrap .order_middle .bill .calc div { width: 17%; }
+                        .wrap .order_contents .order_box_wrap .order_middle .bill .calc .pro_sum { width: 25%; }
+                        .wrap .order_contents .order_box_wrap .order_middle .bill .calc .deli_sum,.wrap .order_contents .order_box_wrap .order_middle .bill .calc .sale_sum
+                         { width: 20%; }
+                        .wrap .order_contents .order_box_wrap .order_middle .bill .calc div ul li:last-child { font-size: 12px; margin-top: 3px; }
+                        .wrap .order_contents .order_box_wrap .order_btn { font-size: 12px; }
+                        .wrap .order_contents .order_box_wrap .order_middle .charge_box .card_info .ci_box .cib_subject select { font-size: 14px; }
+                        .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select > div { padding: 10px; font-size: 14px; }
+     
+                        
+                    }
+
+                    @media (max-width:600px) {
+                                        
+                        .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content div { float: none; margin-right: 0; width: 100%; }
+                        .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input:first-child { margin-bottom: 15px; }
+                        .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .obc_input { float: none; width: 100%; }
+                        .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .textArea1 .sub_input { width: 100%; }
+                        .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content .textArea2 .message_box .sub_input { width: 100%; }
+                        .wrap .order_contents .order_box_wrap .order_middle .charge_box { margin: 50px 0; }
+                        .wrap .order_contents .order_box_wrap .order_btn a { padding: 10px 20px; }
+                        
+                        .wrap .order_contents .order_box_wrap .order_middle .bill .calc div ul li span { font-size: 13px; }
+                        .wrap .order_contents .order_box_wrap .order_middle .bill .calc div ul li:first-child { font-size: 12px; margin-bottom: 0; }
+                        .wrap .order_contents .order_box_wrap .order_middle .bill .calc .total_sum { width: 25%; } 
+                        
+                        .wrap .order_contents .order_box_wrap .order_middle .point_info { padding: 20px 0; }
+                        .wrap .order_contents .order_box_wrap .order_middle .point_info ul li:first-child { font-size: 15px; }
+                        .wrap .order_contents .order_box_wrap .order_middle .point_info ul li.f22 { font-size: 16px; }
+                        .wrap .order_contents .order_box_wrap .order_middle .point_info ul:last-child .point_input { width: 68px; padding: 0; }
+
+                    }
+
+                    @media (max-width:400px) {
+                        
+                        .wrap .order_contents .order_box_wrap .order_middle .charge_box .card_info .ci_box .cib_subject span { margin-right: 0; }
+                        .wrap .order_contents .order_box_wrap .order_middle .charge_box .card_info .ci_box .cib_subject input { width: 63px; }
+                        .wrap .order_contents .order_box_wrap .order_middle .charge_box .card_info .ci_box div.total_sum { width: 10%; }
+                        .wrap .order_contents .order_box_wrap .order_top .orderer_info h4 ,.wrap .order_contents .order_box_wrap .order_top .delivery_info h4
+                        ,.wrap .order_contents .order_box_wrap .order_middle .charge_box h4 { font-size: 17px; }
+                        
+                    }
 
                 </style>
                 
@@ -300,19 +406,18 @@
                                 <h4 class="f20 mb20px mb10px bor_bottom">배송정보</h4>
                                 
                                 <div class="ob_content mb10px">
-                                    <div class="obc_subject mb10px">이름</div>
                                     <div class="obc_input">
-                                        <input type="text" name="r_name" id="r_name" class="w50" value="">
+                                       이름 &nbsp;&nbsp;<input type="text" name="r_tel" id="r_name" class="w70" value="" placeholder="">
                                     </div>
                                 </div>
 
                                 <div class="ob_content mb10px">
-                                    <div class="obc_input">
-                                        연락처1 &nbsp;<input type="text" name="r_tel" id="r_tel" class="w50" value="" placeholder="('-'없이 입력)">
+                                    <div class="obc_input phone_num1">
+                                        연락처1 &nbsp;<input type="text" name="r_tel" id="r_tel1" class="w70" value="" placeholder="('-'없이 입력)">
                                     </div>
 
-                                    <div class="obc_input">
-                                        연락처2 &nbsp;<input type="text" name="r_tel" id="r_tel" class="w50" value="" placeholder="('-'없이 입력)">
+                                    <div class="obc_input phone_num2">
+                                        연락처2 &nbsp;<input type="text" name="r_tel" id="r_tel2" class="w70" value="" placeholder="('-'없이 입력)">
                                     </div>
                                 </div>
 
@@ -321,47 +426,36 @@
                                     
                                     <div class="obc_subject">
                                         <div class="zip_btn cursor fw_600 f14 mb10px" id="r_zip_btn">
-                                            <input type="text" name="r_zip" id="r_zip" class="w30" value="" placeholder="우편번호 입력하세요.">
+                                            <input type="text" name="r_zip" id="r_zip" class="w60" value="" placeholder="우편번호 입력하세요.">
                                             <a href="#">주소찾기</a>
                                         </div>
                                     </div>
-
-                                    <div class="obc_input">
+                                    <div class="obc_input address_input">
                                         <input type="text" name="r_addr_1" id="r_addr_1" class="sub_input w98" value="" placeholder="기본주소 입력하세요.">
-                                        <input type="text" name="r_addr_1" id="r_addr_1" class="sub_input w98" value="" placeholder="주소 입력하세요.">
+                                        <input type="text" name="r_addr_2" id="r_addr_1" class="sub_input w98" value="" placeholder="상세주소 입력하세요.">
                                     </div>
                                 </div>
                                 
-                                <style>
-                                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content div.textArea1 ,.ob_content div.textArea2
-                                     { float: left; width: 50%; margin-top: 10px; }
-                                    .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content::after { content: ''; display: block; overflow: hidden; clear: both; } 
-
-
-                                </style>
-
                                 <div class="ob_content mb10px">
-                                    <div class="textArea1">
+                                    <div class="textArea1 mb10px mt20px">
                                         <div class="obc_subject mb10px">배송메시지</div>
-                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        <input type="text" name="r__d_message" id="" class="sub_input w60" value="" placeholder="배송메세지를 입력하세요.">
                                     </div>
                                     
-                                    <div class="textArea2 mb10px">
+                                    <div class="textArea2 mt20px">
                                   
                                         <div class="message_box mb10px">
                                             <div class="obc_subject mb10px">상품 메시지 (40자 내외만 가능) &nbsp;
-                                                <!-- <div class="text_select"> -->
+                                                <div class="text_select f14 mt10px">
                                                     <input type="radio" name="" id="" value="없음">&nbsp;없음&nbsp;
                                                     <input type="radio" name="" id="" value="리본">&nbsp;리본&nbsp;
                                                     <input type="radio" name="" id="" value="카드">&nbsp;카드&nbsp;
                                                     <input type="radio" name="" id="" value="익명">&nbsp;익명&nbsp;
-                                                <!-- </div> -->
+                                                </div>
                                             </div>
+                                        
+                                            <input type="text" name="r_p_message" id="" class="w60 sub_input" value="" placeholder="상품메세지를 입력하세요.">
                                             
-                                            <div class="obc_input">
-                                                <textarea name="" id="" cols="30" rows="10"></textarea>
-                                            </div>
-
                                         </div>
                                     </div>
                                     
@@ -369,21 +463,6 @@
                             </div>
                         </div>
                         <!--} order_box-->
-
-                        <style>
-                            .point_box input::placeholder, .ob_content input::placeholder { font-size: 13px; margin-left: 10px; }
-                            .wrap .order_contents .order_box_wrap .order_middle { padding: 20px; }
-                            .wrap .order_contents .order_box_wrap .order_middle .point_info { border: 2px solid #ccc; padding: 25px; }
-                            
-                            .wrap .order_contents .order_box_wrap .order_middle .point_info ul { float: left; width: 33.3%; overflow: hidden;  }
-                            .wrap .order_contents .order_box_wrap .order_middle .point_info::after { content: ''; display: block; overflow: hidden; clear: both; }
-                            
-                            .wrap .order_contents .order_box_wrap .order_top .delivery_info .ob_content textarea { border: 1px solid #ccc; }
-
-                            .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content div { float: left; margin-right: 10px; }
-                            .wrap .order_contents .order_box_wrap .order_top .orderer_info .ob_content::after { content: ''; display: block; overflow: hidden; clear: both; }
-
-                        </style>
                 
                         <!--order_middle {-->
                         <div class="order_middle">
@@ -401,128 +480,53 @@
 
                                 <ul>
                                     <li class="mb10px">포인트사용</li>
-                                    <li><input class="w20" type="text" name="" id="" value=""> P</li>
+                                    <li><input class="w40 point_input" type="text" name="" id="" value=""> P</li>
                                 </ul>
 
                             </div>
-
-                            <style>
-                                .wrap .order_contents .order_box_wrap .order_middle .bill { background-color: #ececec; }
-                                .wrap .order_contents .order_box_wrap .order_middle .bill .calc div { float: left; width: 13%; padding: 4% 0; }
-                                .wrap .order_contents .order_box_wrap .order_middle .bill .calc { width: 90%; margin: 0 auto; }
-                                .wrap .order_contents .order_box_wrap .order_middle .bill .calc::after { content: ''; overflow: hidden; display: block; clear: both; }
-                                
-
-
-                            </style>
 
                             <div class="bill t_center">
                                 <div class="calc">
 
                                     <div class="pro_sum">
                                         <ul>
-                                            <li class="mb10px f20 fw_bold color_555"><span>39,900원</span></li>
-                                            <li class="ce444_color">상품금액</li>
-                                        
+                                            <li class="mb10px f20 fw_bold color_555"><span>139,900</span>원</li>
+                                            <li class="ce444_color word_break">상품금액</li>
                                         </ul>
                                     </div>
 
-                                    <div><a class="plus_icon"><img src="../images/plus_icon.png" alt="plus_icon"></a></div>
+                                    <div class="sum_icon"><a class="plus_icon"><img src="../images/plus_icon.png" alt="plus_icon"></a></div>
 
                                     <div class="deli_sum">
                                         <ul>
-                                            <li class="mb10px f20 fw_bold color_555"><span>0원</span></li>
+                                            <li class="mb10px f20 fw_bold color_555"><span>0</span>원</li>
                                             <li class="ce444_color">배송비</li>
                                         </ul>
                                     </div>
 
-                                    <div><a class="minus_icon"><img src="../images/minus_icon.png" alt="minus_icon"></a></div>
+                                    <div class="sum_icon"><a class="minus_icon"><img src="../images/minus_icon.png" alt="minus_icon"></a></div>
 
                                     <div class="sale_sum">
                                         <ul>
-                                            <li class="mb10px f20 fw_bold color_555"><span>0원</span></li>
-                                            <li class="ce444_color">할인금액</li>
+                                            <li class="mb10px f20 fw_bold color_555"><span>0</span>원</li>
+                                            <li class="ce444_color word_break">할인금액</li>
                                         </ul>
                                     </div>
 
-                                    <div><a class="minus_icon"><img src="../images/equal_icon.png" alt="equal_icon"></a></div>
+                                    <div class="sum_icon"><a class="minus_icon"><img src="../images/equal_icon.png" alt="equal_icon"></a></div>
 
                                     <div class="total_sum">
                                         <ul>
-                                            <li class="mb10px f20 fw_bold color_555"><span>39,900원</span></li>
-                                            <li class="red_color">결제 예정금액</li>
+                                            <li class="mb10px f20 fw_bold color_555"><span>139,900</span>원</li>
+                                            <li class="red_color word_break">결제 예정금액</li>
                                         </ul>
                                     </div>
                                     
-
-                                    <!-- <span id="order_sum" class="retail">
-                                        <em id="span_order_sum">39,900</em>원
-                                        <i>상품금액</i>
-                                    </span>
-                                    <a class="plus_icon"><img src="../images/plus_icon.png" alt="plus_icon"></a>
-
-                                    <span id="delivery_sum" class="plus">
-                                        <em id="span_delivery_sum">0</em>원
-                                        <i>배송비</i>
-                                    </span>
-                                    <a class="minus_icon"><img src="../images/minus_icon.png" alt="minus_icon"></a>
-
-                                    
-                                    <span id="discount_sum" class="minus">
-                                        <em id="span_discount_sum">0</em>원
-                                        할인금액<i class="fas fa-chevron-down"></i>
-                                        <div id="total_sale" class="balloon">
-                                            <div class="detail">
-                                                <span class="totalDcPrc">총 할인금액<em></em></span>
-                                                <span class="godDcPrc">상품할인<em></em></span>
-                                                <span class="godCpnPrc">상품쿠폰<em></em></span>
-                                            </div>
-                                        </div>
-                                        
-                                    </span>
-                                    <a class="minus_icon"><img src="../images/equal_icon.png" alt="equal_icon"></a>
-                                    <span id="pay_sum" class="total"><em id="span_pay_sum">39900</em>원<i>결제예정 금액</i></span> -->
                                 </div>
                             </div>
 
-                            <style>
-                                .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select > div 
-                                { float: left; width: 50%; border: 1px solid #ddd; padding: 15px; }
-                                .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select > div:hover { background-color: rgb(96, 96, 96); color: white; }
-                                .wrap .order_contents .order_box_wrap .order_middle .charge_box .charge_select::after { content: ''; display: block; overflow: hidden; clear: both; }
-                                .wrap .order_contents .order_box_wrap .order_middle .charge_box .cash_info { display: none; }
-                                .wrap .order_contents .order_box_wrap .order_middle .charge_box .card_info { display: none; } 
-
-
-
-                                
-
-
-
-                            </style>
-
-                            <script>
-                                $(document).ready( function(){
-
-                                    $('.charge_cash').click( function(){
-                                        
-                                        var cashINFO = $('.cash_info');
-                                        $('.cash_info').show();
-                                        $('.card_info').hide();
-                                        
-                                    });
-
-                                    $('.charge_card').click( function(){
-                                        $('.card_info').show();
-                                        $('.cash_info').hide();
-                                        
-                                    });
-
-                                });
-                            </script>
-
                             <div class="charge_box mtb3per">
-                                <h4 class="f20 mb20px bor_bottom">결제수단&nbsp;&nbsp;<span class="f12">결제수단을 선택하여 지불 정보를 입력해주세요.</span></h4>
+                                <h4 class="f20 mt10px mb20px bor_bottom">결제수단&nbsp;&nbsp;<span class="f12 word_break">결제수단을 선택하여 지불 정보를 입력해주세요.</span></h4>
                                 
                                 <div class="charge_select t_center mb10px">
                                     <div class="charge_cash cursor">
@@ -536,32 +540,34 @@
                                     </div>
                                 </div>
             
-                                <div class="charge_info cash_info">
+                                <div class="charge_info cash_info t_left mt20px">
                                     <div class="ci_box">
-                                        <div class="cib_subject">기업은행 : 167-141774-01-019</div>
-                                        <div class="cib_subject">예금주명 주식회사 예원엠앤디</div>
-                                        <div class="cib_subject"> 입금자 명 : <input type="text" class = "w10" name="cash_name" id="">(주문자와 같을 경우 생략 가능)</div>
+                                        <div class="cib_subject mb10px f14">기업은행 : 167-141774-01-019</div>
+                                        <div class="cib_subject mb10px f14">예금주명 주식회사 예원엠앤디</div>
+                                        <div class="cib_subject f14"> 입금자 명 : <input type="text" class="mr10px" name="cash_name" id="">
+                                            <span class="word_break f12">(주문자와 같을 경우 생략 가능)</span>
+                                        </div>
                                     </div>
                                 </div>
             
-                                <div class="charge_info card_info">
+                                <div class="charge_info card_info t_left mt20px">
                                     <div class="ci_box">
-                                        <div class="cib_subject">
-                                            <span>카드번호</span>
-                                            <input type="number" numberOnly class="w20" name="card_num_1" id="" maxlength="4" oninput="maxLengthCheck(this);"/>
-                                            <input type="number" numberOnly class="w20" name="card_num_2" id="" maxlength="4" oninput="maxLengthCheck(this);"/>
-                                            <input type="number" numberOnly class="w20" name="card_num_3" id="" maxlength="4" oninput="maxLengthCheck(this);"/>
-                                            <input type="number" numberOnly class="w20" name="card_num_4" id="" maxlength="4" oninput="maxLengthCheck(this);"/>
+                                        <div class="cib_subject mb10px">
+                                            <span class="mr10px f14">카드번호</span>
+                                            <input type="number" numberOnly class="mr10px" name="card_num_1" id="" maxlength="4" oninput="maxLengthCheck(this);"/>
+                                            <input type="number" numberOnly class="mr10px" name="card_num_2" id="" maxlength="4" oninput="maxLengthCheck(this);"/>
+                                            <input type="number" numberOnly class="mr10px" name="card_num_3" id="" maxlength="4" oninput="maxLengthCheck(this);"/>
+                                            <input type="number" numberOnly class="mr10px" name="card_num_4" id="" maxlength="4" oninput="maxLengthCheck(this);"/>
                                         </div>
             
-                                        <div class="cib_subject">
-                                            <span>유효기간</span>
-                                            <input type="number" class="w20" placeholder="04" name="card_num_mm" id="" maxlength="2" oninput="maxLengthCheck(this);"/>
-                                            <input type="number" class="w20" placeholder="22" name="card_num_yy" id="" maxlength="2" oninput="maxLengthCheck(this);"/>
+                                        <div class="cib_subject mb10px">
+                                            <span class="mr10px f14">유효기간</span>
+                                            <input type="number" class="mr10px" placeholder="04" name="card_num_mm" id="" maxlength="2" oninput="maxLengthCheck(this);"/>
+                                            <input type="number" placeholder="22" name="card_num_yy" id="" maxlength="2" oninput="maxLengthCheck(this);"/>
                                         </div>
 
                                         <div class="cib_subject">
-                                            <span>할부기간</span>
+                                            <span class="f14">할부기간</span>
                                             <select name="install_period" id="">
                                                 <option value="">선택하세요.</option>
                                                 <option value="01">1개월</option>
@@ -587,25 +593,11 @@
                 
                         </div>
                         <!--} order_middle-->
-
+                        
                         <div class="order_btn t_center">
                             <a href="#">결제하기</a>
                             <a href="#">취소하기</a>
                         </div>
-
-                        <style>
-                            .wrap .order_contents .order_box_wrap .order_btn a { display: inline-block; padding: 15px 30px; }
-                            .wrap .order_contents .order_box_wrap .order_btn a:first-child { background-color: #2d2d2d; color: white; margin-right: 10px; border: 1px solid black; }
-                            .wrap .order_contents .order_box_wrap .order_btn a:last-child { border: 1px solid #2d2d2d; color: black; }
-                            .wrap .order_contents .order_box_wrap .order_btn a:last-child:hover { border: 1px solid red; background-color: red; color: white; }
-                            /* .wrap .order_contents .order_box_wrap .order_btn a:first-child:hover { background-color: rgb(161, 161, 161); color: white;  } */
-                            
-                            /* .wrap .order_contents .order_box_wrap .order_btn { text-align: center; } */
-                            /* .wrap .order_contents .order_box_wrap .order_btn div { float: left; width: 50%; } */
-                            /* .wrap .order_contents .order_box_wrap .order_btn::after { content: ''; display: block; clear: both; overflow: hidden; } */
-
-
-                        </style>
 
                     </form>
                 </div>
