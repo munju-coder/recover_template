@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/swiper.min.css">
     <script src="../js/swiper.js"></script>
     <!--js-->
+    <script src="../js/common.js"></script>
     <script src="../js/main.js"></script>
     <!--style sheet-->
     <link rel="stylesheet" href="../css/import.css">
@@ -55,8 +56,8 @@
 
                 <div class="header_right t_right">
                     <ul>
-                        <li class="header_login mt10px"><a href="#">로그인</a></li>
-                        <li class="header_join mt10px"><a href="#">회원가입</a></li>
+                        <li class="header_login mt10px"><a href="../login/login.html">로그인</a></li>
+                        <li class="header_join mt10px"><a href="../member/mb_reg_chk.html">회원가입</a></li>
                         <li><a href="../member/mb_cart.html"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
                         <li><a href="#"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
                         <li class="menu_icon"><a href="#"><img src="../images/menu_icon.png" alt="menu_icon"></a></li>
@@ -208,29 +209,13 @@
         <!--} aside menu-->
 
         <style>
-            .wrap .reg_chk_contents .reg_chk_box { background-color: #dddddd; }
-            .wrap .reg_chk_contents .rcm_top, .contents .rcm_middle { padding:2%; }
-            .wrap .reg_chk_contents .rcm_middle { padding-top: 0; }
-
-            .wrap .reg_chk_contents .rcm_top .ncb_top, .reg_chk_contents .rcm_top .ncb_chk { background-color: #ffffff; padding: 1.5% 1%; }
-            .wrap .reg_chk_contents .rcm_top .ncb_btn { padding: 2%; margin:0 auto; color:#ffffff; margin-top: 2%; margin-bottom: 5%; }
-
-            .wrap .reg_chk_contents .reg_chk_middle .rcm_middle .rcmm_subject,
-            .wrap .reg_chk_contents .reg_chk_middle .rcm_middle .rcmm_textarea { padding: 1% 0;}
 
 
             @media (max-width: 768px) {
-                
-                .wrap .reg_chk_contents .rcm_top .ncb_btn { font-size: 14px; }
-                .wrap .reg_chk_contents .reg_chk_middle .rcm_middle .rcmm_chk_box .rcmm_subject { font-size: 15px; }
-                .wrap .reg_chk_contents .reg_chk_middle .rcm_middle .rcmm_chk_box .rcmm_chk_1 { font-size: 13px; }
 
-                .wrap .reg_chk_contents .reg_chk_middle .rcm_top .nice_chk_box .ncb_chk { font-size: 14px; }
             }            
             @media (max-width:600px) {
-                .wrap .reg_chk_contents .rcm_top .ncb_btn { width: 140px; padding: 10px; font-size: 13px; }
-                .wrap .reg_chk_contents .rcm_top, .reg_chk_contents .rcm_middle { padding: 5%; }
-                .wrap .reg_chk_contents .rcm_top { padding-bottom: 0; }
+
 
             }
         </style>

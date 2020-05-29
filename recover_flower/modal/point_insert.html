@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>리커버플라워 포인트등록</title>
+        <!--jquery-->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!--font Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!--goolge webfont-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet"> 
+        <!-- swiper slide -->
+        <link rel="stylesheet" href="../css/swiper.min.css">
+        <script src="../js/swiper.js"></script>
+        <!--js-->
+        <script src="../js/main.js"></script>
+        <!--style sheet-->
+        <link rel="stylesheet" href="../css/import.css">
+        <link rel="stylesheet" href="../css/main.css">
+    
+    </head>
+
+    <script>
+        $(document).ready( function(){
+
+            /**
+            * @brief serializeObject
+            * form  
+            */
+            $.fn.serializeObject = function() {
+                var obj = null;
+                try {
+                    if (this[0].tagName && this[0].tagName.toUpperCase() == "FORM") {
+                        var arr = this.serializeArray();
+                        if (arr) {
+                            obj = {};
+                            jQuery.each(arr, function() {
+                                obj[this.name] = this.value;
+                            });
+                        }
+                    }
+                } catch (e) {
+                    alert(e.message);
+                } finally {
+                }
+            
+                return obj;
+            };
+        });
+    </script>
+    <body>
+        <div class="point_insert">
+            <div class="pb_top fw_600 t_center">
+                <h1>포인트등록</h1>
+            </div>
+
+            <form action="">
+                <fieldset>
+                    <div class="pb_middle t_center">
+                        <p class="p_color">승인번호</p>
+                        <div class="m10px">
+                            <input type="text" class="" value="승인번호를 입력하세요">
+                        </div>
+                    </div>
+
+                    <div class="pb_middle t_center">
+                        <p class="p_color">결제일</p>
+                        <div class="m10px">
+                            <input type="text" class="" value="ex) 20190101">
+                        </div>
+                    </div>
+
+                    <div class="pb_middle t_center">
+                        <p class="p_color">결제 금액</p>
+                        <div class="m10px">
+                            <input type="text" class="" value="결제금액을 입력하세요">
+                        </div>
+                    </div>
+
+                    <div class="pb_btn t_center">
+                        <div>
+                            <a class="happy_user" href="#">해피쿠폰회원</a>
+                            <a class="normal_user" href="#">일반회원</a>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/swiper.min.css">
     <script src="../js/swiper.js"></script>
     <!--js-->
+    <script src="../js/common.js"></script>
     <script src="../js/main.js"></script>
     <!--style sheet-->
     <link rel="stylesheet" href="../css/import.css">
@@ -212,48 +213,136 @@
             <!--order_wrap {-->
             <div class="member_wrap order_wrap dw_1400px">
                 <div class="member_top">
-                    <h2 class="f24 mb20px">주문내역조회</h2>
+                    <h2 class="f24 mb20px">주문내역</h2>
                     <p class="word_break f12 mb20px">주문서번호 링크를 누르시면 주문상세내역을 조회하실 수 있습니다.</p>
                 </div>
 
-                <div class="member_middle order_middle mb20px">
+                <div class="member_middle order_middle result_middle mb10px">
+                    <div class="order_result_top">
+                        <div class="ort_left mb10px w70">
+                            <span><input class="mr5px" type="checkbox" name="" id=""></span>
+                            <span>주문날짜: <span>20200521 18:20</span></span>&nbsp;&nbsp;
+                            <span class="word_break">주문번호: <span>2019032915462525</span></span>
+                        </div>
+    
+                        <div class="ort_right w30 t_right">
+                            <!-- <a href="#">주문내역삭제</a> -->
+                        </div>
+                    </div>
+      
+                    <div class="order_result_middle">
+                        <div class="orl_contents">
+                            <ul class="orlc_top w20">
+                                <li><a href=""><img class="w50 " src="../images/main_img1.jpg" alt="product image"></a></li>
+                            </ul>
+                             
+                            <ul class="orlc_middle w40 mt5per">
+                                <li class="word_break"><span>로맨틱 꽃바구니 (어버이날 기념일 이벤트 상품)</span> / <span>1</span></li>
+                            </ul>
+
+                            <ul class="orlc_bottom w40 mt10px">
+                                <li class="mb10px">
+                                    <div class="mb10px">배송완료</div>
+                                    <div>토요일 5/16 도착</div>
+                                </li>
+                                <li class="mb10px"><a href="#">배송조회</a></li>
+                                <li class="mb10px"><a href="#">교환신청</a></li>
+                                <li class="mb10px"><a href="#">반품신청</a></li>
+                                <!-- <li class="mb10px"><a href="#">구매후기</a></li> -->
+                            </ul>
+                            
+                        </div>
+                       
+                    </div>
+
+                </div>
+
+                <div class="member_middle order_middle result_middle mb10px mt10px">
+                    <div class="order_result_top">
+                        <div class="ort_left mb10px w70">
+                            <span><input class="mr5px" type="checkbox" name="" id=""></span>
+                            <span>주문날짜: <span>20200521 18:20</span></span>&nbsp;&nbsp;
+                            <span class="word_break">주문번호: <span>2019032915462525</span></span>
+                        </div>
+
+                    </div>
+      
+                    <div class="order_result_middle">
+                        <div class="orl_contents">
+                            <ul class="orlc_top w20">
+                                <li><a href=""><img class="w50 " src="../images/main_img1.jpg" alt="product image"></a></li>
+                            </ul>
+                             
+                            <ul class="orlc_middle w40 mt5per">
+                                <li class="word_break"><span>로맨틱 꽃바구니 (어버이날 기념일 이벤트 상품)</span> / <span>1</span></li>
+                            </ul>
+
+                            <ul class="orlc_bottom w40 mt10px">
+                                <li class="mb10px">
+                                    <div class="mb10px">배송완료</div>
+                                    <div>토요일 5/16 도착</div>
+                                </li>
+                                <li class="mb10px"><a href="#">배송조회</a></li>
+                                <li class="mb10px"><a href="#">교환신청</a></li>
+                                <li class="mb10px"><a href="#">반품신청</a></li>
+                                <!-- <li class="mb10px"><a href="#">구매후기</a></li> -->
+                            </ul>
+                            
+                        </div>
+                       
+                    </div>
+
+                </div>
+
+                <!-- <div class="member_middle order_middle mb20px">
                     <div class="member_list">
                         <div class="w5 mbl_subject order_subject t_left mleft_5px"><input type="checkbox" name="" for=""></div>
-                        <div class="w20 mbl_subject order_subject t_center">주문번호</div>
+                        <div class="w30 mbl_subject order_subject t_center">주문번호</div>
                         <div class="w20 mbl_subject order_subject t_center">주문날짜</div>
                         <div class="w5 mbl_subject order_subject t_center">상품수</div>
                         <div class="w15 mbl_subject order_subject t_center">주문금액</div>
-                        <div class="w15 mbl_subject order_subject t_center">결제수단</div>
+                        <div class="w10 mbl_subject order_subject t_center">결제수단</div>
                         <div class="w10 mbl_subject order_subject t_center">상태</div>
                     </div>
 
                     <div class="mbl_middle order_middle pt20px">
                         <div class="w5 mbl_subject order_subject t_left mleft_5px"><input type="checkbox" name="" for=""></div>
-                        <div class="w20 mbl_subject order_subject t_center fw_600 text_hidden"><a class="g_color" href="../order/order_result.html">2019032915462525</a></div>
+                        <div class="w30 mbl_subject order_subject t_center fw_600 text_hidden">
+                            <a href="../product/product_view.html"><img src="../images/sub_img2.jpg" alt="product image"></a>
+                            <a class="g_color" href="../order/order_result.html">2019032915462525</a>
+                        </div>
                         <div class="w20 mbl_subject order_subject t_center"><span>19-03-29 18:00:00 </span></div>
                         <div class="w5 mbl_subject order_subject t_center">1</div>
                         <div class="w15 mbl_subject order_subject t_center">39,000원</div>
-                        <div class="w15 mbl_subject order_subject t_center">카드결제</div>
+                        <div class="w10 mbl_subject order_subject t_center">카드결제</div>
                         <div class="w10 mbl_subject order_subject t_center c_red fw_600">상품준비중</div>
                     </div>
 
                     <div class="mbl_middle order_middle pt20px">
                         <div class="w5 mbl_subject order_subject t_left mleft_5px"><input type="checkbox" name="" for=""></div>
-                        <div class="w20 mbl_subject order_subject t_center fw_600 text_hidden"><a class="g_color" href="../order/order_result.html">2019032915462525</a></div>
+                        <div class="w30 mbl_subject order_subject t_center fw_600 text_hidden">
+                            <a href="../product/product_view.html"><img src="../images/sub_img2.jpg" alt="product image"></a>
+                            <a class="g_color" href="../order/order_result.html">2019032915462525</a>
+                        </div>
                         <div class="w20 mbl_subject order_subject t_center"><span>19-03-29 18:00:00 </span></div>
                         <div class="w5 mbl_subject order_subject t_center">1</div>
                         <div class="w15 mbl_subject order_subject t_center">39,000원</div>
-                        <div class="w15 mbl_subject order_subject t_center">현금결제</div>
+                        <div class="w10 mbl_subject order_subject t_center">현금결제</div>
                         <div class="w10 mbl_subject order_subject t_center c_red fw_600 red_color">주문취소</div>
                     </div>
                     
-                </div>
+                </div> -->
 
-                <div class="order_list_btn mb3per">
+                <style>
+
+
+                </style>
+
+                <div class="order_list_btn mb5per">
                     <div class="t_left"><a href="#">주문내역삭제</a></div>
                 </div>
 
-                <div class="p_paging t_center mb3per">
+                <div class="p_paging t_center mb3per mt10per">
                     <div class="pp_wrap">
                         <a href=""><i class="fas fa-angle-left"></i></a>
                         <a href=""><i class="fas fa-angle-double-left"></i></a>

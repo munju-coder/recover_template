@@ -24,18 +24,6 @@
 
 </head>
 
-<script>
-    $('document').ready( function(){
-        
-        $('.wrap .mypage_contents .mypage_top ul li:last-child a').click( function(){
-         var memberCancel = confirm( '정말 탈퇴하시겠습니까?' );
-        });
-
-    });
-
-    
-</script>
-
 <body>
     <!--wrap {-->
     <div class="wrap">
@@ -68,8 +56,8 @@
 
                 <div class="header_right t_right">
                     <ul>
-                        <li class="header_login mt10px"><a href="../login/login.html">로그인</a></li>
-                        <li class="header_join mt10px"><a href="../member/mb_reg_chk.html">회원가입</a></li>
+                        <li class="header_login mt10px"><a href="#">로그인</a></li>
+                        <li class="header_join mt10px"><a href="#">회원가입</a></li>
                         <li><a href="../member/mb_cart.html"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
                         <li><a href="../member/my_page.html"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
                         <li class="menu_icon"><a href="#"><img src="../images/menu_icon.png" alt="menu_icon"></a></li>
@@ -112,7 +100,7 @@
             <div class="left_menu_wrap">
                 <div class="login_wrap t_center">
                     <div class="login_form_wrap">
-                        <form name="" action="" id="login_form">
+                        <form name="" action="" id="login_form" class="order_form">
                             <!-- 로그인 전 적용해야할 폼 -->
                             <fieldset class="before_logoin">
                                 <input type="text" name="mb_id" id="login_id" placeholder="아이디" maxlength="20">
@@ -170,7 +158,7 @@
                         <ul class="mb10px">
                             <li class="left_tablinks f14 cursor catego_active" tab_name="left_tab1"><a href="#">카테고리</a></li>
                             <li class="left_tablinks f14 cursor" tab_name="left_tab2"><a href="#">프로모션</a></li>
-                            <li class="left_tablinks f14 cursor" tab_name="left_tab3"><a href="#">마이페이지</a></li>
+                            <li class="left_tablinks f14 cursor" tab_name="left_tab3"><a href="../member/my_page.html">마이페이지</a></li>
                         </ul>
                     </div>
                 
@@ -220,126 +208,123 @@
         </aside>
         <!--} aside menu-->
 
+        <style>
+
+        </style>
+        
         <!--contents {-->
-        <div class="contents member_contents mypage_contents contents_border">
-            <!--member_wrap {-->
-            <div class="member_wrap mp_wrap dw_1400px">
-                <div class="member_top mb2per mypage_top">
-                    <h2 class="f24 mb20px">마이페이지</h2>
-                
-                    <div class="my_option">
-                        <ul>
-                            <li class="f12"><a href="../modal/point_insert.html">포인트등록</a></li>
-                            <li class="f12"><a href="../member/mb_reg_form.html">정보수정</a></li>
-                            <li class="f12"><a href="#">회원탈퇴</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!--member_middle {-->
-                <div class="member_middle mypage_middle">
-                    <div class="point_box mb20px">
-                        <div>
-                            <ul>
-                                <li>적립금: <strong>0원</strong></li>
-                                <li>마일리지: <strong>0원</strong></li>
-                                <li>쿠폰: <strong>0개</strong></li>
-                            </ul>
-                        </div>
-
+        <div class="contents member_contents contents_border order_contents">
+            <form class="member_form dw_1400px">
+                <!--member_wrap {-->
+                <div class="member_wrap dw_1400px">
+                    <div class="member_top mb20px">
+                        <h2 class="f24 mb20px">회원정보수정</h2>
+                        <p class="mb10px f12 red_color">* 변경할 정보를 기입하여 주십시오.</p>
                     </div>
 
-                    <div class="mbm_top">
-                    
-                        <div class="mbmt_top">
-                            <div class="fw_blod">
-                                <i class="far fa-user mr5px"></i> 
-                                <span>나의 주문처리 현황</span> 
-                                <span>(최근 <strong>3개월</strong>기준)</span>
-                            </div>
-
-                        </div>
-
-                        <div class="mbmt_middle t_center">
-                            <ul class="col-xs-6 col-sm-3">
-                                <li class="">입금전</li>
-                                <li class="f22 fw_bold"><a href="#">0</a></li>
-                            </ul>
-
-                            <ul class="col-xs-6 col-sm-3">
-                                <li class="">배송준비중</li>
-                                <li class="f22 fw_bold"><a href="#">0</a></li>
-                            </ul>
-
-                            <ul class="col-xs-6 col-sm-3">
-                                <li class="">배송중</li>
-                                <li class="f22 fw_bold"><a href="#">0</a></li>
-                            </ul>
-
-                            <ul class="col-xs-6 col-sm-3">
-                                <li class="">배송완료</li>
-                                <li class="f22 fw_bold"><a href="#">0</a></li>
-                            </ul>
-
-                        </div>
-
-                        <div class="mbmt_bottom t_left">
-                            <div class="mbmtb_top">
-                                <ul class="">
-                                    <li>취소: </li>
-                                    <li><a href="#">0</a></li>
-                                </ul>
-
-                                <ul class="">
-                                    <li>교환: </li>
-                                    <li><a href="#">0</a></li>
-                                </ul>
-
-                                <ul class="">
-                                    <li>반품: </li>
-                                    <li><a href="#">0</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-    
-                    </div>
-                    
-                    <div class="member_middle mtb3per">
-                        <div class="member_top ptb10px">
-                            <div class="f20">최근 주문 내역</div>
-                            <div class="m_btn t_right f14"><a href="mb_order_list.html"><i class="fas fa-plus mr5px"></i>더보기</a></div>
-                        </div>
-
-                        <div class="member_list mbpage_list">
+                    <!--reg_box {-->
+                    <div class="order_box order_top reg_box">
+                        <div class="orderer_info mb3per">
+                            <h4 class="f20 mb20px bor_bottom">기본 정보</h4>
                             
-                            <div class="w30 mbl_subject order_number t_center">주문번호</div>
-                            <div class="w20 mbl_subject order_date t_center">주문날짜</div>
-                            <div class="w10 mbl_subject order_Pnumber t_center">상품수</div>
-                            <div class="w15 mbl_subject order_price t_center">주문금액</div>
-                            <div class="w10 mbl_subject t_center none">결제수단</div>
-                            <div class="w15 mbl_subject order_status t_center none">상태</div>
-                        </div>
 
-                        <div class="mbl_middle ptb20px mbpage_middle">
-                            
-                            <div class="w30 mbl_subject order_subject t_center fw_600 text_hidden order_number">
-                                <!-- <a href="../product/product_view.html"><img class="" src="../images/sub_img2.jpg" alt="product image"></a> -->
-                                <a class="g_color text_hidden" href="../order/order_result.html">2019032915462525</a>
+                            <div class="ob_content mb10px">
+                                <div class="obc_subject mb10px">이름</div>
+                                <div class="obc_input">
+                                    <input type="text" name="r_name" id="r_name" class="w100" value="">
+                                </div>
                             </div>
-                            <div class="w20 mbl_subject order_date t_center text_hidden"><span>19-03-29 18:00:00 </span></div>
-                            <div class="w10 mbl_subject order_Pnumber t_center">1</div>
-                            <div class="w15 mbl_subject order_price t_center">39,000원</div>
-                            <div class="w10 mbl_subject t_center none">카드결제</div>
-                            <div class="w15 mbl_subject t_center red_color fw_600 order_status none">상품준비중</div>
+
+                            <div class="ob_content mb10px order_num">
+                                <div class="obc_subject mb10px">아이디</div>
+                                <div class="obc_input">
+                                    <input type="text" name="r_id" id="r_tel" class="w100" value="" placeholder="('-'없이 입력)"> 
+                                </div>
+                            </div>
+
+                            <div class="ob_content mb10px order_num">
+                                <div class="obc_subject mb10px">비밀번호</div>
+                                <div class="obc_input mb10px">
+                                    <input type="text" name="r_id" id="r_tel" class="w100" value="" placeholder="('-'없이 입력)"> 
+                                </div>
+
+                                <div class="obc_subject mb10px">비밀번호 확인</div>
+                                <div class="obc_input">
+                                    <input type="text" name="r_id" id="r_tel" class="w100" value="" placeholder="('-'없이 입력)"> 
+                                </div>
+                            </div>
+
+                            <div class="ob_content">
+                                <div class="mbmib_subject w100 t_left">
+                                    <p class="obc_subject">이메일</p>
+                                    <div class="mtb10px">
+                                        <input type="text" class="email_name w30" placeholder="E-mail"> @
+                                        <input type="text" class="email_domain w30" value="">
+                                        <select class="select_domain w30">
+                                            <option value="">직접입력</option>
+                                            <option value="daum.net">daum</option>
+                                            <option value="naver.com">naver</option>
+                                            <option value="gmail.com">gmail</option>
+                                            <option value="yahoo.com">yahoo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <style>
+                           
+                            @media (max-width:768px) {
+                          }
+                        </style>
+
+                        <div class="delivery_info reg_add_info mtb20px">
+                            <h4 class="f20 mb20px mb10px bor_bottom">추가정보</h4>
+                            
+                            <div class="ob_content mb10px address_box">
+                                <div class="obc_subject mb10px">주소</div>
+                                
+                                <div class="obc_subject">
+                                    <div class="zip_btn cursor fw_600 f14 mb10px" id="r_zip_btn">
+                                        <input type="text" name="r_zip" id="r_zip" class="w60" value="" placeholder="우편번호 입력하세요.">
+                                        <a href="#">주소찾기</a>
+                                    </div>
+                                </div>
+                                <div class="obc_input address_input">
+                                    기본주소<input type="text" name="r_addr_1" id="r_addr_1" class="sub_input w100 mb10px mt10px" value="" placeholder="기본주소 입력하세요.">
+                                    상세주소<input type="text" name="r_addr_2" id="r_addr_1" class="sub_input w100 mb10px mt10px" value="" placeholder="상세주소 입력하세요.">
+                                </div>
+                            </div>
+
+                            <div class="ob_content mb10px bank_info">
+                                <div class="obc_input phone_num1 mb10px">
+                                    예금주 &nbsp;&nbsp;&nbsp;<input type="text" name="r_tel" id="r_tel1" class="w70" value="" placeholder="('-'없이 입력)">
+                                </div>
+
+                                <div class="obc_input phone_num2 mb10px">
+                                    은행명 &nbsp;&nbsp;&nbsp;<input type="text" name="r_tel" id="r_tel2" class="w70" value="" placeholder="('-'없이 입력)">
+                                </div>
+
+                                <div class="obc_input phone_num2">
+                                    계좌번호 <input type="text" name="r_tel" id="r_tel2" class="w70" value="" placeholder="('-'없이 입력)">
+                                </div>
+                            </div>
+                            
+                            
                         </div>
                     </div>
+                    <!--} reg_box-->
                 </div>
-                <!--} mb_middle-->
-            </div>
-            <!--} member_wrap-->
+                <!--} member_wrap-->   
+
+                <div class="order_btn t_center mb5per mt3per">
+                    <a href="#">결제하기</a>
+                    <a href="#">취소하기</a>
+                </div>
+            </form>
         </div>
-        <!--} contents-->
+        <!--} content-->
 
         <!--footer {-->
         <footer>

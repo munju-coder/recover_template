@@ -16,12 +16,128 @@
     <link rel="stylesheet" href="../css/swiper.min.css">
     <script src="../js/swiper.js"></script>
     <!--js-->
+    <script src="../js/common.js"></script>
     <script src="../js/main.js"></script>
     <!--style sheet-->
     <link rel="stylesheet" href="../css/import.css">
     <link rel="stylesheet" href="../css/main.css">
 
 </head>
+<style>
+    /*product view*/
+    .wrap .product_contents .c_top { border-bottom: 1px solid #333; padding-bottom: 15px; }
+    .wrap .product_contents .c_top a { font-size: 24px; }
+    .wrap .product_contents .pro_middle .cm_top { overflow: hidden; padding: 2%; }
+    .wrap .product_contents .pro_middle::after { content: ''; display: block; overflow: hidden; clear: both; } 
+    .wrap .product_contents .pro_middle .cm_top .cm_left { float: left; width: 40%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right { float: left; width: 50%; margin-left: 10%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_left .main_img,.wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul li a img  { width: 100%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img, .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul { overflow: hidden; width: 100%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul li { float: left; width: 17%; margin: 3% auto 3% 6%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right p { color: rgb(24, 24, 24); }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .product_text { width: 90%; margin-bottom: 3%; padding: 3% 30% 3% 2%; background-color: #fafafa; border-top: 1px solid #ddd; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .product_text .p_info_list { float: left; width: 50%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .product_text::after { content: ''; display: block; overflow: hidden; clear: both; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .product_text ul li:not(.ft_size) { margin-bottom: 10%; color: #757575; font-size: 14px; font-weight: 600; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .product_text .p_info_contents { float: right; width: 50%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_option select { width: 100%;  }
+    
+    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top { position: relative; } 
+    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top a span { position: absolute; top: 41%; margin-left: 10px; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top a img { width: 100px; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn { width: 100%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn { float: left; width: 33%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn { float: left; background-color: #d50c0c; width: 50%; padding: 3% 2%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn a { color: white; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { float: right; border: 1px solid #d50c0c; width: 47%; padding: 2.9% 2%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn a { color: #d50c0c; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn i, .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn i { margin-right: 5px; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn::after { content: ''; overflow: hidden; display: block; clear: both; } 
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name { overflow: hidden; width: 90%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name li button { border: 1px solid #ddd; background-color: white; padding: 5px 10px; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name li,.wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price li { float: left; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price { width: 100%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price::after { content: ''; display: block; overflow: hidden; clear: both;}
+    .wrap .product_contents .cm_bottom .cmb_tab, .wrap .product_contents .cm_bottom .cmb_tab ul { overflow: hidden; }
+    .wrap .product_contents .cm_bottom .cmb_tab ul li { float: left; width: 33.3%; }
+    .wrap .product_contents .cm_bottom .cmb_tab ul li a { display: block; height: 60px; background-color: #f7f7f7; border: 1px solid #cdcdcd; font-size: 17px; color: #666; line-height: 58px; text-align: center; border-right: none; }
+    .wrap .product_contents .cm_bottom .cmb_tab ul li:last-child a { border-right: 1px solid #cdcdcd; }
+    
+    .wrap .contents .cm_bottom .item_count { display: inline-block; background-color: #aaa; padding: 0 5px; line-height: 23px; border-radius: 15px; color: #fff; min-width: 24px; font-size: 12px; margin-left: 2%; }
+    .wrap .product_contents .cm_bottom .item_active { background-color: #55bfb1; }
+    .wrap .product_contents .cm_bottom .tab1 .cmb_tab ul::after { content: ''; display: block; overflow: hidden; clear: both; }
+    .wrap .product_contents .cm_bottom .tab1 .ptab_contents img { width: 100%; }
+    
+    .wrap .product_contents .cm_bottom .p_btn > div { float: right; width: 50%;  }
+    .wrap .product_contents .cm_bottom .p_btn::after { content: ''; display: block; overflow: hidden; clear: both; }
+    
+    .wrap .product_contents .cm_bottom .p_btn .w_btn { width: 33%; padding: 15px;  background-color: #d50c0c; color: white; }
+    .wrap .product_contents .cm_bottom .p_btn .m_btn { width: 20%; padding: 15px; margin-left: 1%; border: 1px solid #ddd; }
+
+    .wrap .product_contents .cm_bottom table th { padding: 2%; } 
+    .wrap .product_contents .cm_bottom table ul li { margin-bottom: 10px; word-break: keep-all; }
+    .wrap .product_contents .cm_bottom .p_delivery table .d_info { padding: 0 0 0 3%; }
+    .wrap .product_contents .cm_bottom .p_delivery table .td_p { padding: 0 0 0 9%; }
+    .wrap .product_contents .cm_bottom .p_return_info table td { padding: 3%; }
+
+    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div { float: left; }
+    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 80%; margin-right: 10px; }
+    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title i { font-size: 20px; }
+
+    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon { border: 1px solid #ddd; padding: 8px; border-radius: 20px; margin-right: 5px; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .cart_icon { border: 1px solid #ddd; padding: 8px; border-radius: 20px; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon i:last-child { display: none; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon:hover i:last-child { display: block; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon:hover i:first-child { display: none; }
+
+    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title::after { content: ''; display: block; overflow: hidden; clear: both; }
+
+    .wrap .product_contents .product_form .cm_right .cmr_middle { border-top: 1px solid #ddd; }
+
+    .wrap .product_contents .product_form .cm_right .cmr_middle a img { width: 100px; margin-right: 10px; }
+    .wrap .product_contents .product_form .cm_right .cmr_middle ul li { margin-bottom: 10px; }
+    .wrap .product_contents .product_form .cm_right .cmr_middle ul li:first-child span del { margin-left: 10px; }
+    @media (max-width:1110px) {
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn { width: 100%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn { width: 100%; margin-bottom: 10px; }
+    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { margin-right: 0; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { width: 100%; margin-top: 10px; }
+
+    }
+    @media (max-width:992px) {
+        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 70%; }
+    }
+    
+    @media (max-width:768px) {
+    .wrap .product_contents .pro_middle .cm_top .cm_left { width: 100%; }
+    .wrap .product_contents .pro_middle .cm_top .cm_right { width: 100%; text-align: left; margin-left: 0; margin-top: 20px; } 
+    .wrap .product_contents .pro_middle .cm_top .cm_right { border-top: 2px solid #dbdada; padding-top: 20px; }
+    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 83%; }
+    }
+
+    @media (max-width:600px) {
+        .wrap .product_contents .cm_bottom .cmb_tab ul li a { height: 45px; line-height: 40px; font-size: 14px; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn input { padding: 0; }
+        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 55%; }
+    }
+    @media (max-width:400px) {
+        .wrap .product_contents .pro_middle .cm_top .cm_right p,.wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price li { font-size: 17px; }
+        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn,.wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { font-size: 14px; }
+        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title i { font-size: 15px; }
+        .wrap .product_contents .product_form .cm_right .cmr_middle ul li { font-size: 12px; }
+        .wrap .product_contents .cm_bottom .p_btn .m_btn { width: 25%; font-size: 14px; margin-left: 10px; }
+        .wrap .product_contents .cm_bottom .p_btn .w_btn { width: 38%; font-size: 14px; }
+        
+        
+
+    }
+
+
+
+
+
+</style>
+
 
 <body>
     <!--wrap {-->
@@ -115,38 +231,6 @@
                                 
                                 <input type="submit" id="login_submit" value="로그인" class="btn_submit ft_600">
                             </fieldset>
-
-                            <!-- 로그인 후 적용해야할 폼
-                            <div class="after_login">
-                                <div class="al_top">
-                                    <div class="alt_right">
-                                        <img src="images/no_profile.gif" alt="profile image">
-                                        <a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>
-                                    </div>
-
-                                    <div class="alt_left">
-                                        <p>테스트28님</p>
-                                        <button type="text">로그아웃</button>
-                                    </div>
-                                </div>
-
-                                <div class="al_bottom">
-                                    <div class="alb_right">
-                                        <div class="">
-                                            <i class="fa fa-envelope"></i>
-                                        </div>
-                                        <span>0</span>
-                                    </div>
-
-                                    <div class="alb_left">
-                                        <div class="">
-                                            <i class="fa fa-database"></i>
-                                        </div>
-                                        <span>1,015,564</span>
-                                    </div>
-                                </div>
-                            </div> -->
-
                         </form>
                     </div>
                 </div>
@@ -207,67 +291,6 @@
         </aside>
         <!--} aside menu-->
 
-        <style>
-        /*product view*/
-        .wrap .product_contents .c_top { border-bottom: 1px solid #333; padding-bottom: 15px; }
-        .wrap .product_contents .c_top a { font-size: 24px; }
-        .wrap .product_contents .pro_middle .cm_top { overflow: hidden; padding: 2%; }
-        .wrap .product_contents .pro_middle::after { content: ''; display: block; overflow: hidden; clear: both; } 
-        .wrap .product_contents .pro_middle .cm_top .cm_left { float: left; width: 40%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right { float: left; width: 50%; margin-left: 10%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_left .main_img,.wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul li a img  { width: 100%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img, .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul { overflow: hidden; width: 100%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_left .sub_img ul li { float: left; width: 17%; margin: 3% auto 3% 6%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right p { color: rgb(24, 24, 24);  /* margin-bottom: 10px;  */}
-        .wrap .product_contents .pro_middle .cm_top .cm_right .product_text { width: 90%; margin-bottom: 3%; padding: 3% 30% 3% 2%; background-color: #fafafa; border-top: 1px solid #ddd; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .product_text .p_info_list { float: left; width: 50%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .product_text::after { content: ''; display: block; overflow: hidden; clear: both; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .product_text ul li:not(.ft_size) { margin-bottom: 10%; color: #757575; font-size: 14px; font-weight: 600; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .product_text .p_info_contents { float: right; width: 50%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option select { width: 100%;  }
-        
-        .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top { position: relative; } 
-        .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top a span { position: absolute; top: 41%; margin-left: 10px; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top a img { width: 100px; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn { width: 100%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn { float: left; width: 33%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn button { border: 1px solid #ddd; background-color: white; padding: 7px; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn input { padding: 3px; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn { float: left; background-color: #d50c0c; width: 33%; padding: 3% 2%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn a { color: white; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { float: right; border: 1px solid #d50c0c; width: 33%; padding: 2.9% 2%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn a { color: #d50c0c; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn i, .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn i { margin-right: 5px; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn::after { content: ''; overflow: hidden; display: block; clear: both; } 
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name { overflow: hidden; width: 90%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name li button { border: 1px solid #ddd; background-color: white; padding: 5px 10px; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_name li,.wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price li { float: left; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price { width: 100%; }
-        .wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price::after { content: ''; display: block; overflow: hidden; clear: both;}
-        .wrap .product_contents .cm_bottom .cmb_tab, .wrap .product_contents .cm_bottom .cmb_tab ul { overflow: hidden; }
-        .wrap .product_contents .cm_bottom .cmb_tab ul li { float: left; width: 20%; }
-        .wrap .product_contents .cm_bottom .cmb_tab ul li a { display: block; height: 60px; background-color: #f7f7f7; border: 1px solid #cdcdcd; border-bottom: 1px solid #000; font-size: 17px; color: #666; line-height: 58px; text-align: center; }
-        .wrap .contents .cm_bottom .cmb_tab ul .tab_click_active { background-color: #ffffff; border: 1px solid #000; border-bottom: none; color: #000; }
-        .wrap .contents .cm_bottom .item_count { display: inline-block; background-color: #aaa; padding: 0 5px; line-height: 23px; border-radius: 15px; color: #fff; min-width: 24px; font-size: 12px; margin-left: 2%; }
-        .wrap .product_contents .cm_bottom .item_active { background-color: #55bfb1;; }
-        .wrap .product_contents .cm_bottom .tab1 .cmb_tab ul::after { content: ''; display: block; overflow: hidden; clear: both; }
-        .wrap .product_contents .cm_bottom .tab1 .ptab_contents img { width: 100%; }
-        
-        .wrap .product_contents .cm_bottom .p_btn > div { float: right; width: 50%;  }
-        .wrap .product_contents .cm_bottom .p_btn::after { content: ''; display: block; overflow: hidden; clear: both; }
-        
-        .wrap .product_contents .cm_bottom .p_btn .w_btn { width: 33%; padding: 15px;  background-color: #d50c0c; color: white; }
-        .wrap .product_contents .cm_bottom .p_btn .m_btn { width: 20%; padding: 15px; margin-left: 1%; border: 1px solid #ddd; }
-
-        .wrap .product_contents .cm_bottom table th { padding: 2%; } 
-        .wrap .product_contents .cm_bottom table ul li { margin-bottom: 10px; word-break: keep-all; }
-        .wrap .product_contents .cm_bottom .p_delivery table .d_info { padding: 0 0 0 3%; }
-        .wrap .product_contents .cm_bottom .p_delivery table .td_p { padding: 0 0 0 9%; }
-        .wrap .product_contents .cm_bottom .p_return_info table td { padding: 3%; }
-        
-
-        </style>
-
         <!--product_contents {-->
         <div class="contents product_contents contents_border mb3per">
             <!--product_wrap {-->
@@ -297,7 +320,7 @@
                         <!--} 상품섬네일 끝-->
 
                         <script>
-
+                            //product image hover event
                             $(document).ready( function(){
 
                                 $('.sub_img ul li a img').mouseenter( function(){
@@ -313,6 +336,43 @@
                                 });
 
                             });
+
+                                //global variable
+                                var seq = $("#seq").val();
+                                var product_price = Number(COMMON.form.str_num($(".product_price").text()));
+                                var total_price = Number(COMMON.form.str_num($(".total_price").text()));
+                                var product_amount = Number(COMMON.form.str_num($(".cnt_input").val()));
+
+                                var sum_price = 0;
+                                var sum_amount = product_amount;
+                                var option_price = 0;
+
+                                //plus btn event
+                                $("#plus").click(function(){
+                                    sum_amount += 1;
+                                    $(".cnt_input").val(sum_amount);
+                                    sum_price = (product_price + option_price) * sum_amount;
+                                    $(".total_price").text(COMMON.form.comma(sum_price));
+                                });
+
+                                //minus btn event
+                                $("#minus").click(function(){
+                                    sum_amount -= 1;
+                                    
+                                    if(sum_amount >= product_amount)
+                                    {
+                                        $(".cnt_input").val(sum_amount);
+                                        sum_price = sum_price - (product_price + option_price);
+                                        $(".total_price").text(COMMON.form.comma(sum_price));
+                                    }
+                                    else
+                                    {
+                                        $(".cnt_input").val(product_amount);
+                                        sum_amount = product_amount;
+                                        alert("최소 구매수량 1개입니다.");
+                                    }
+                                    
+                                });
                         </script>
     
                         <!--{ 상품정보 시작-->
@@ -339,70 +399,12 @@
                                     </div>
                                 </div>
 
-                                <style>
-                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div { float: left; }
-                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 80%; margin-right: 10px; }
-                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title i { font-size: 20px; }
-
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon { border: 1px solid #ddd; padding: 8px; border-radius: 20px; margin-right: 5px; }
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .cart_icon { border: 1px solid #ddd; padding: 8px; border-radius: 20px; }
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon i:last-child { display: none; }
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon:hover i:last-child { display: block; }
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right .cmr_top .cmrt_title .favorite_icon:hover i:first-child { display: none; }
-
-                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title::after { content: ''; display: block; overflow: hidden; clear: both; }
-
-                                    .wrap .product_contents .product_form .cm_right .cmr_middle { border-top: 1px solid #ddd; }
-
-                                    .wrap .product_contents .product_form .cm_right .cmr_middle a img { width: 100px; margin-right: 10px; }
-                                    .wrap .product_contents .product_form .cm_right .cmr_middle ul li { margin-bottom: 10px; }
-                                    .wrap .product_contents .product_form .cm_right .cmr_middle ul li:first-child span del { margin-left: 10px; }
-                                    @media (max-width:1110px) {
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn { width: 100%; }
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn { width: 100%; margin-bottom: 10px; }
-                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { margin-right: 0; }
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { width: 100%; margin-top: 10px; }
-
-                                    }
-                                    @media (max-width:992px) {
-                                        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 70%; }
-                                    }
-                                    
-                                    @media (max-width:768px) {
-                                    .wrap .product_contents .pro_middle .cm_top .cm_left { width: 100%; }
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right { width: 100%; text-align: left; margin-left: 0; margin-top: 20px; } 
-                                    .wrap .product_contents .pro_middle .cm_top .cm_right { border-top: 2px solid #dbdada; padding-top: 20px; }
-                                    .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 83%; }
-                                    }
-
-                                    @media (max-width:600px) {
-                                        .wrap .product_contents .cm_bottom .cmb_tab ul li a { height: 45px; line-height: 40px; font-size: 14px; }
-                                        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .left_btn input { padding: 0; }
-                                        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title div:first-child { width: 55%; }
-                                    }
-                                    @media (max-width:400px) {
-                                        .wrap .product_contents .pro_middle .cm_top .cm_right p,.wrap .product_contents .pro_middle .cm_top .cm_right .c_option .p_price li { font-size: 17px; }
-                                        .wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .middle_btn,.wrap .product_contents .pro_middle .cm_top .cm_right .c_btn .right_btn { font-size: 14px; }
-                                        .wrap .product_contents .product_form .cm_right .cmr_top .cmrt_title i { font-size: 15px; }
-                                        .wrap .product_contents .product_form .cm_right .cmr_middle ul li { font-size: 12px; }
-                                        .wrap .product_contents .cm_bottom .p_btn .m_btn { width: 25%; font-size: 14px; margin-left: 10px; }
-                                        .wrap .product_contents .cm_bottom .p_btn .w_btn { width: 38%; font-size: 14px; }
-                                        
-                                        
-
-                                    }
-                                
-
-
-
-
-                                </style>
 
                                 <div class="cmr_middle">
                                     
                                     <ul class="mt20px">
                                         <li><span>10%<del class="red_color">49,000원</del></span></li>
-                                        <li class="f12"><strong class="mr10px f24 fw_bold">44,100원</strong>즉시할인가</li>
+                                        <li class="f12"><strong class="mr10px f24 fw_bold product_price">44,100원</strong>즉시할인가</li>
                                         <li><div>최대 441원 적립</div></li>
                                         <li><span class="f12 red_color">품절임박 (2개 남음)</span></li>
                                         <li class="b_color f13 fw_bold">내일 모레 5/16 도착 예정 (서울/경기  기준)</li>
@@ -429,15 +431,58 @@
   
                                     <ul class="p_price fw_bold w90">
                                         <li class="w50 f22 t_left">총금액</li>
-                                        <li class="w50 price_list f22 t_right"><span class="fw_bold total number unit_price product_total_price">44,100</span>원</li>
+                                        <li class="w50 price_list f22 t_right"><span class="fw_bold total_price">44,100</span>원</li>
                                     </ul>
+                                    <style>
+                                        .w85 { width: 85%; }
+                                        .w15 { width: 15%; }
+                                        .w70px { width: 70px; }
+                                        .wrap .product_contents .product_form .cm_right .c_option .amount,.wrap .product_contents .product_form .cm_right .c_option .amount div { overflow: hidden; }
+                                        /* .wrap .product_contents .product_form .cm_right .c_option .amount p { float: left; width: 80%; } */
+                                        /* .wrap .product_contents .product_form .cm_right .c_option .amount > div { float: left; width: 20%;  } */
+                                       
+                                       /* #cnt { width: 100%; padding: 10px 0; padding-left: 10px; float: left;  }  */
+                                       /* .wrap .product_contents  .product_form .cm_right .c_option .amount div input[type="button"] { height: 22px; border: 0; font-size: 10px; } */
+                                       .wrap .product_contents .pro_middle .cm_bottom .cmb_contents { display: none; }
+                                       .tab_block { display: block; }
+                                       .wrap .product_contents .cm_bottom .cmb_tab ul li a.menu_active { background-color:#6b7279ba; color: white; }
+                                       .wrap .product_contents .product_form .cm_right .c_option .amount div { float: left; }
+                                       /* .wrap .product_contents .product_form .cm_right .c_option .amount div.count_box input { wi} */
+                                       .wrap .product_contents  .product_form .cm_right .c_option .amount .count_button input[type="button"] { height: 14px; border: 0; display: block; font-size: 10px; }
+                                       .col-md-6 { padding-left: 0; }
+
+                                       @media (max-width:1110px) {
+                                        .wrap .product_contents  .product_form .cm_right .c_option .amount .count_box { margin-top: 10px; }
+                                        .wrap .product_contents  .product_form .cm_right .c_option .amount .count_box .count_input .w70px { width: 80px; margin-right: 5px; }
+
+                                       }
+                                       
+                                       
+               
+                                    </style>
+                                    <div class="amount mt30px">
+                                        <div class="w80"><p class="f18">로맨틱 꽃바구니 A타입</p></div>
+                                        
+
+                                        <div class="count_box">
+                                            <div class="t_right count_input"> 
+                                                <input type="text" id="cnt" class="cnt_input w70px" value="1">
+                                            </div>
+    
+                                            <div class="count_button">
+                                                <input type="button" class="mb3px" id="minus" value="▲" onclick="numPlus()">
+                                                <input type="button" value="▼" id="plus" onclick="numMinus()">
+                                            </div>
+                                        </div>
+                                        
+
+
+
+
+                                    </div>
 
                                     <div class="c_btn f18 t_center cursor mt5per w90">
-                                        <div class="left_btn mt10px">
-                                            <button type="button" id="minus"><i class="fas fa-minus"></i></button>
-                                            <input type="text" class="t_center w50 count" value="1">
-                                            <button type="button" id="plus" class="plus"><i class="fas fa-plus"></i></button>
-                                        </div>
+                                        
 
                                         <div class="middle_btn fw_bold"><a href="../order/order.html"><i class="fa fa-credit-card"></i>바로구매</a></div>
                                         <div class="right_btn fw_bold"><a href="../member/my_page.html"><i class="fa fa-shopping-cart"></i>장바구니</a></div>
@@ -450,6 +495,43 @@
                         </form>
                         <!--} 상품정보 끝-->
                     </div>
+                    
+
+                    <script>
+                        $(document).ready( function(){
+
+                            $(".tab_block").css("display", "block");
+                            $('.tab_main').each( function(){
+                                $(this).click( function(e){
+                                    e.preventDefault();
+                                    
+                                    $(".tab_main").removeClass("menu_active");
+                                    $(this).addClass("menu_active");
+                                    $(".cmb_contents").removeClass("tab_block");
+
+                                    $(".cmb_contents").css("display", "none");
+                                    var chk = $(this).attr("chk");
+                                    $("#" + chk).css("display", "block");
+                                });
+
+                            });
+                        });
+
+                        var num = 1;
+      
+                        function numPlus(){
+                            num++;
+                            document.getElementById('cnt').value = num;
+                        }
+                        function numMinus(){
+                            if (num>1) {
+                                num--;
+                                document.getElementById('cnt').value = num;
+                            } 
+                            
+
+                        }
+                    </script>
   
                     <!--{ cm_bottom 시작-->
                     <div class="cm_bottom">
@@ -457,69 +539,20 @@
                         <div class="tab1" id="ptab1">
                             <div class="cmb_tab mtb2per">
                                 <ul>
-                                    <li><a class="tab_click_active fw_bold" href="#ptab1">상품정보</a></li>
-                                    <li><a href="#ptab2">사용후기<span class="item_count">0</span></a></li>
-                                    <li><a href="#ptab3">상품문의<span class="item_count">0</span></a></li>
-                                    <li><a href="#ptab4">배송정보</a></li>
-                                    <li><a href="#ptab5">교환정보</a></li>
+                                    <li><a class="tab_main menu_active tab_block" href="#" chk="product_detail">상품정보</a></li>
+                                    <li><a class="tab_main" href="#" chk="product_de">배송정보</a></li>
+                                    <li><a class="tab_main" href="#" chk="product_re">교환정보</a></li>
                                 </ul>
                             </div>
             
-                            <div  class="ptab_contents">
+                            <div class="ptab_contents tab_block cmb_contents menu_active" id="product_detail">
                                 <img src="../images/product_detail_img.jpg" alt="product detail page">
                             </div>
                         </div>
 
-                        <div class="tab2" id="ptab2">
-                            <div class="cmb_tab mtb2per">
-                                <ul>
-                                    <li><a href="#ptab1">상품정보</a></li>
-                                    <li><a class="tab_click_active fw_bold" href="#ptab2">사용후기<span class="item_count item_active">0</span></a></li>
-                                    <li><a href="#ptab3">상품문의<span class="item_count">0</span></a></li>
-                                    <li><a href="#ptab4">배송정보</a></li>
-                                    <li><a href="#ptab5">교환정보</a></li>
-                                </ul>
-                            </div>
+
+                        <div class="cmb_contents mb3per" id="product_de">
             
-                            <div  class="p_review ptab_contents f17">
-                                <div class="p_btn">
-                                    <div class="m_btn t_center">더보기</div>
-                                    <div class="w_btn t_center">사용후기 쓰기</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab3" id="ptab3">
-                            <div class="cmb_tab mtb2per">
-                                <ul>
-                                    <li><a href="#ptab1">상품정보</a></li>
-                                    <li><a href="#ptab2">사용후기<span class="item_count">0</span></a></li>
-                                    <li><a class="tab_click_active fw_bold" href="#ptab3">상품문의<span class="item_count item_active">0</span></a></li>
-                                    <li><a href="#ptab4">배송정보</a></li>
-                                    <li><a href="#ptab5">교환정보</a></li>
-                                </ul>
-                            </div>
-            
-                            <div class="p_inqury ptab_contents f17">
-                                <div class="p_btn">
-                                    <div class="m_btn t_center">더보기</div>
-                                    <div class="w_btn t_center">상품문의 쓰기</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab4" id="ptab4">
-                            <div class="cmb_tab mtb2per">
-                                <ul>
-                                    <li><a href="#ptab1">상품정보</a></li>
-                                    <li><a href="#ptab2">사용후기<span class="item_count">0</span></a></li>
-                                    <li><a href="#ptab3">상품문의<span class="item_count">0</span></a></li>
-                                    <li><a class="tab_click_active fw_bold" href="#ptab4">배송정보</a></li>
-                                    <li><a href="#ptab5">교환정보</a></li>
-                                </ul>
-                            </div>
-
-
                             <div class="p_delivery ptab_contents">
                                 <h3 class="fw_bold mb20px">배송 안내</h3>
                                 <table class="w100 f14">
@@ -534,7 +567,6 @@
                                             <th class="pd1per">택배배송</th>
                                             <td>
                                                 <div class="d_info">
-                                                    <!-- <strong>업체 및 산지에서 택배로 배송</strong> -->
                                                     <ul class="mb3">
                                                         <li><strong class="fw_bold">업체 및 산지에서 택배로 배송</strong></li>
                                                         <li>일요일/공휴일 포함 시 추가 배송기일 소요</li>
@@ -553,18 +585,8 @@
                                 </table>
                             </div>
                         </div>
-                    
-                        <div class="tab5" id = "ptab5">
-                            <div class="cmb_tab mtb2per">
-                                <ul>
-                                    <li><a href="#ptab1">상품정보</a></li>
-                                    <li><a href="#ptab2">사용후기<span class="item_count">0</span></a></li>
-                                    <li><a href="#ptab3">상품문의<span class="item_count">0</span></a></li>
-                                    <li><a href="#ptab4">배송정보</a></li>
-                                    <li><a class="tab_click_active fw_bold" href="#ptab5">교환정보</a></li>
-                                </ul>
-                            </div>
-
+               
+                        <div class="cmb_contents" id="product_re">
                             <div class="p_return_info ptab_contents">
                                 <h3 class="fw_bold mb20px">교환 및 반품 안내</h3>
                                 <table class="w100 f14">

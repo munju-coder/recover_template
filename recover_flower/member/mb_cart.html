@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/swiper.min.css">
     <script src="../js/swiper.js"></script>
     <!--js-->
+    <script src="../js/common.js"></script>
     <script src="../js/main.js"></script>
     <!--style sheet-->
     <link rel="stylesheet" href="../css/import.css">
@@ -55,8 +56,8 @@
 
                 <div class="header_right t_right">
                     <ul>
-                        <li class="header_login mt10px"><a href="#">로그인</a></li>
-                        <li class="header_join mt10px"><a href="#">회원가입</a></li>
+                        <li class="header_login mt10px"><a href="../login/login.html">로그인</a></li>
+                        <li class="header_join mt10px"><a href="../member/mb_reg_chk.html">회원가입</a></li>
                         <li><a href="../member/mb_cart.html"><img src="../images/cart_icon.png" alt="cart_icon"></a></li>
                         <li><a href="../member/my_page.html"><img src="../images/mypage_icon.png" alt="mypage_icon"></a></li>
                         <li class="menu_icon"><a href="#"><img src="../images/menu_icon.png" alt="menu_icon"></a></li>
@@ -219,7 +220,7 @@
                     <div class="member_middle mb1per">
                         <div class="member_list">
                             <div class="w40 mbl_subject t_center">
-                                <div class="w7"><input type="checkbox" id="pd_all_input" name="pr_price" ></div>
+                                <div class=""><input type="checkbox" id="pd_all_input" name="pr_price" ></div>
                                 <div class="w80 t_center">상품명</div>                            
                             </div>
 
@@ -273,21 +274,21 @@
                         <div class="mb_btn mb_left_btn t_left">
                             <div class="btn_box">
                                 <input type="button" class="delete_btn" value="선택삭제">
-                                <input type="button" class="empty_btn" value="비우기">
+                                <!-- <input type="button" class="empty_btn" value="비우기"> -->
                             </div>
                         </div>
                         
                         <div class="mb_right_info">
                             <ul>
-                                <li class="">
+                                <li class="mb10px">
                                     <span>배송비</span>
                                     <strong>0</strong> 원
                                 </li>
                     
-                                <li class="">
+                                <!-- <li class="">
                                     <span>포인트</span>
                                     <strong>0</strong> 점
-                                </li>
+                                </li> -->
                     
                                 <li class="">
                                     <span>총계</span>
@@ -301,8 +302,8 @@
 
                     <div class="mb_bottom mt3per mb5per">
                         <div class="mbb_btn t_center fw_bold">
-                            <input type="button" class="color_red mbb_left" value="쇼핑계속하기">
-                            <input type="button" class="color_5151 mbb_right" value="주문하기">
+                            <a href="../product/product_list.html"><input type="button" class="color_red mbb_left" value="쇼핑계속하기"></a>
+                            <a href="../order/order.html"><input type="button" class="color_5151 mbb_right" value="주문하기"></a>
                         </div>                    
                     </div>
 
